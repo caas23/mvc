@@ -1,0 +1,189 @@
+html {
+    min-height: 100%;
+    background: linear-gradient(#3D92DD, #4D8611);
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1300px;
+    min-height: 100%;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+    & ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+header {
+    background: url('../images/sky.jpg');
+    height: 150px;
+    border-bottom: 4px solid #3D92DD;
+    margin: -0.5rem;
+}
+
+.site-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    font-size: 32px;
+    padding-top: 2rem;
+}
+
+nav {
+    & ul {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 1300px;
+    padding-top: 2.5rem;
+    padding: 2rem;
+    }
+
+    & li {
+        list-style-type: none;
+        font-size: 22px;
+        font-weight: bold;
+    
+        & a {
+            text-decoration: none;
+            color: #333;
+        }
+    
+        & a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+h1 {
+    border-bottom: 4px double #ccc;
+}
+
+
+.me-img {
+    float: left;
+    margin: 0.5rem 2rem 0 1rem;
+
+}
+
+.container,
+.container-about {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: justify;
+    min-height: calc(900px - 150px - 135px);
+    margin-bottom: 1rem;
+}
+
+.container > div {
+    min-width: 450px;
+    background-color: transparent;
+    padding: 1rem;
+    font-size: 18px;
+    border: 2px dashed #ccc;
+
+    & > ul {
+        padding: 0;
+
+        & > li {
+            list-style-type: none;
+        }
+    }
+}
+
+.container-about > div {
+    background-color: transparent;
+    padding: 1rem;
+    font-size: 18px;
+    border: 2px dashed #ccc;
+    margin-bottom: 2rem;
+}
+
+div.col2 {
+    border-left: none;
+    min-width: 175px;
+
+    & a {
+        color: #111;
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+    
+}
+
+.about-img {
+    float: right;
+    width: 275px;
+    margin: 1rem 0 0 1rem;
+}
+
+.container-report {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+    & > div {
+        width: 1300px;
+        background-color: transparent;
+        padding: 1rem;
+        font-size: 18px;
+        border: 2px dashed #ccc;
+        margin-bottom: 2rem;
+    }
+}
+
+.lucky-div {
+    width: 1300px;
+    background-color: white;
+    text-align: center;
+    min-height: 550px;
+    margin-bottom: 1rem;
+}
+
+.api-div {
+    width: 1300px;
+    background-color: white;
+    min-height: 550px;
+    margin-bottom: 1rem;
+}
+
+.lucky-img {
+    width: 123px;
+    height: 200px;
+    box-shadow: 0 0 15px 5px #ccc;
+    margin: 3rem 1.5rem 0 0;
+}
+
+footer {
+    background: url('../images/grass.jpg');
+    height: 134px;
+    border-top: 4px solid #4D8611;
+    margin: -0.5rem;
+    text-align: center;
+    font-size: 18px;
+    color: #111;
+}
+
+footer {
+    & p {
+        margin-top: 4rem;
+    }
+
+    & span {
+        background-color: #f5f5f5;
+        padding: 1.2rem;
+        border-radius: 5px;
+        box-shadow: 0 0 7px 2px #ccc;
+    }
+}

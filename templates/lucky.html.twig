@@ -1,0 +1,16 @@
+{# templates/lucky_number.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}Lucky{% endblock %}
+
+{% block body %}
+    <h1>Lucky</h1>
+    <div class="container">
+        <div class="lucky-div">
+            <img class="lucky-img" src="{{ asset('img/' ~ num1 ~ '.jpg') }}" alt="">
+            <img class="lucky-img" src="{{ asset('img/' ~ num2 ~ '.jpg') }}" alt="">
+            <img class="lucky-img" src="{{ asset('img/' ~ num3 ~ '.jpg') }}" alt="">
+        </div>
+    </div>
+{% endblock %}
