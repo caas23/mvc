@@ -187,3 +187,8 @@ footer {
         box-shadow: 0 0 7px 2px #ccc;
     }
 }
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
