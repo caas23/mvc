@@ -1,0 +1,81 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Redovisning{% endblock %}
+
+{% block body %}
+    <h1>Redovisning</h1>
+    <div class="container-report">
+        <div>
+            <h3 id="kmom01">Kmom01</h3>
+            <p>
+                Mina förkunskaper kring objektorientering sträcker sig enbart till tidigare kurser under utbildningen,
+                där kanske oopython varit den som gett mest insikt i det. I början av den kursen kändes det ganska rörigt och det var 
+                inte helt lätt att greppa konceptet, men nu när jag hunnit bekanta mig med det känns det som att det sjunkit in något.
+                <br><br>
+
+                För att komma igång med att skapa en klass i PHP behöver man ha lite koll på objekt i PHP.
+                Ett objekt kan skapas utifrån en fördefinierad klass, eller utifrån en egendefinierad sådan (vilket görs med hjälp av nyckelorder <code>class</code>). 
+                För att skapa ett nytt objekt används nyckelordet <code>new</code> och för att lägga till properties till ett objekt används
+                <code>objekt -> property = tilldelning</code>.<br>
+                Inom en klass definieras medlemsvariabler, vilka kan vara till exempel publika eller privata. 
+                Om variablerna är privata behövs set- och get-metoder för att hantera dem, vilket är ett ganska vanligt 
+                sätt att hantera medlemsvariabler - att ha privata metoder har flera fördelar gentemot publika sådana.<br>
+                Givetvis finns flera andra delar, som inte berörts här, men kort sagt behövs förståelse för hur en klass skapas,
+                hur medlemsvariabler och metoder används och hanteras, hur objekt instansieras och hur tilldelning sker.<br><br>
+
+                Angående kodbasen - initialt var reaktionen "Oj, här finns en hel del att sätta sig in i." Men efter att ha arbetat igenom
+                guiden, mer eller mindre en och en halv gång (på grund av en fadäs), klarnade många delar. Jag insåg att jag faktiskt är bekant
+                med många av delarna - jag har ju tidigare stött på json, php, css, twig och så vidare. Känslan nu efter att ha arbetat igenom
+                första kursmomentet är att jag känner mig hyfsat trygg i den övergripande bild jag fått av kodbasen och strukturen.<br><br>
+                
+                Angående artikeln - här ska jag väl vara ärlig och säga att jag har inte läst den "pärm till pärm" så att säga, men utifrån huvudrubrikerna
+                i början av artikeln har jag tittat lite mer på Code Style Guide och Coding Practices för att få en insikt kring dessa delar. Utöver dessa
+                läste jag även mer om Templating, eftersom vi redan kommit igång och arbetar med detta i kursen. Slutligen la jag lite extra tid på Testing-avsnittet
+                eftersom jag i inledningen av kursen sett att vi kommer beröra tester. I PHP? Det vet jag inte än, men jag tänker att det kan vara värdelfullt att ha
+                ögnat igenom detta avsnitt oavsett.<br><br>
+
+                TIL<br> 
+                    - Hur grundstrukturen för klasser och objekt ser ut i PHP.<br>
+                    - Att CSS stödjer nesting! Det hade jag missat och med den vetskapen kunde jag justera min CSS-kod lite.<br>
+                    - Hur en variabel kan inkluderas i bildkällan i en img-tag i en Twig-fil. Detta var något jag tänkte att det borde ju gå, 
+                    men att faktiskt implementera det i denna specifika situation krävde att jag vände mig till dokumentation för vägledning.
+            </p>
+        </div>
+        <div>
+            <h3 id="kmom02">Kmom02</h3>
+            <p>
+                Redovisningstext för detta kmom kommer här.
+            </p>
+        </div>
+        <div>
+            <h3 id="kmom03">Kmom03</h3>
+            <p>
+                Redovisningstext för detta kmom kommer här.
+            </p>
+        </div>
+        <div>
+            <h3 id="kmom04">Kmom04</h3>
+            <p>
+                Redovisningstext för detta kmom kommer här.
+            </p>
+        </div>
+        <div>
+            <h3 id="kmom05">Kmom05</h3>
+            <p>
+                Redovisningstext för detta kmom kommer här.
+            </p>
+        </div>
+        <div>
+            <h3 id="kmom06">Kmom06</h3>
+            <p>
+                Redovisningstext för detta kmom kommer här.
+            </p>
+        </div>
+        <div>
+            <h3 id="kmom07-10" >Kmom07-10</h3>
+            <p>
+                Redovisningstext för detta kmom kommer här.
+            </p>
+        </div>
+    </div>
+{% endblock %}
