@@ -11,19 +11,19 @@ class Kmom01ControllerTwig extends AbstractController
     #[Route("/", name: "presentation")]
     public function presentation(): Response
     {
-        return $this->render('presentation.html.twig');
+        return $this->render('Kmom01/presentation.html.twig');
     }
 
     #[Route("/about", name: "about")]
     public function about(): Response
     {
-        return $this->render('about.html.twig');
+        return $this->render('Kmom01/about.html.twig');
     }
 
     #[Route("/report", name: "report")]
     public function report(): Response
     {
-        return $this->render('report.html.twig');
+        return $this->render('Shared/report.html.twig');
     }
 
     #[Route("/lucky", name: "lucky")]
@@ -41,7 +41,7 @@ class Kmom01ControllerTwig extends AbstractController
             'num3' => $num3
         ];
 
-        return $this->render('lucky.html.twig', $data);
+        return $this->render('Kmom01/lucky.html.twig', $data);
     }
 
 
@@ -60,9 +60,6 @@ class Kmom01ControllerTwig extends AbstractController
             'num3' => $num3
         ];
 
-        return $this->render('api.html.twig', $data);
+        return $this->render('Shared/api.html.twig', $data);
     }
-
-
-
 }
