@@ -19,13 +19,13 @@ class Kmom01ControllerTwig extends AbstractController
     {
         return $this->render('about.html.twig');
     }
-    
+
     #[Route("/report", name: "report")]
     public function report(): Response
     {
         return $this->render('report.html.twig');
     }
-    
+
     #[Route("/lucky", name: "lucky")]
     public function lucky(): Response
     {
@@ -43,8 +43,8 @@ class Kmom01ControllerTwig extends AbstractController
 
         return $this->render('lucky.html.twig', $data);
     }
-    
-    
+
+
     #[Route("/api", name: "api")]
     public function api(): Response
     {
@@ -63,6 +63,6 @@ class Kmom01ControllerTwig extends AbstractController
         return $this->render('api.html.twig', $data);
     }
 
-    
+
 
 }

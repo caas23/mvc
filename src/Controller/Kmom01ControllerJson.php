@@ -7,12 +7,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class Kmom01ControllerJson
-{   
+{
     #[Route("/api/quote", name: "api/quote")]
     public function jsonQuote(): Response
     {
         $quoteNum = random_int(0, 2);
-        $quotes = array (
+        $quotes = array(
             "The way to get started is to quit talking and begin doing. -Walt Disney",
             "Be yourself; everyone else is already taken. -Oscar Wilde",
             "You must be the change you wish to see in the world. -Mahatma Gandhi",
