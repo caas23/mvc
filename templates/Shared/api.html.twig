@@ -6,14 +6,65 @@
     <h1>Api</h1>
     <div class="container">
         <div class="api-div">
-        <h4>
+        <h3>
             Nedan listas tillgängliga JSON routes.
-        </h4>
+        </h3>
             <ul>
-                <a href="{{ path('api/quote') }}" style="color: #111;" target="_blank">Citat (/api/quote)</a>
+                <a href="{{ path('api/quote') }}" target="_blank">Citat (/api/quote)</a>
                 <li>
                     Visar ett (av tre) slumpmässigt citat av en känd person.
                     Dessutom visas det datum och den tid citatet genererades.
+                </li>
+
+                <h4>Kortlek utan jokrar</h4>
+                
+
+                <a href="{{ path('api/deck') }}" target="_blank">Visa alla kort sorterade per färg och värde</a>
+                <li>
+                    Visar 52 kort sorterad.
+                </li>
+                
+                <a href="{{ path('api/deck/shuffle') }}" target="_blank">Visa alla kort i slumpad ordning</a>
+                <li>
+                    Visar 52 kort i slumpad ordning, varje slumpad omgång uppdaterar korten i sessionen.
+                </li>
+               
+                <a href="{{ path('api/deck/draw') }}" target="_blank">Dra <strong>ett</strong> slumpmässigt kort</a>
+                <li>
+                    Visa ett slumpmässigt kort från kortleken.
+                </li>
+                
+                <li>
+                    Dra <strong>x antal</strong> slumpmässiga kort
+                    <form method="post" action="" target="_blank">  
+                        <input type="number" name="num_cards" min="1" max="52" placeholder="1">
+                        <input type="submit" name="" value="Visa kort">
+                    </form>
+                </li>
+                
+                <h4>Kortlek med jokrar</h4>
+                
+                <a href="{{ path('api/deck/joker') }}" target="_blank">Visa alla kort (inklusive jokrar) sorterade per färg och värde</a>
+                <li>
+                    Visar 54 kort sorterad.
+                </li>
+
+                <a href="{{ path('api/deck/joker/shuffle') }}" target="_blank">Visa alla kort (inklusive jokrar) i slumpad ordning</a>
+                <li>
+                    Visar 54 kort i slumpad ordning, varje slumpad omgång uppdaterar korten i sessionen.
+                </li>
+
+                <a href="{{ path('api/deck/joker/draw') }}" target="_blank">Dra <strong>ett</strong> slumpmässigt kort</a>
+                <li>
+                    Visa ett slumpmässigt kort från kortleken.
+                </li>
+
+                <li>
+                    Dra <strong>x antal</strong> slumpmässiga kort (inklusive jokrar)
+                    <form method="post" action="" target="_blank">  
+                        <input type="number" name="num_cards_joker" min="1" max="54" placeholder="1">
+                        <input type="submit" name="" value="Visa kort">
+                    </form>
                 </li>
             </ul>
         </div>
