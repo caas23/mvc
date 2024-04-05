@@ -1,0 +1,21 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Korthand{% endblock %}
+
+{% block body %}
+    <h1>Korthand</h1>
+    <div class="container card-container">
+        <div>
+            {% set counter = 0 %}
+            {% for player in hand %}
+                <h4>Spelare {{ players[counter] }}</h4>
+                {% set counter = counter + 1 %}
+                {% for card in player %}
+                    <img class="single-card" src="{{ asset('svg/' ~ card) }}" alt="{{ card }}">
+                {% endfor %}
+                <br>  
+            {% endfor %}  
+            <p>Det finns {{ cards_left }} kort kvar i kortleken.</p>
+        </div>
+    </div>
+{% endblock %}

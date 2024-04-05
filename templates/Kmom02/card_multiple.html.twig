@@ -1,0 +1,15 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Flera kort{% endblock %}
+
+{% block body %}
+    <h1>Slumpade kort</h1>
+    <div class="container card-container">
+        <div>
+            {% for card in cards %}
+                <img class="single-card" src="{{ asset('svg/' ~ card) }}" alt="{{ card }}">
+            {% endfor %}
+            <p>Det finns {{ cards_left }} kort kvar i kortleken.</p>
+        </div>
+    </div>
+{% endblock %}

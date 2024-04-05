@@ -1,0 +1,20 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Session{% endblock %}
+
+{% block body %}
+    <h1>
+        Session
+        <a class="trash-can" href="{{ path('session/delete') }}">&#128465;</a>
+    </h1>
+    {{ include('Shared/flash.html.twig') }}
+    <div class="container session-container">
+        <div>
+        {% if session._sf2_attributes is defined %}
+            {{ dump(session._sf2_attributes) }}
+        {% else %}
+            <p>Sessionen är tom!</p>
+        {% endif %}
+        <div>
+    </div>
+{% endblock %}

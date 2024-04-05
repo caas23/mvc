@@ -1,0 +1,13 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Ett kort{% endblock %}
+
+{% block body %}
+    <h1>Ett slumpmässigt kort</h1>
+    <div class="container single-card-container">
+        <div>
+            <img class="single-card" src="{{ asset('svg/' ~ card) }}" alt="{{ card }}">
+            <p>Det finns {{ cards_left }} kort kvar i kortleken.</p>
+        </div>
+    </div>
+{% endblock %}

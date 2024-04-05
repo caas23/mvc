@@ -1,0 +1,74 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Kort{% endblock %}
+
+{% block body %}
+    <h1>Kort</h1>
+    <div class="card-container">
+        <div class="link-div">
+        <h4>
+            Kortlek utan jokrar
+        </h4>
+        <ul>
+            <li>
+                <a href="{{ path('card/deck') }}">Visa alla kort sorterade per färg och värde</a>
+            </li>
+            <li>
+                <a href="{{ path('card/deck/shuffle') }}">Visa alla kort i slumpad ordning</a>
+            </li>
+            <li>
+                <a href="{{ path('card/deck/draw') }}">Dra <strong>ett</strong> slumpmässigt kort</a>
+            </li>
+            <li>
+                Dra <strong>x antal</strong> slumpmässiga kort
+                <form method="post" action="">  
+                    <input type="number" name="num_cards" min="1" max="52" placeholder="1">
+                    <input type="submit" name="" value="Visa kort">
+                </form>
+            </li>
+            <li>
+                Dela ut <strong>x antal</strong> kort till <strong>x antal</strong> spelare.<br>
+                Använd följade route <code>/card/deck/deal/:players/:cards</code>
+            </li>
+        </ul>
+        <h4>
+            Kortlek med jokrar
+        </h4>
+        <ul>
+            <li>
+               <a href="{{ path('card/deck/joker') }}">Visa alla kort sorterade per färg och värde</a>
+            </li>
+            <li>
+                <a href="{{ path('card/deck/joker/shuffle') }}">Visa alla kort i slumpad ordning</a>
+            </li>
+            <li>
+                <a href="{{ path('card/deck/joker/draw') }}">Dra <strong>ett</strong> slumpmässigt kort</a>
+            </li>
+            <li>
+                Dra <strong>x antal</strong> slumpmässiga kort
+                <form method="post" action="">  
+                    <input type="number" name="num_cards_joker" min="1" max="54" placeholder="1">
+                    <input type="submit" name="" value="Visa kort">
+                </form>
+            </li>
+            <li>
+                Dela ut <strong>x antal</strong> kort till <strong>x antal</strong> spelare.<br>
+                Använd följade route <code>/card/deck/joker/deal/:players/:cards</code>
+            </li>
+        </ul>
+        </div>
+        <div class="text-div">
+            <h4>Kod och klasser</h4>
+            <p>
+                Jag har fyra klasser för korten, <code>Card</code>, <code>CardHand</code>, <code>DeckOfCards</code> och <code>DeckOfCardsJoker</code>.
+                <code>Card</code>-klassen har en metod, som hämtar ut ett kort. <code>CardHand</code> har tre metoder, <code>add</code>, 
+                <code>getNumberOfCards</code> och <code>getOneCard</code>, samtidigt som den även har en kompositionsrelation till <code>Card</code>-klassen.
+                <br><br>
+                <code>DeckOfCards</code> har två metoder, <code>getCards</code> samt <code>getCardsShuffled</code>. <code>DeckOfCardsJoker</code>
+                ärver från denna klass.
+                <img class="uml-img" src="{{ asset('img/uml.png') }}" alt="">
+            </p>
+        </div>
+        
+    </div>
+{% endblock %}

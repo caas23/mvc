@@ -1,0 +1,17 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Kortlek{% endblock %}
+
+{% block body %}
+    <h1>Kortlek</h1>
+    <div class="container card-container">
+        <div>
+            {% for card in cards %}
+                <img class="single-card" src="{{ asset('svg/' ~ card) }}" alt="{{ card }}">
+                {% if (card == '_joker2.svg' or '13' in card) and shuffle == false %}
+                    <br>
+                {% endif %}
+            {% endfor %}  
+        </div>
+    </div>
+{% endblock %}
