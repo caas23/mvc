@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Card;
+namespace Caas23\Card;
 
-use App\Card\Card;
+use Caas23\Card\Card;
 
 class CardHand
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Card;
+namespace Caas23\Card;
 
 class DeckOfCards
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controller;
+namespace Caas23\Controller;
 
-use App\Card\Card;
-use App\Card\CardHand;
-use App\Card\DeckOfCards;
-use App\Card\DeckOfCardsJoker;
+use Caas23\Card\Card;
+use Caas23\Card\CardHand;
+use Caas23\Card\DeckOfCards;
+use Caas23\Card\DeckOfCardsJoker;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
