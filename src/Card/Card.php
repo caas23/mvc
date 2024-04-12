@@ -13,9 +13,9 @@ class Card
 
     public function getOneCard($cards): string
     {
-        $rand_key = array_rand($cards, 1);
+        $randKey = array_rand($cards, 1);
 
-        $this->card = $cards[$rand_key];
+        $this->card = $cards[$randKey];
         return $this->card;
     }
 }

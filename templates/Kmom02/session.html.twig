@@ -10,8 +10,8 @@
     {{ include('Shared/flash.html.twig') }}
     <div class="container session-container">
         <div>
-        {% if session._sf2_attributes is defined %}
-            {{ dump(session._sf2_attributes) }}
+        {% if session != [] %}
+            {{ dump(session) }}
         {% else %}
             <p>Sessionen är tom!</p>
         {% endif %}

@@ -106,10 +106,9 @@ class ApiController extends AbstractController
     public function jsonDeckDraw(
         SessionInterface $session
     ): Response {
-        if ($session->has("cards")) {
-        } else {
-            $NewDeck = new DeckOfCards();
-            $session->set("cards", $NewDeck->getCards());
+        if (!$session->has("cards")) {
+            $newDeck = new DeckOfCards();
+            $session->set("cards", $newDeck->getCards());
         }
 
         $card = new Card();
@@ -176,10 +175,9 @@ class ApiController extends AbstractController
     public function jsonDeckJokerDraw(
         SessionInterface $session
     ): Response {
-        if ($session->has("cardsJoker")) {
-        } else {
-            $NewDeck = new DeckOfCardsJoker();
-            $session->set("cardsJoker", $NewDeck->getCards());
+        if (!$session->has("cardsJoker")) {
+            $newDeck = new DeckOfCardsJoker();
+            $session->set("cardsJoker", $newDeck->getCards());
         }
 
         $card = new Card();
@@ -210,10 +208,9 @@ class ApiController extends AbstractController
 
         if ($number == '') {
             $number = $request->request->get('num_cards_joker');
-            if ($session->has("cardsJoker")) {
-            } else {
-                $NewDeck = new DeckOfCardsJoker();
-                $session->set("cardsJoker", $NewDeck->getCards());
+            if (!$session->has("cardsJoker")) {
+                $newDeck = new DeckOfCardsJoker();
+                $session->set("cardsJoker", $newDeck->getCards());
             }
 
             $card = new Card();
@@ -226,12 +223,13 @@ class ApiController extends AbstractController
                 $session->set("cardsJoker", array_diff($cards, [$randomCard]));
                 $drawnCards[] = $randomCard;
             }
-            $session->set("cards_left", $cards);
-        } else {
-            if ($session->has("deck")) {
-            } else {
-                $NewDeck = new DeckOfCards();
-                $session->set("cards", $NewDeck->getCards());
+        $session->set("cards_left", $cards);
+        $session->set("drawn_cards", $drawnCards);
+        return $this->redirectToRoute('drawMultiple', ["number" => $number]);
+
+        } if (!$session->has("cards")) {
+                $newDeck = new DeckOfCards();
+                $session->set("cards", $newDeck->getCards());
             }
 
             $card = new Card();
@@ -244,18 +242,14 @@ class ApiController extends AbstractController
                 $session->set("cards", array_diff($cards, [$randomCard]));
                 $drawnCards[] = $randomCard;
             }
-            $session->set("cards_left", $cards);
-        }
-
+        $session->set("cards_left", $cards);
         $session->set("drawn_cards", $drawnCards);
-
         return $this->redirectToRoute('drawMultiple', ["number" => $number]);
     }
 
     // Kmom02
     #[Route("api/deck/draw/{number<\d+>}", name: "drawMultiple", methods: ['GET'])]
     public function jsonDeckShowMultiple(
-        int $number,
         SessionInterface $session
     ): Response {
 
