@@ -23,7 +23,7 @@ class SessionController extends AbstractController
         session_start();
 
         $data = [
-            'session' => $session->getBag("attributes")->all()
+            'session' => $session->all()
         ];
 
         return $this->render('Kmom02/session.html.twig', $data);

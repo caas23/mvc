@@ -64,12 +64,12 @@ class Kmom02ControllerCard extends AbstractController
         $card = new Card();
         $cards = $session->get("cards");
 
-        $randomCard = $card->getOneCard($cards);
-        $session->set("cards", array_diff($cards, [$randomCard]));
+        $randomCard = $card->getOneCard((array)$cards);
+        $session->set("cards", array_diff((array)$cards, (array)$randomCard));
 
         $data = [
             'card' => $randomCard,
-            'cards_left' => count($cards) - 1
+            'cards_left' => count((array)$cards) - 1
         ];
 
         return $this->render('Kmom02/card_single.html.twig', $data);
@@ -95,30 +95,34 @@ class Kmom02ControllerCard extends AbstractController
 
             for ($i = 1; $i <= $number; $i++) {
                 $cards = $session->get("cardsJoker");
-                $randomCard = $card->getOneCard($cards);
-                $session->set("cardsJoker", array_diff($cards, [$randomCard]));
+                $randomCard = $card->getOneCard((array)$cards);
+                $session->set("cardsJoker", array_diff((array)$cards, (array)$randomCard));
                 $drawnCards[] = $randomCard;
             }
-        $session->set("cards_left", $cards);
-        $session->set("drawn_cards", $drawnCards);
-        return $this->redirectToRoute('drawMulitple', ["number" => $number]);
+            if (isset($cards)) {
+                $session->set("cards_left", $cards);
+            }
+            $session->set("drawn_cards", $drawnCards);
+            return $this->redirectToRoute('drawMulitple', ["number" => $number]);
 
         } if (!$session->has("cards")) {
-                $newDeck = new DeckOfCards();
-                $session->set("cards", $newDeck->getCards());
-            }
+            $newDeck = new DeckOfCards();
+            $session->set("cards", $newDeck->getCards());
+        }
 
-            $card = new Card();
+        $card = new Card();
 
-            $drawnCards = [];
+        $drawnCards = [];
 
-            for ($i = 1; $i <= $number; $i++) {
-                $cards = $session->get("cards");
-                $randomCard = $card->getOneCard($cards);
-                $session->set("cards", array_diff($cards, [$randomCard]));
-                $drawnCards[] = $randomCard;
-            }
-        $session->set("cards_left", $cards);
+        for ($i = 1; $i <= $number; $i++) {
+            $cards = $session->get("cards");
+            $randomCard = $card->getOneCard((array)$cards);
+            $session->set("cards", array_diff((array)$cards, (array)$randomCard));
+            $drawnCards[] = $randomCard;
+        }
+        if (isset($cards)) {
+            $session->set("cards_left", $cards);
+        }
         $session->set("drawn_cards", $drawnCards);
         return $this->redirectToRoute('drawMulitple', ["number" => $number]);
     }
@@ -129,7 +133,7 @@ class Kmom02ControllerCard extends AbstractController
     ): Response {
         $data = [
             'cards' => $session->get("drawn_cards"),
-            'cards_left' => count($session->get("cards_left")) - 1
+            'cards_left' => count((array)$session->get("cards_left")) - 1
         ];
         $session->remove("cards_left");
         $session->remove("drawn_cards");
@@ -162,8 +166,8 @@ class Kmom02ControllerCard extends AbstractController
 
             for ($k = 1; $k <= $cards; $k++) {
                 $cardsDeck = $session->get("cards");
-                $randomCard = $hand->getOneCard($cardsDeck);
-                $session->set("cards", array_diff($cardsDeck, [$randomCard]));
+                $randomCard = $hand->getOneCard((array)$cardsDeck);
+                $session->set("cards", array_diff((array)$cardsDeck, (array)$randomCard));
                 $cardsOnHand[] = $randomCard;
             }
 
@@ -173,7 +177,7 @@ class Kmom02ControllerCard extends AbstractController
         $data = [
             "hand" => $allHands,
             "players" => array_keys($allHands),
-            "cards_left" => count($session->get("cards"))
+            "cards_left" => count((array)$session->get("cards"))
         ];
 
         return $this->render('Kmom02/card_hand.html.twig', $data);

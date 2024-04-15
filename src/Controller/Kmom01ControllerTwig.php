@@ -30,9 +30,9 @@ class Kmom01ControllerTwig extends AbstractController
     public function lucky(): Response
     {
         $number = random_int(100, 999);
-        $num1 = str_split($number, 1)[0];
-        $num2 = str_split($number, 1)[1];
-        $num3 = str_split($number, 1)[2];
+        $num1 = str_split((string)$number, 1)[0];
+        $num2 = str_split((string)$number, 1)[1];
+        $num3 = str_split((string)$number, 1)[2];
 
         $data = [
             'number' => $number,

@@ -21,9 +21,9 @@ class ApiController extends AbstractController
     public function api(): Response
     {
         $number = random_int(100, 999);
-        $num1 = str_split($number, 1)[0];
-        $num2 = str_split($number, 1)[1];
-        $num3 = str_split($number, 1)[2];
+        $num1 = str_split((string)$number, 1)[0];
+        $num2 = str_split((string)$number, 1)[1];
+        $num3 = str_split((string)$number, 1)[2];
 
         $data = [
             'number' => $number,
@@ -114,12 +114,12 @@ class ApiController extends AbstractController
         $card = new Card();
         $cards = $session->get("cards");
 
-        $randomCard = $card->getOneCard($cards);
-        $session->set("cards", array_diff($cards, [$randomCard]));
+        $randomCard = $card->getOneCard((array)$cards);
+        $session->set("cards", array_diff((array)$cards, (array)$randomCard));
 
         $data = [
             'Kort' => $randomCard,
-            'Kort kvar' => count($cards) - 1
+            'Kort kvar' => count((array)$cards) - 1
         ];
 
         $response = new JsonResponse($data);
@@ -183,12 +183,12 @@ class ApiController extends AbstractController
         $card = new Card();
         $cards = $session->get("cardsJoker");
 
-        $randomCard = $card->getOneCard($cards);
-        $session->set("cardsJoker", array_diff($cards, [$randomCard]));
+        $randomCard = $card->getOneCard((array)$cards);
+        $session->set("cardsJoker", array_diff((array)$cards, (array)$randomCard));
 
         $data = [
             'Kort' => $randomCard,
-            'Kort kvar' => count($cards) - 1
+            'Kort kvar' => count((array)$cards) - 1
         ];
 
         $response = new JsonResponse($data);
@@ -219,30 +219,34 @@ class ApiController extends AbstractController
 
             for ($i = 1; $i <= $number; $i++) {
                 $cards = $session->get("cardsJoker");
-                $randomCard = $card->getOneCard($cards);
-                $session->set("cardsJoker", array_diff($cards, [$randomCard]));
+                $randomCard = $card->getOneCard((array)$cards);
+                $session->set("cardsJoker", array_diff((array)$cards, (array)$randomCard));
                 $drawnCards[] = $randomCard;
             }
-        $session->set("cards_left", $cards);
-        $session->set("drawn_cards", $drawnCards);
-        return $this->redirectToRoute('drawMultiple', ["number" => $number]);
+            if (isset($cards)) {
+                $session->set("cards_left", $cards);
+            }
+            $session->set("drawn_cards", $drawnCards);
+            return $this->redirectToRoute('drawMultiple', ["number" => $number]);
 
         } if (!$session->has("cards")) {
-                $newDeck = new DeckOfCards();
-                $session->set("cards", $newDeck->getCards());
-            }
+            $newDeck = new DeckOfCards();
+            $session->set("cards", $newDeck->getCards());
+        }
 
-            $card = new Card();
+        $card = new Card();
 
-            $drawnCards = [];
+        $drawnCards = [];
 
-            for ($i = 1; $i <= $number; $i++) {
-                $cards = $session->get("cards");
-                $randomCard = $card->getOneCard($cards);
-                $session->set("cards", array_diff($cards, [$randomCard]));
-                $drawnCards[] = $randomCard;
-            }
-        $session->set("cards_left", $cards);
+        for ($i = 1; $i <= $number; $i++) {
+            $cards = $session->get("cards");
+            $randomCard = $card->getOneCard((array)$cards);
+            $session->set("cards", array_diff((array)$cards, (array)$randomCard));
+            $drawnCards[] = $randomCard;
+        }
+        if (isset($cards)) {
+            $session->set("cards_left", $cards);
+        }
         $session->set("drawn_cards", $drawnCards);
         return $this->redirectToRoute('drawMultiple', ["number" => $number]);
     }
@@ -255,7 +259,7 @@ class ApiController extends AbstractController
 
         $data = [
             'Dragna kort' => $session->get("drawn_cards"),
-            'Kort kvar' => count($session->get("cards_left")) - 1
+            'Kort kvar' => count((array)$session->get("cards_left")) - 1
         ];
         $session->remove("cards_left");
         $session->remove("drawn_cards");

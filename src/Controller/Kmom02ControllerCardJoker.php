@@ -56,12 +56,12 @@ class Kmom02ControllerCardJoker extends AbstractController
         $card = new Card();
         $cards = $session->get("cardsJoker");
 
-        $randomCard = $card->getOneCard($cards);
-        $session->set("cardsJoker", array_diff($cards, [$randomCard]));
+        $randomCard = $card->getOneCard((array)$cards);
+        $session->set("cardsJoker", array_diff((array)$cards, (array)$randomCard));
 
         $data = [
             'card' => $randomCard,
-            'cards_left' => count($cards) - 1
+            'cards_left' => count((array)$cards) - 1
         ];
 
         return $this->render('Kmom02/card_single.html.twig', $data);
@@ -92,8 +92,8 @@ class Kmom02ControllerCardJoker extends AbstractController
 
             for ($k = 1; $k <= $cards; $k++) {
                 $cardsDeck = $session->get("cardsJoker");
-                $randomCard = $hand->getOneCard($cardsDeck);
-                $session->set("cardsJoker", array_diff($cardsDeck, [$randomCard]));
+                $randomCard = $hand->getOneCard((array)$cardsDeck);
+                $session->set("cardsJoker", array_diff((array)$cardsDeck, (array)$randomCard));
                 $cardsOnHand[] = $randomCard;
             }
 
@@ -103,7 +103,7 @@ class Kmom02ControllerCardJoker extends AbstractController
         $data = [
             "hand" => $allHands,
             "players" => array_keys($allHands),
-            "cards_left" => count($session->get("cardsJoker"))
+            "cards_left" => count((array)$session->get("cardsJoker"))
         ];
 
         return $this->render('Kmom02/card_hand.html.twig', $data);

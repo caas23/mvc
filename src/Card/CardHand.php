@@ -5,8 +5,11 @@ namespace Caas23\Card;
 use Caas23\Card\Card;
 
 class CardHand
-{
-    private $hand = [];
+{   
+    /**
+     * @var array<mixed> $hand
+     */
+    private array $hand = [];
 
     public function add(Card $card): void
     {
@@ -17,13 +20,17 @@ class CardHand
     {
         return count($this->hand);
     }
-
-    public function getOneCard($cards)
+    
+    /**
+     * @param array<mixed> $cards
+     */
+    public function getOneCard($cards): string
     {
-        $oneCard;
         foreach ($this->hand as $card) {
             $oneCard = $card->getOneCard($cards);
         }
-        return $oneCard;
+        if (isset($oneCard)) {
+            return $oneCard;
+        } return "";
     }
 }

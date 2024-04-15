@@ -4,14 +4,17 @@ namespace Caas23\Card;
 
 class Card
 {
-    protected $card;
+    protected mixed $card;
 
     public function __construct()
     {
         $this->card = null;
     }
 
-    public function getOneCard($cards): string
+    /**
+     * @param array<mixed> $cards
+     */
+    public function getOneCard(array $cards): mixed
     {
         $randKey = array_rand($cards, 1);
 
