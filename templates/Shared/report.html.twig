@@ -114,7 +114,49 @@
         <div>
             <h3 id="kmom03">Kmom03</h3>
             <p>
-                Redovisningstext för detta kmom kommer här.
+    
+                <strong>Modellering</strong><br>
+                Berätta hur det kändes att modellera ett kortspel med flödesdiagram och psuedokod. 
+                Var det något som du tror stödjer dig i din problemlösning och tankearbete för att strukturera koden kring en applikation?
+                <p>
+                    Första tanken när jag skulle börja skissa på ett flödesdiagram var ungefär "Oj, var börjar jag?". När jag väl kom igång insåg jag att det faktiskt är 
+                    riktigt hjälpsamt att skissa upp flödet och visualisera det på så sätt, och det var inte alls lika "stort" att ta sig an som jag först trodde. 
+                    Det var snarare bara otroligt hjälpsamt och gav en tydlig bild av vad som skulle göras och hur flödet skulle se ut, helt enkelt.<br>
+                    Detsamma gällde nog psuedokoden, att det först kändes lite klurigt hur den skulle skrivas för att faktiskt klassas som psuedokod och inte programmeringskod.
+                    Men även denna del kändes väldigt hjälpsam för att få lite koll på stegen och hur allt skulle hänga samman.<br>
+                    Denna metodik är absolut något jag kommer ta med mig och använda mig mer utav!  
+                </p>
+                
+                <strong>Implementation</strong><br>
+                <p>
+                    Jag är generellt nöjd med hur jag löste uppgiften, då spelet fungerar så som jag förväntar mig. Jag tror dock att jag gjorde det onödigt krånligt till en början och
+                    fick därför strutkurera om en del när jag var klar med ett första, fungerande utkast. Även om jag hade ett flödesdiagram och en psuedokod att förhålla mig till
+                    så hade jag inte helt klart för mig var jag ville stoppa alla delar i koden, så att säga, och gjorde därför det onödigt kluddigt till en början. 
+                    Efter att ha strukturerat om lite och fått lite ordning på filer och kod så känner jag mig nöjd med resultatet.<br>
+                    En förbättringspotential, eller vidareutveckling, vore att göra spelet lite mer avancerat, och göra banken smartare.<br>
+                    Rent kodmässigt vore en förbättring att bli av med alla meddelanden som fås via <code>composer lint</code>. Här har jag dock valt att förbise fyra meddelanden;<br>
+                    &bull; Det första, som handlar om "Cyclomatic Complexity of 10" har jag medvetet valt att förbise, då jag efter granskning av koden anser att det i det givna fallet
+                    är godtagbart. Här bör man dock kanske vara lite kritisk och fundera på "vem är jag att säga att det är godtagbart?", men det är min bedömning i detta fall. En mer
+                    erfaren programmerare (läs rättare) kanske skulle se det på ett annat sätt och i sådant fall tas feedback tacksamt emot!<br>
+                    &bull; De resterande tre meddelande är av samma karaktär, och handlar om "no value type specified in iterable type array", dessa har jag valt att förbise av den enkla
+                    anledningen att jag inte kan lösa dem utan att lyckas "förstöra" resten av min kod. Återigen, eventuell feedback på detta tas emot med öppet sinne. 
+                </p>
+                
+                <strong>Ramverket</strong><br>
+                <p>
+                    Känslan så långt är att det är mycket att lära, men även mycket som blir tydligare ju längre in i kursen vi kommer. Det finns många delar där jag känner att jag behöver
+                    läsa på för att förstå hur det funkar i just Symfony eller hur något förväntas se ut, lösas, eller hanteras. Den generella känslan är dock att jag tycker det är spännande
+                    och ser framemot att lära mig ännu mer innan kursen är slut.
+                </p>
+
+                <strong>TIL</strong><br>
+                <p>
+                    - Mer om hur sessionen funkar i Symfony. Jag insåg efter att ha installerat linters att min lösning för sessionen fungerade rent "kodmässigt" men där jag 
+                    ändå fick ändra om en del för att få det att funka med phpmd och phpstan. Efter att ha läst på fick jag en bättre insikt i att "Ah.. det är så här jag BÖR 
+                    hantera sessionsdelarna i Symfony, även om min första lösning fungerade utåt sett."<br>
+                    - En generell TIL, är att jag ibland skriver onödig kod, som jag får feedback på från phpmd och phpstan. Vilket i sin tur leder till att jag sakta men säkert 
+                    lär mig hur jag faktiskt kan effektivisera den kod jag skriver. Många gånger har det handlat om onödiga <code>else-satser</code>. Otroligt lärorikt!
+                </p>
             </p>
         </div>
         <div>
