@@ -240,7 +240,8 @@ ul.dicearea li {
 .card-container {
     text-align: unset;
 }
-.single-card {
+.single-card,
+.single-card-21 {
     width: 93px;
     margin-left: 0;
     padding: 0;
@@ -301,10 +302,8 @@ a:hover.trash-can {
 
 .uml-img {
     display: block;
-    /* float: right; */
     margin-top: 1rem;
     border-radius: 5px;
-    box-shadow: 0 0 1px 1px #f5f5f5;
 }
 
 .text-div,
@@ -336,4 +335,122 @@ a:hover.trash-can {
 .link-div {
     border-right: none;
     width: 45%;
+}
+
+.landing-container,
+.doc-container,
+.twentyOne-container{
+    & a {
+        color: #111;
+    }
+
+    & a:hover {
+        font-weight: bold;
+    }
+
+    & h4 {
+        margin: 1rem 0;
+    }
+    
+    & h5 {
+        margin-bottom: 0;
+    }
+    
+    & > div {
+        position: relative;
+    }
+}
+
+.doc-container h4 {
+    margin-bottom: 0;
+}
+
+.btn-div {
+    position: absolute;
+    bottom: 0;
+    width: 97.5%;
+}
+
+.landing-container > div ul {
+    margin-bottom: 1rem;
+
+    & li {
+        margin-left: 1.4rem;
+        list-style-type: disc;
+    }
+    & li.inner-list {
+        margin-left: 0;
+        list-style-type: circle;
+    }
+}
+
+.flowchart-img {
+    max-width: 100%;
+    display: block;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.pseudo-code {
+    display: block;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: #eee;
+    padding: 0.5rem;
+}
+
+input[type=submit], input[type=number] {
+    background-color: #1995e7;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    padding: 12px 28px;
+    text-decoration: none;
+    margin: 1rem 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type=submit].doc-btn {
+    width: 145.83px;
+    padding: 12px 18px;
+    margin-bottom: 0;
+}
+
+input[type=submit].game-btn {
+    margin-top: 0.5rem;
+}
+
+.radio-input {
+    transform: scale(1.25);
+}
+
+.twentyOne-btn {
+    display: inline-block;
+    width: 145px;
+}
+
+input[type=number] {
+    background-color: #fff;
+    color: #111;
+    cursor: auto;
+    text-align: center;
+}
+
+input[type=submit]:hover {
+    transform: scale(1.05);
+}
+
+.single-card-21:not(.latest) {
+    opacity: 0.75;
+}
+
+.ace-form {
+    border: 4px double #ccc;
+    padding: 0 1rem;
+    margin: 1rem 0;
+}
+
+.p-total {
+    margin-top: 0;
 }
