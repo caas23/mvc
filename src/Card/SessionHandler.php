@@ -58,6 +58,7 @@ class SessionHandler extends DeckOfCards
         $total = $session->get("total");
         $session->set("total", $total + (int)$request->request->get("ace"));
         $session->set("aceCard", false);
+        $this->checkBust($session, false);
     }
 
     public function checkBust(
