@@ -1,0 +1,52 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Spela 21{% endblock %}
+
+{% block body %}
+    <h1>Spela 21</h1>
+    <div class="container twentyOne-container">
+        <div>
+            {% if drawn_bank is defined %}
+                <div>
+                    {% for card in drawn_bank %}
+                        {% if card == drawn_bank|last %}
+                        <img class="single-card-21 latest" src="{{ asset('svg/' ~ card) }}" alt="{{ card }}">
+                        {% else %}
+                        <img class="single-card-21" src="{{ asset('svg/' ~ card) }}" alt="{{ card }}">
+                        {% endif %}            
+                    {% endfor %}
+                    <p class="p-total">Bankens total: {{ total }}</p>
+                </div>
+            {% endif %}
+           
+            {% if drawn_player is defined %}
+                <div>
+                    {% for card in drawn_player %}
+                        {% if card == drawn_player|last %}
+                        <img class="single-card-21 latest" src="{{ asset('svg/' ~ card) }}" alt="{{ card }}">
+                        {% else %}
+                        <img class="single-card-21" src="{{ asset('svg/' ~ card) }}" alt="{{ card }}">
+                        {% endif %}            
+                    {% endfor %}
+                    <p class="p-total">Din total: {{ players_total }}</p>
+                </div>
+            {% endif %}
+
+            {% if total is defined and (total == 21 or total >= players_total and total < 21) %}
+                <h3>Banken vann!</h3>
+                <div class="btn-div">
+                    <form method="post" action="{{ path('game/play') }}">  
+                        <input type="submit" name="21" value="Spela igen!">
+                    </form>
+                </div>
+            {% elseif total is defined and (total > 21 or total < players_total) %}
+                <h3>Du vann!</h3>
+                <div class="btn-div">
+                    <form method="post" action="{{ path('game/play') }}">  
+                      <input type="submit" name="21" value="Spela igen!">
+                    </form>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

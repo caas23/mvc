@@ -1,0 +1,68 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}21{% endblock %}
+
+{% block body %}
+    <h1>21</h1>
+    <div class="container landing-container">
+        <div>
+            <h3>Spelregler</h3>
+
+            <ul>
+                <p>Spelet i sin helhet går ut på att komma så nära <a href="https://sv.wikipedia.org/wiki/Tjugoett_(kortspel)" target="_blank">21</a>  som möjligt, utan att gå över den gränsen.</p>
+
+                <li>Grundregler (utan insats)</li>
+                <ul>
+                    <li class="inner-list">
+                        Spelet börjar med att både spelaren och banken (här datorn) har noll kort vardera.
+                    </li>
+                    <li class="inner-list">
+                        Spelaren ges ett kort, och väljer därefter att få ett till kort, eller stanna.
+                    </li>
+                    <li class="inner-list">
+                        Om spelaren får 21, vinner denna.
+                    </li>
+                    <li class="inner-list">
+                        Om spelaren får mer än 21, förlorar denna och banken har vunnit omgången.
+                    </li>
+                    <li class="inner-list">
+                        Om spelaren stannar innan denne fått 21 eller mer, är det bankens tur att spela.<br>
+                        Banken genomför då samma procedur som spelaren, och vinner vid lika eller om dess total är högre än spelarens (utan att gå över 21).<br>
+                        Om banken går över 21 vinner spelaren.
+                    </li>
+                    <li class="inner-list">
+                        Då ingen instats används i denna variant, ges alltid <strong>ett poäng</strong> till den som vunnit omgången.
+                    </li>
+                </ul>
+
+                <li>Poängräkning</li>
+                <ul>
+                    <li class="inner-list">
+                        Nummerkorten (2-10) är värda motsvarande valörer.
+                    </li>
+                    <li class="inner-list">
+                        Knekt är värd 11 poäng.
+                    </li>
+                    <li class="inner-list">
+                        Dam är värd 12 poäng.
+                    </li>
+                    <li class="inner-list">
+                        Kung är värd 13 poäng.
+                    </li>
+                    <li class="inner-list">
+                        Essets värde sätts till 1 eller 14 (spelaren väljer för givet ess).
+                    </li>
+                </ul>
+            </ul>
+            
+            <div class="btn-div">
+                <form action="{{ path('game/doc') }}">  
+                    <input class="doc-btn" type="submit" name="" value="Dokumentation">
+                </form>
+                <form method="post" action="">  
+                    <input class="game-btn" type="submit" name="" value="Starta spelet">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Spela 21{% endblock %}
+
+{% block body %}
+    <h1>Spela 21</h1>
+    <div class="container twentyOne-container">
+        <div>
+            {% if drawn is defined %}
+                <div>
+                    {% for card in drawn %}
+                        {% if card == drawn|last %}
+                        <img class="single-card-21 latest" src="{{ asset('svg/' ~ card) }}" alt="{{ card }}">
+                        {% else %}
+                        <img class="single-card-21" src="{{ asset('svg/' ~ card) }}" alt="{{ card }}">
+                        {% endif %}            
+                    {% endfor %}
+                    {% if aceCard == true %}
+                        <div class="btn-div">
+                            <form class="ace-form" method="post" action="">
+                                <h4>Vilket värde vill du sätta esset till?</h4>
+                                <input class="radio-input" type="radio" name="ace" value="1" required>
+                                <label for "1">1</label><br>
+                                <input class="radio-input" type="radio" name="ace" value="14" required>
+                                <label for "14">14</label><br>
+                                <input type="submit" class="twentyOne-btn" name="21" value="Ange värde">
+                            </form>
+                        </div>
+                    {% endif %}
+                </div>
+                Din total: {{ total }}
+            {% endif %}
+
+            <div class="btn-div">
+                {% if total is not defined or (total < 21 and aceCard == false) %}
+                <form method="post" action="">
+                    <input type="submit" class="twentyOne-btn" name="21" value="Dra nytt kort">
+                    {% if (total is defined and total < 21) %}  
+                        <input type="submit" class="twentyOne-btn" name="21" value="Stanna">
+                    {% endif %}
+                </form>
+                {% endif %}
+            </div>
+
+            {% if total is defined and total == 21 %}
+                <h3>Du vann!</h3>
+            {% elseif total is defined and total > 21 %}
+                <h3>Du förlorade!</h3>
+            {% endif %}
+            
+            {% if total is defined and total >= 21 %}
+                <div class="btn-div">
+                    <form method="post" action="">  
+                        <input type="submit" name="21" value="Spela igen!">
+                    </form>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
