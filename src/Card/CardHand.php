@@ -5,9 +5,9 @@ namespace Caas23\Card;
 use Caas23\Card\Card;
 
 class CardHand
-{   
+{
     /**
-     * @var array<mixed> $hand
+     * @var array $hand
      */
     private array $hand = [];
 
@@ -20,9 +20,9 @@ class CardHand
     {
         return count($this->hand);
     }
-    
+
     /**
-     * @param array<mixed> $cards
+     * @param array $cards
      */
     public function getOneCard($cards): string
     {

@@ -8,6 +8,7 @@ use Caas23\Card\DeckOfCards;
 use Caas23\Card\DeckOfCardsJoker;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -44,5 +45,23 @@ class SessionController extends AbstractController
         );
 
         return $this->redirectToRoute('session');
+    }
+
+    // Kmom03
+    #[Route("api/game", name: "api/game")]
+    public function gameStats(
+        SessionInterface $session
+    ): Response {
+
+        $data = [
+            'Antal vinster spelare' => $session->get("player_won"),
+            'Antal vinster bank' => $session->get("bank_won")
+        ];
+
+        $response = new JsonResponse($data);
+        $response->setEncodingOptions(
+            $response->getEncodingOptions() | JSON_PRETTY_PRINT
+        );
+        return $response;
     }
 }
