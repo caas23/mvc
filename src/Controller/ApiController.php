@@ -261,8 +261,6 @@ class ApiController extends AbstractController
             'Dragna kort' => $session->get("drawn_cards"),
             'Kort kvar' => count((array)$session->get("cards_left")) - 1
         ];
-        $session->remove("cards_left");
-        $session->remove("drawn_cards");
 
         $response = new JsonResponse($data);
         $response->setEncodingOptions(

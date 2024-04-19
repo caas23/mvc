@@ -135,8 +135,6 @@ class Kmom02ControllerCard extends AbstractController
             'cards' => $session->get("drawn_cards"),
             'cards_left' => count((array)$session->get("cards_left")) - 1
         ];
-        $session->remove("cards_left");
-        $session->remove("drawn_cards");
 
         return $this->render('Kmom02/card_multiple.html.twig', $data);
     }
