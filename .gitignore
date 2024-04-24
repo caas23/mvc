@@ -32,3 +32,12 @@ yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 
 /tools/
+.phpdoc/
+.php-cs-fixer.cache
+
+### Ignore Dice files
+src/Dice/
+src/Controller/DiceGameController.php
+templates/pig/
+tests/Dice/
+test.txt
