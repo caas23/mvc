@@ -20,7 +20,7 @@ class Kmom02ControllerCardJoker extends AbstractController
         $deck = new DeckOfCardsJoker();
 
         $data = [
-            'cards' => $deck->getCards(),
+            'cards' => $deck->getCards('../public/svg/'),
             'shuffle' => false
         ];
         return $this->render('Kmom02/card_deck.html.twig', $data);
@@ -32,7 +32,7 @@ class Kmom02ControllerCardJoker extends AbstractController
     ): Response {
         $deck = new DeckOfCardsJoker();
 
-        $cards = $deck->getCardsShuffled();
+        $cards = $deck->getCardsShuffled('../public/svg/');
 
         $data = [
             'cards' => $cards,
@@ -50,7 +50,7 @@ class Kmom02ControllerCardJoker extends AbstractController
     ): Response {
         if (!$session->has("cardsJoker")) {
             $newDeck = new DeckOfCardsJoker();
-            $session->set("cardsJoker", $newDeck->getCards());
+            $session->set("cardsJoker", $newDeck->getCards('../public/svg/'));
         }
 
         $card = new Card();
@@ -85,7 +85,7 @@ class Kmom02ControllerCardJoker extends AbstractController
 
             if (!$session->has("cardsJoker")) {
                 $newDeck = new DeckOfCardsJoker();
-                $session->set("cardsJoker", $newDeck->getCards());
+                $session->set("cardsJoker", $newDeck->getCards('../public/svg/'));
             }
 
             $cardsOnHand = [];

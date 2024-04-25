@@ -27,7 +27,7 @@ class Kmom02ControllerCard extends AbstractController
         $deck = new DeckOfCards();
 
         $data = [
-            'cards' => $deck->getCards(),
+            'cards' => $deck->getCards('../public/svg/'),
             'shuffle' => false
         ];
 
@@ -39,7 +39,7 @@ class Kmom02ControllerCard extends AbstractController
         SessionInterface $session
     ): Response {
         $deck = new DeckOfCards();
-        $cards = $deck->getCardsShuffled();
+        $cards = $deck->getCardsShuffled('../public/svg/');
 
         $data = [
             'cards' => $cards,
@@ -58,7 +58,7 @@ class Kmom02ControllerCard extends AbstractController
 
         if (!$session->has("cards")) {
             $newDeck = new DeckOfCards();
-            $session->set("cards", $newDeck->getCards());
+            $session->set("cards", $newDeck->getCards('../public/svg/'));
         }
 
         $card = new Card();
@@ -86,7 +86,7 @@ class Kmom02ControllerCard extends AbstractController
             $number = $request->request->get('num_cards_joker');
             if (!$session->has("cardsJoker")) {
                 $newDeck = new DeckOfCardsJoker();
-                $session->set("cardsJoker", $newDeck->getCards());
+                $session->set("cardsJoker", $newDeck->getCards('../public/svg/'));
             }
 
             $card = new Card();
@@ -107,7 +107,7 @@ class Kmom02ControllerCard extends AbstractController
 
         } if (!$session->has("cards")) {
             $newDeck = new DeckOfCards();
-            $session->set("cards", $newDeck->getCards());
+            $session->set("cards", $newDeck->getCards('../public/svg/'));
         }
 
         $card = new Card();
@@ -157,7 +157,7 @@ class Kmom02ControllerCard extends AbstractController
 
             if (!$session->has("cards")) {
                 $newDeck = new DeckOfCards();
-                $session->set("cards", $newDeck->getCards());
+                $session->set("cards", $newDeck->getCards('../public/svg/'));
             }
 
             $cardsOnHand = [];
