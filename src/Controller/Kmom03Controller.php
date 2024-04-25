@@ -23,7 +23,7 @@ class Kmom03Controller extends AbstractController
     public function initGame(
         SessionInterface $session
     ): Response {
-        (new SessionHandler())->sessionInit($session);
+        (new SessionHandler())->sessionInit($session, '../public/svg/');
 
         return $this->redirectToRoute('game/play');
     }
@@ -64,7 +64,7 @@ class Kmom03Controller extends AbstractController
             $randomCard = $card->getOneCard((array)$cards);
             $drawn[] = $randomCard;
 
-            $handleSession->setValue($session, $card->getValue($randomCard), false);
+            $handleSession->setValue($session, $card->getValue($randomCard), $session->get("total"), false);
 
             $session->set("cards", array_diff((array)$cards, (array)$randomCard));
             $session->set("drawn", $drawn);
@@ -72,7 +72,7 @@ class Kmom03Controller extends AbstractController
         }
 
         if ($request->request->get("21") == "Ange värde") {
-            $handleSession->setAceValue($session, $request);
+            $handleSession->setAceValue($session, (int)$request->request->get("ace"), $session->get("total"));
         }
 
         $data = [
@@ -100,7 +100,7 @@ class Kmom03Controller extends AbstractController
             $randomCard = $card->getOneCard((array)$cards);
             $drawn[] = $randomCard;
 
-            $handleSession->setValue($session, $card->getValue($randomCard), true);
+            $handleSession->setValue($session, $card->getValue($randomCard), $session->get("total"), true);
 
             $session->set("cards", array_diff((array)$cards, (array)$randomCard));
             $session->set("drawn", $drawn);
