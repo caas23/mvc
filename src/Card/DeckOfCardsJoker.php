@@ -2,6 +2,9 @@
 
 namespace Caas23\Card;
 
+/**
+ * DeckOfCardsJoker class handling a deck including jokers.
+ */
 class DeckOfCardsJoker extends DeckOfCards
 {
     private mixed $joker = [
@@ -15,10 +18,11 @@ class DeckOfCardsJoker extends DeckOfCards
     }
 
     /**
+     * Get deck of cards, including jokers.
      * @return array<mixed>
      */
-    public function getCards(): array
+    public function getCards(string $path): array
     {
-        return array_merge(parent::getCards(), (array)$this->joker);
+        return array_merge(parent::getCards($path), (array)$this->joker);
     }
 }
