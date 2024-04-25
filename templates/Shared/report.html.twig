@@ -116,8 +116,6 @@
             <p>
     
                 <strong>Modellering</strong><br>
-                Berätta hur det kändes att modellera ett kortspel med flödesdiagram och psuedokod. 
-                Var det något som du tror stödjer dig i din problemlösning och tankearbete för att strukturera koden kring en applikation?
                 <p>
                     Första tanken när jag skulle börja skissa på ett flödesdiagram var ungefär "Oj, var börjar jag?". När jag väl kom igång insåg jag att det faktiskt är 
                     riktigt hjälpsamt att skissa upp flödet och visualisera det på så sätt, och det var inte alls lika "stort" att ta sig an som jag först trodde. 
@@ -162,7 +160,51 @@
         <div>
             <h3 id="kmom04">Kmom04</h3>
             <p>
-                Redovisningstext för detta kmom kommer här.
+    
+                <strong>PHPUnit</strong><br>
+                Berätta hur du upplevde att skriva kod som testar annan kod med PHPUnit och hur du upplever phpunit rent allmänt.
+                <p>
+                    Att skriva testkod för annan kod är något jag är lite bekant med sedan tidigare, men inte i just PHP.<br>
+                    Att skriva bra testkod känns ibland lite klurigt, och i just detta fall var det extra klurigt att få till bra testkod
+                    för sessionklassen, som ju är beroende av sessionsvariabler. Jag har därför inte lyckats få full kodtäckning i mina tester, men kommit 
+                    vad jag känner är nära utifrån förutsättningarna.  
+                </p>
+                
+                <strong>Kodtäckning</strong><br>
+                <p>
+                    Som nämnt ovan nådde jag inte hela vägen för sessionklassen, och landade strax under 85% för denna. De andra klasserna lyckades jag nå 100% för, vilket gjorde
+                    att min totala kodtäckning landade strax över 90% i slutändan. 
+                </p>
+                
+                <strong>Testbarhet</strong><br>
+                <p>
+                    Återigen är vi tillbaka i sessionklasssen, som jag upplevde lite svår att testa då den är så beroende av sessionen. Jag försökte läsa på lite och
+                    se hur jag skulle tackla det, men nådde inte hela vägen ändå. Jag ser det dock som en förbättring att jag lyckades skriva om koden och nå den täckning jag 
+                    gjorde, då den initiala procenten låg omkring 65-70%, vill jag minnas.<br>
+                    De andra klasserna upplevdes enklare i detta avseende, och jag kände att jag kunde genomföra rimliga tester för metoderna.
+                </p>
+
+                <strong>Omskrivning för ökad testbarhet</strong><br>
+                <p>
+                    Jag valde som sagt att skriva om delar av min sessionsklass för att underlätta testningen. Hade den initiala täcknignen varit, låt säga 90% för klassen, hade
+                    jag troligen tänkt att "Okej, inte hela vägen men nära nog". Nu när den var så förhållandevis låg kände jag att "här måste det gå att göra något för att komma upp lite",
+                    vilket det bevisligen även gick. Jag vill dock minnas att jag motiverade delar av min intiala kod för klassen med att jag hellre la det i klassen är i kontrollern,
+                    för att spara några kodrader där. Men nu när jag kom till kmom04 kände jag att det blev mer fördelaktigt att lägga någon extra rad i kontrollerna för att kunna
+                    testa metoderna på ett smidigare sätt.
+                </p>
+                
+                <strong>Snygg och ren kod</strong><br>
+                <p>
+                    Jag vill dra mig till minnes att Mikael i en föreläsning till kursmomentet slog fast att, jo, man kan nog påstå att tesbarkod och "snygg och ren kod" går lite
+                    hand i hand. Jag är beredd att hålla med här, just för att jag under testning av min egen kod sett hur strukturen av koden spelar in när den ska testas.
+                    Och mer strukturerad kod känns väl generellt snyggare?! Jag tror absolut så!
+                </p>
+                
+                <strong>TIL</strong><br>
+                <p>
+                    - Vad PHPUnit och PHPdoc är, och hur de kan användas.<br>
+                    - Dessutom har jag fått en inblick i hur mockning fungerar i PHP.<br>
+                </p>
             </p>
         </div>
         <div>
