@@ -67,7 +67,7 @@ class ApiController extends AbstractController
     {
         $deck = new DeckOfCards();
 
-        $cards = $deck->getCards();
+        $cards = $deck->getCards('../public/svg/');
 
         $data = [
             'Kort' => array_values($cards)
@@ -86,7 +86,7 @@ class ApiController extends AbstractController
         SessionInterface $session
     ): Response {
         $deck = new DeckOfCards();
-        $cards = $deck->getCardsShuffled();
+        $cards = $deck->getCardsShuffled('../public/svg/');
 
         $data = [
             'Kort' => $cards,
@@ -108,7 +108,7 @@ class ApiController extends AbstractController
     ): Response {
         if (!$session->has("cards")) {
             $newDeck = new DeckOfCards();
-            $session->set("cards", $newDeck->getCards());
+            $session->set("cards", $newDeck->getCards('../public/svg/'));
         }
 
         $card = new Card();
@@ -135,7 +135,7 @@ class ApiController extends AbstractController
     {
         $deck = new DeckOfCardsJoker();
 
-        $cards = $deck->getCards();
+        $cards = $deck->getCards('../public/svg/');
 
         $data = [
             'Kort' => array_values($cards)
@@ -154,7 +154,7 @@ class ApiController extends AbstractController
         SessionInterface $session
     ): Response {
         $deck = new DeckOfCardsJoker();
-        $cards = $deck->getCardsShuffled();
+        $cards = $deck->getCardsShuffled('../public/svg/');
 
 
         $data = [
@@ -177,7 +177,7 @@ class ApiController extends AbstractController
     ): Response {
         if (!$session->has("cardsJoker")) {
             $newDeck = new DeckOfCardsJoker();
-            $session->set("cardsJoker", $newDeck->getCards());
+            $session->set("cardsJoker", $newDeck->getCards('../public/svg/'));
         }
 
         $card = new Card();
@@ -210,7 +210,7 @@ class ApiController extends AbstractController
             $number = $request->request->get('num_cards_joker');
             if (!$session->has("cardsJoker")) {
                 $newDeck = new DeckOfCardsJoker();
-                $session->set("cardsJoker", $newDeck->getCards());
+                $session->set("cardsJoker", $newDeck->getCards('../public/svg/'));
             }
 
             $card = new Card();
@@ -231,7 +231,7 @@ class ApiController extends AbstractController
 
         } if (!$session->has("cards")) {
             $newDeck = new DeckOfCards();
-            $session->set("cards", $newDeck->getCards());
+            $session->set("cards", $newDeck->getCards('../public/svg/'));
         }
 
         $card = new Card();
