@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/caas23/dbwebb-kurser/mvc/me/report/src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css?v=9.2.31" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css?v=9.2.31" rel="stylesheet" type="text/css">
+  <link href="_css/style.css?v=9.2.31" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/home/caas23/dbwebb-kurser/mvc/me/report/src</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/ApiController.php.html#17">Caas23\Controller\ApiController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#15">Caas23\Controller\DiceGameController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom01ControllerTwig.php.html#9">Caas23\Controller\Kmom01ControllerTwig</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#16">Caas23\Controller\Kmom02ControllerCard</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCardJoker.php.html#15">Caas23\Controller\Kmom02ControllerCardJoker</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom03Controller.php.html#14">Caas23\Controller\Kmom03Controller</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SessionController.php.html#17">Caas23\Controller\SessionController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/Dice.php.html#5">Caas23\Dice\Dice</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceGraphic.php.html#5">Caas23\Dice\DiceGraphic</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#7">Caas23\Dice\DiceHand</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/ApiController.php.html#17">Caas23\Controller\ApiController</a></td><td class="text-right">380</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#16">Caas23\Controller\Kmom02ControllerCard</a></td><td class="text-right">380</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#15">Caas23\Controller\DiceGameController</a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="Controller/Kmom03Controller.php.html#14">Caas23\Controller\Kmom03Controller</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#7">Caas23\Dice\DiceHand</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCardJoker.php.html#15">Caas23\Controller\Kmom02ControllerCardJoker</a></td><td class="text-right">90</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/ApiController.php.html#20"><abbr title="Caas23\Controller\ApiController::api">api</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#39"><abbr title="Caas23\Controller\ApiController::jsonQuote">jsonQuote</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#65"><abbr title="Caas23\Controller\ApiController::jsonDeck">jsonDeck</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#84"><abbr title="Caas23\Controller\ApiController::jsonDeckShuffle">jsonDeckShuffle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#105"><abbr title="Caas23\Controller\ApiController::jsonDeckDraw">jsonDeckDraw</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#133"><abbr title="Caas23\Controller\ApiController::jsonDeckJoker">jsonDeckJoker</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#152"><abbr title="Caas23\Controller\ApiController::jsonDeckJokerShuffle">jsonDeckJokerShuffle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#174"><abbr title="Caas23\Controller\ApiController::jsonDeckJokerDraw">jsonDeckJokerDraw</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#202"><abbr title="Caas23\Controller\ApiController::apiPost">apiPost</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#255"><abbr title="Caas23\Controller\ApiController::jsonDeckShowMultiple">jsonDeckShowMultiple</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#17"><abbr title="Caas23\Controller\DiceGameController::home">home</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#23"><abbr title="Caas23\Controller\DiceGameController::testRollDice">testRollDice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#36"><abbr title="Caas23\Controller\DiceGameController::testRollDices">testRollDices</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#59"><abbr title="Caas23\Controller\DiceGameController::testDiceHand">testDiceHand</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#85"><abbr title="Caas23\Controller\DiceGameController::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#91"><abbr title="Caas23\Controller\DiceGameController::initCallback">initCallback</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#112"><abbr title="Caas23\Controller\DiceGameController::play">play</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#128"><abbr title="Caas23\Controller\DiceGameController::roll">roll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#158"><abbr title="Caas23\Controller\DiceGameController::save">save</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom01ControllerTwig.php.html#11"><abbr title="Caas23\Controller\Kmom01ControllerTwig::presentation">presentation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom01ControllerTwig.php.html#17"><abbr title="Caas23\Controller\Kmom01ControllerTwig::about">about</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom01ControllerTwig.php.html#23"><abbr title="Caas23\Controller\Kmom01ControllerTwig::report">report</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom01ControllerTwig.php.html#29"><abbr title="Caas23\Controller\Kmom01ControllerTwig::lucky">lucky</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#18"><abbr title="Caas23\Controller\Kmom02ControllerCard::card">card</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#24"><abbr title="Caas23\Controller\Kmom02ControllerCard::cardDeck">cardDeck</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#37"><abbr title="Caas23\Controller\Kmom02ControllerCard::cardDeckShuffle">cardDeckShuffle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#54"><abbr title="Caas23\Controller\Kmom02ControllerCard::cardDeckDraw">cardDeckDraw</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#78"><abbr title="Caas23\Controller\Kmom02ControllerCard::cardDeckDrawMultiple">cardDeckDrawMultiple</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#130"><abbr title="Caas23\Controller\Kmom02ControllerCard::cardDeckShowMultiple">cardDeckShowMultiple</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#142"><abbr title="Caas23\Controller\Kmom02ControllerCard::dealCardHand">dealCardHand</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCardJoker.php.html#17"><abbr title="Caas23\Controller\Kmom02ControllerCardJoker::cardDeckJoker">cardDeckJoker</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCardJoker.php.html#29"><abbr title="Caas23\Controller\Kmom02ControllerCardJoker::cardDeckJokerShuffle">cardDeckJokerShuffle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCardJoker.php.html#47"><abbr title="Caas23\Controller\Kmom02ControllerCardJoker::cardDeckJokerDraw">cardDeckJokerDraw</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCardJoker.php.html#70"><abbr title="Caas23\Controller\Kmom02ControllerCardJoker::dealJokerCardHand">dealJokerCardHand</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom03Controller.php.html#16"><abbr title="Caas23\Controller\Kmom03Controller::gameIntro">gameIntro</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom03Controller.php.html#22"><abbr title="Caas23\Controller\Kmom03Controller::initGame">initGame</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom03Controller.php.html#31"><abbr title="Caas23\Controller\Kmom03Controller::gameDoc">gameDoc</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom03Controller.php.html#37"><abbr title="Caas23\Controller\Kmom03Controller::gamePlay">gamePlay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom03Controller.php.html#43"><abbr title="Caas23\Controller\Kmom03Controller::drawCard">drawCard</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Kmom03Controller.php.html#87"><abbr title="Caas23\Controller\Kmom03Controller::drawCardBank">drawCardBank</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SessionController.php.html#19"><abbr title="Caas23\Controller\SessionController::session">session</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SessionController.php.html#33"><abbr title="Caas23\Controller\SessionController::sessionDelete">sessionDelete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SessionController.php.html#51"><abbr title="Caas23\Controller\SessionController::gameStats">gameStats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/Dice.php.html#9"><abbr title="Caas23\Dice\Dice::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/Dice.php.html#14"><abbr title="Caas23\Dice\Dice::roll">roll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/Dice.php.html#20"><abbr title="Caas23\Dice\Dice::getValue">getValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/Dice.php.html#25"><abbr title="Caas23\Dice\Dice::getAsString">getAsString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceGraphic.php.html#16"><abbr title="Caas23\Dice\DiceGraphic::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceGraphic.php.html#21"><abbr title="Caas23\Dice\DiceGraphic::getAsString">getAsString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#11"><abbr title="Caas23\Dice\DiceHand::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#16"><abbr title="Caas23\Dice\DiceHand::roll">roll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#23"><abbr title="Caas23\Dice\DiceHand::getNumberDices">getNumberDices</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#28"><abbr title="Caas23\Dice\DiceHand::getValues">getValues</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#37"><abbr title="Caas23\Dice\DiceHand::getString">getString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#46"><abbr title="Caas23\Dice\DiceHand::sum">sum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Card/SessionHandler.php.html#98"><abbr title="Caas23\Card\SessionHandler::checkWinner">checkWinner</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="Card/SessionHandler.php.html#81"><abbr title="Caas23\Card\SessionHandler::checkBust">checkBust</abbr></a></td><td class="text-right">66%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/ApiController.php.html#202"><abbr title="Caas23\Controller\ApiController::apiPost">apiPost</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#78"><abbr title="Caas23\Controller\Kmom02ControllerCard::cardDeckDrawMultiple">cardDeckDrawMultiple</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#142"><abbr title="Caas23\Controller\Kmom02ControllerCard::dealCardHand">dealCardHand</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCardJoker.php.html#70"><abbr title="Caas23\Controller\Kmom02ControllerCardJoker::dealJokerCardHand">dealJokerCardHand</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controller/Kmom03Controller.php.html#43"><abbr title="Caas23\Controller\Kmom03Controller::drawCard">drawCard</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Card/SessionHandler.php.html#98"><abbr title="Caas23\Card\SessionHandler::checkWinner">checkWinner</abbr></a></td><td class="text-right">16</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#59"><abbr title="Caas23\Controller\DiceGameController::testDiceHand">testDiceHand</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#128"><abbr title="Caas23\Controller\DiceGameController::roll">roll</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/Kmom03Controller.php.html#87"><abbr title="Caas23\Controller\Kmom03Controller::drawCardBank">drawCardBank</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Card/SessionHandler.php.html#81"><abbr title="Caas23\Card\SessionHandler::checkBust">checkBust</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#105"><abbr title="Caas23\Controller\ApiController::jsonDeckDraw">jsonDeckDraw</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/ApiController.php.html#174"><abbr title="Caas23\Controller\ApiController::jsonDeckJokerDraw">jsonDeckJokerDraw</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#36"><abbr title="Caas23\Controller\DiceGameController::testRollDices">testRollDices</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/DiceGameController.php.html#91"><abbr title="Caas23\Controller\DiceGameController::initCallback">initCallback</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCard.php.html#54"><abbr title="Caas23\Controller\Kmom02ControllerCard::cardDeckDraw">cardDeckDraw</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/Kmom02ControllerCardJoker.php.html#47"><abbr title="Caas23\Controller\Kmom02ControllerCardJoker::cardDeckJokerDraw">cardDeckJokerDraw</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#16"><abbr title="Caas23\Dice\DiceHand::roll">roll</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#28"><abbr title="Caas23\Dice\DiceHand::getValues">getValues</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#37"><abbr title="Caas23\Dice\DiceHand::getString">getString</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dice/DiceHand.php.html#46"><abbr title="Caas23\Dice\DiceHand::sum">sum</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.31</a> using <a href="https://secure.php.net/" target="_top">PHP 8.3.4</a> and <a href="https://phpunit.de/">PHPUnit 9.6.18</a> at Thu Apr 25 17:21:16 UTC 2024.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js?v=9.2.31" type="text/javascript"></script>
+  <script src="_js/d3.min.js?v=9.2.31" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js?v=9.2.31" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([10,0,0,0,0,0,0,0,0,1,0,5], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([55,0,0,0,0,0,0,2,0,1,0,15], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,3,"<a href=\"Card\/Card.php.html#8\">Caas23\\Card\\Card<\/a>"],[100,5,"<a href=\"Card\/CardHand.php.html#10\">Caas23\\Card\\CardHand<\/a>"],[100,3,"<a href=\"Card\/DeckOfCards.php.html#8\">Caas23\\Card\\DeckOfCards<\/a>"],[100,2,"<a href=\"Card\/DeckOfCardsJoker.php.html#8\">Caas23\\Card\\DeckOfCardsJoker<\/a>"],[84.84848484848484,26,"<a href=\"Card\/SessionHandler.php.html#10\">Caas23\\Card\\SessionHandler<\/a>"],[0,19,"<a href=\"Controller\/ApiController.php.html#17\">Caas23\\Controller\\ApiController<\/a>"],[0,15,"<a href=\"Controller\/DiceGameController.php.html#15\">Caas23\\Controller\\DiceGameController<\/a>"],[0,4,"<a href=\"Controller\/Kmom01ControllerTwig.php.html#9\">Caas23\\Controller\\Kmom01ControllerTwig<\/a>"],[0,19,"<a href=\"Controller\/Kmom02ControllerCard.php.html#16\">Caas23\\Controller\\Kmom02ControllerCard<\/a>"],[0,9,"<a href=\"Controller\/Kmom02ControllerCardJoker.php.html#15\">Caas23\\Controller\\Kmom02ControllerCardJoker<\/a>"],[0,12,"<a href=\"Controller\/Kmom03Controller.php.html#14\">Caas23\\Controller\\Kmom03Controller<\/a>"],[0,3,"<a href=\"Controller\/SessionController.php.html#17\">Caas23\\Controller\\SessionController<\/a>"],[0,4,"<a href=\"Dice\/Dice.php.html#5\">Caas23\\Dice\\Dice<\/a>"],[0,2,"<a href=\"Dice\/DiceGraphic.php.html#5\">Caas23\\Dice\\DiceGraphic<\/a>"],[0,10,"<a href=\"Dice\/DiceHand.php.html#7\">Caas23\\Dice\\DiceHand<\/a>"],[100,0,"<a href=\"Kernel.php.html#8\">Caas23\\Kernel<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Card\/Card.php.html#12\">Caas23\\Card\\Card::__construct<\/a>"],[100,1,"<a href=\"Card\/Card.php.html#21\">Caas23\\Card\\Card::getOneCard<\/a>"],[100,1,"<a href=\"Card\/Card.php.html#32\">Caas23\\Card\\Card::getValue<\/a>"],[100,1,"<a href=\"Card\/CardHand.php.html#20\">Caas23\\Card\\CardHand::add<\/a>"],[100,1,"<a href=\"Card\/CardHand.php.html#28\">Caas23\\Card\\CardHand::getNumberOfCards<\/a>"],[100,3,"<a href=\"Card\/CardHand.php.html#37\">Caas23\\Card\\CardHand::getOneCard<\/a>"],[100,1,"<a href=\"Card\/DeckOfCards.php.html#12\">Caas23\\Card\\DeckOfCards::__construct<\/a>"],[100,1,"<a href=\"Card\/DeckOfCards.php.html#21\">Caas23\\Card\\DeckOfCards::getCards<\/a>"],[100,1,"<a href=\"Card\/DeckOfCards.php.html#31\">Caas23\\Card\\DeckOfCards::getCardsShuffled<\/a>"],[100,1,"<a href=\"Card\/DeckOfCardsJoker.php.html#15\">Caas23\\Card\\DeckOfCardsJoker::__construct<\/a>"],[100,1,"<a href=\"Card\/DeckOfCardsJoker.php.html#24\">Caas23\\Card\\DeckOfCardsJoker::getCards<\/a>"],[100,1,"<a href=\"Card\/SessionHandler.php.html#12\">Caas23\\Card\\SessionHandler::__construct<\/a>"],[100,1,"<a href=\"Card\/SessionHandler.php.html#20\">Caas23\\Card\\SessionHandler::sessionInit<\/a>"],[100,2,"<a href=\"Card\/SessionHandler.php.html#35\">Caas23\\Card\\SessionHandler::winnerToSession<\/a>"],[88.88888888888889,5,"<a href=\"Card\/SessionHandler.php.html#48\">Caas23\\Card\\SessionHandler::setValue<\/a>"],[100,1,"<a href=\"Card\/SessionHandler.php.html#69\">Caas23\\Card\\SessionHandler::setAceValue<\/a>"],[66.66666666666666,6,"<a href=\"Card\/SessionHandler.php.html#81\">Caas23\\Card\\SessionHandler::checkBust<\/a>"],[60,10,"<a href=\"Card\/SessionHandler.php.html#98\">Caas23\\Card\\SessionHandler::checkWinner<\/a>"],[0,1,"<a href=\"Controller\/ApiController.php.html#20\">Caas23\\Controller\\ApiController::api<\/a>"],[0,1,"<a href=\"Controller\/ApiController.php.html#39\">Caas23\\Controller\\ApiController::jsonQuote<\/a>"],[0,1,"<a href=\"Controller\/ApiController.php.html#65\">Caas23\\Controller\\ApiController::jsonDeck<\/a>"],[0,1,"<a href=\"Controller\/ApiController.php.html#84\">Caas23\\Controller\\ApiController::jsonDeckShuffle<\/a>"],[0,2,"<a href=\"Controller\/ApiController.php.html#105\">Caas23\\Controller\\ApiController::jsonDeckDraw<\/a>"],[0,1,"<a href=\"Controller\/ApiController.php.html#133\">Caas23\\Controller\\ApiController::jsonDeckJoker<\/a>"],[0,1,"<a href=\"Controller\/ApiController.php.html#152\">Caas23\\Controller\\ApiController::jsonDeckJokerShuffle<\/a>"],[0,2,"<a href=\"Controller\/ApiController.php.html#174\">Caas23\\Controller\\ApiController::jsonDeckJokerDraw<\/a>"],[0,8,"<a href=\"Controller\/ApiController.php.html#202\">Caas23\\Controller\\ApiController::apiPost<\/a>"],[0,1,"<a href=\"Controller\/ApiController.php.html#255\">Caas23\\Controller\\ApiController::jsonDeckShowMultiple<\/a>"],[0,1,"<a href=\"Controller\/DiceGameController.php.html#17\">Caas23\\Controller\\DiceGameController::home<\/a>"],[0,1,"<a href=\"Controller\/DiceGameController.php.html#23\">Caas23\\Controller\\DiceGameController::testRollDice<\/a>"],[0,2,"<a href=\"Controller\/DiceGameController.php.html#36\">Caas23\\Controller\\DiceGameController::testRollDices<\/a>"],[0,3,"<a href=\"Controller\/DiceGameController.php.html#59\">Caas23\\Controller\\DiceGameController::testDiceHand<\/a>"],[0,1,"<a href=\"Controller\/DiceGameController.php.html#85\">Caas23\\Controller\\DiceGameController::init<\/a>"],[0,2,"<a href=\"Controller\/DiceGameController.php.html#91\">Caas23\\Controller\\DiceGameController::initCallback<\/a>"],[0,1,"<a href=\"Controller\/DiceGameController.php.html#112\">Caas23\\Controller\\DiceGameController::play<\/a>"],[0,3,"<a href=\"Controller\/DiceGameController.php.html#128\">Caas23\\Controller\\DiceGameController::roll<\/a>"],[0,1,"<a href=\"Controller\/DiceGameController.php.html#158\">Caas23\\Controller\\DiceGameController::save<\/a>"],[0,1,"<a href=\"Controller\/Kmom01ControllerTwig.php.html#11\">Caas23\\Controller\\Kmom01ControllerTwig::presentation<\/a>"],[0,1,"<a href=\"Controller\/Kmom01ControllerTwig.php.html#17\">Caas23\\Controller\\Kmom01ControllerTwig::about<\/a>"],[0,1,"<a href=\"Controller\/Kmom01ControllerTwig.php.html#23\">Caas23\\Controller\\Kmom01ControllerTwig::report<\/a>"],[0,1,"<a href=\"Controller\/Kmom01ControllerTwig.php.html#29\">Caas23\\Controller\\Kmom01ControllerTwig::lucky<\/a>"],[0,1,"<a href=\"Controller\/Kmom02ControllerCard.php.html#18\">Caas23\\Controller\\Kmom02ControllerCard::card<\/a>"],[0,1,"<a href=\"Controller\/Kmom02ControllerCard.php.html#24\">Caas23\\Controller\\Kmom02ControllerCard::cardDeck<\/a>"],[0,1,"<a href=\"Controller\/Kmom02ControllerCard.php.html#37\">Caas23\\Controller\\Kmom02ControllerCard::cardDeckShuffle<\/a>"],[0,2,"<a href=\"Controller\/Kmom02ControllerCard.php.html#54\">Caas23\\Controller\\Kmom02ControllerCard::cardDeckDraw<\/a>"],[0,8,"<a href=\"Controller\/Kmom02ControllerCard.php.html#78\">Caas23\\Controller\\Kmom02ControllerCard::cardDeckDrawMultiple<\/a>"],[0,1,"<a href=\"Controller\/Kmom02ControllerCard.php.html#130\">Caas23\\Controller\\Kmom02ControllerCard::cardDeckShowMultiple<\/a>"],[0,5,"<a href=\"Controller\/Kmom02ControllerCard.php.html#142\">Caas23\\Controller\\Kmom02ControllerCard::dealCardHand<\/a>"],[0,1,"<a href=\"Controller\/Kmom02ControllerCardJoker.php.html#17\">Caas23\\Controller\\Kmom02ControllerCardJoker::cardDeckJoker<\/a>"],[0,1,"<a href=\"Controller\/Kmom02ControllerCardJoker.php.html#29\">Caas23\\Controller\\Kmom02ControllerCardJoker::cardDeckJokerShuffle<\/a>"],[0,2,"<a href=\"Controller\/Kmom02ControllerCardJoker.php.html#47\">Caas23\\Controller\\Kmom02ControllerCardJoker::cardDeckJokerDraw<\/a>"],[0,5,"<a href=\"Controller\/Kmom02ControllerCardJoker.php.html#70\">Caas23\\Controller\\Kmom02ControllerCardJoker::dealJokerCardHand<\/a>"],[0,1,"<a href=\"Controller\/Kmom03Controller.php.html#16\">Caas23\\Controller\\Kmom03Controller::gameIntro<\/a>"],[0,1,"<a href=\"Controller\/Kmom03Controller.php.html#22\">Caas23\\Controller\\Kmom03Controller::initGame<\/a>"],[0,1,"<a href=\"Controller\/Kmom03Controller.php.html#31\">Caas23\\Controller\\Kmom03Controller::gameDoc<\/a>"],[0,1,"<a href=\"Controller\/Kmom03Controller.php.html#37\">Caas23\\Controller\\Kmom03Controller::gamePlay<\/a>"],[0,5,"<a href=\"Controller\/Kmom03Controller.php.html#43\">Caas23\\Controller\\Kmom03Controller::drawCard<\/a>"],[0,3,"<a href=\"Controller\/Kmom03Controller.php.html#87\">Caas23\\Controller\\Kmom03Controller::drawCardBank<\/a>"],[0,1,"<a href=\"Controller\/SessionController.php.html#19\">Caas23\\Controller\\SessionController::session<\/a>"],[0,1,"<a href=\"Controller\/SessionController.php.html#33\">Caas23\\Controller\\SessionController::sessionDelete<\/a>"],[0,1,"<a href=\"Controller\/SessionController.php.html#51\">Caas23\\Controller\\SessionController::gameStats<\/a>"],[0,1,"<a href=\"Dice\/Dice.php.html#9\">Caas23\\Dice\\Dice::__construct<\/a>"],[0,1,"<a href=\"Dice\/Dice.php.html#14\">Caas23\\Dice\\Dice::roll<\/a>"],[0,1,"<a href=\"Dice\/Dice.php.html#20\">Caas23\\Dice\\Dice::getValue<\/a>"],[0,1,"<a href=\"Dice\/Dice.php.html#25\">Caas23\\Dice\\Dice::getAsString<\/a>"],[0,1,"<a href=\"Dice\/DiceGraphic.php.html#16\">Caas23\\Dice\\DiceGraphic::__construct<\/a>"],[0,1,"<a href=\"Dice\/DiceGraphic.php.html#21\">Caas23\\Dice\\DiceGraphic::getAsString<\/a>"],[0,1,"<a href=\"Dice\/DiceHand.php.html#11\">Caas23\\Dice\\DiceHand::add<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#16\">Caas23\\Dice\\DiceHand::roll<\/a>"],[0,1,"<a href=\"Dice\/DiceHand.php.html#23\">Caas23\\Dice\\DiceHand::getNumberDices<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#28\">Caas23\\Dice\\DiceHand::getValues<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#37\">Caas23\\Dice\\DiceHand::getString<\/a>"],[0,2,"<a href=\"Dice\/DiceHand.php.html#46\">Caas23\\Dice\\DiceHand::sum<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
