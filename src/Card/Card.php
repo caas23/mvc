@@ -2,6 +2,9 @@
 
 namespace Caas23\Card;
 
+/**
+ * Card class handling single cards.
+ */
 class Card
 {
     protected ?string $card;
@@ -12,6 +15,7 @@ class Card
     }
 
     /**
+     * Get a random card from given deck.
      * @param array $cards
      */
     public function getOneCard(array $cards): string
@@ -22,6 +26,9 @@ class Card
         return $this->card;
     }
 
+    /**
+     * Get numeric value for given card.
+     */
     public function getValue(string $card): int
     {
         $number = explode("-", $card)[1];
