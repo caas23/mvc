@@ -2,9 +2,11 @@
 
 namespace Caas23\Card;
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
+/**
+ * SessionHandler class handling the session.
+ */
 class SessionHandler extends DeckOfCards
 {
     public function __construct()
@@ -12,10 +14,14 @@ class SessionHandler extends DeckOfCards
         parent::__construct();
     }
 
+    /**
+     * Init new session.
+     */
     public function sessionInit(
-        SessionInterface $session
+        SessionInterface $session,
+        string $path
     ): void {
-        $session->set("cards", parent::getCardsShuffled());
+        $session->set("cards", parent::getCardsShuffled($path));
         $session->set("drawn", []);
         $session->set("drawn_player", []);
         $session->set("total", 0);
@@ -23,6 +29,9 @@ class SessionHandler extends DeckOfCards
         $session->set("aceCard", false);
     }
 
+    /**
+     * Add winner to session and add one point.
+     */
     public function winnerToSession(
         SessionInterface $session,
         string $sessionVariable
@@ -33,12 +42,15 @@ class SessionHandler extends DeckOfCards
         $session->set($sessionVariable, $session->get($sessionVariable) + 1);
     }
 
+    /**
+     * Set value for card, add to total. Check if total > 21, using checkBust().
+     */
     public function setValue(
         SessionInterface $session,
         int $value,
+        mixed $total,
         bool $bank
     ): void {
-        $total = $session->get("total");
         if ($value != 01) {
             $session->set("total", $total + $value);
         } elseif ($bank == false) {
@@ -48,38 +60,46 @@ class SessionHandler extends DeckOfCards
         } elseif ($bank == true) {
             $session->set("total", $total + 1);
         }
-        $this->checkBust($session, $bank);
+        $this->checkBust($session, $total, $bank);
     }
 
+    /**
+     * Set ace value, as chosen by player. Add to total. Check if total > 21, using checkBust().
+     */
     public function setAceValue(
         SessionInterface $session,
-        Request $request
+        int $value,
+        mixed $total
     ): void {
-        $total = $session->get("total");
-        $session->set("total", $total + (int)$request->request->get("ace"));
+        $session->set("total", $total + $value);
         $session->set("aceCard", false);
-        $this->checkBust($session, false);
+        $this->checkBust($session, $total, false);
     }
-
+    /**
+     * Check if total > 21, if so add winner to session. If total <= 21, and game is over, check who won using checkWinner().
+     */
     public function checkBust(
         SessionInterface $session,
+        mixed $total,
         bool $bank
     ): void {
-        $total = $session->get("total");
         if ($total > 21 && $bank == false) {
             $this->winnerToSession($session, "bank_won");
         } elseif ($total > 21 && $bank == true) {
             $this->winnerToSession($session, "player_won");
         } elseif ($total <= 21) {
-            $this->checkWinner($session, $bank);
+            $this->checkWinner($session, $total, $bank);
         }
     }
 
+    /**
+     * Check if player or bank won, add winner to session using winnerToSession().
+     */
     public function checkWinner(
         SessionInterface $session,
+        mixed $total,
         bool $bank
     ): void {
-        $total = $session->get("total");
         $playersTotal = $session->get("players_total");
 
         if ($bank == false && $total == 21 || ($bank == true && $total >= 17 && $total < $playersTotal)) {
