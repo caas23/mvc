@@ -35,7 +35,7 @@ class Kmom05Controller extends AbstractController
 
             $library = new Library();
             $library->setTitle((string)$title);
-            $library->setIsbn((int)$isbn);
+            $library->setIsbn((string)$isbn);
             $library->setAuthor((string)$author);
             $library->setImage((string)$image);
 
@@ -126,7 +126,7 @@ class Kmom05Controller extends AbstractController
         }
 
         $book->setTitle((string)$title);
-        $book->setIsbn((int)$isbn);
+        $book->setIsbn((string)$isbn);
         $book->setAuthor((string)$author);
         $book->setImage((string)$image);
 
@@ -191,7 +191,7 @@ class Kmom05Controller extends AbstractController
             $library = new Library();
             $library->setTitle((string)$book[0]);
             $library->setAuthor((string)$book[1]);
-            $library->setIsbn((int)$book[2]);
+            $library->setIsbn((string)$book[2]);
             $library->setImage((string)$book[3]);
             $entityManager->persist($library);
             $entityManager->flush();
@@ -215,7 +215,7 @@ class Kmom05Controller extends AbstractController
     #[Route('/api/library/book/{isbn}', name: 'api/library/book')]
     public function showOneBookAPI(
         LibraryRepository $libraryRepository,
-        int $isbn
+        string $isbn
     ): Response {
         $book = $libraryRepository->findOneByIsbn($isbn);
 

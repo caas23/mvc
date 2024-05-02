@@ -16,7 +16,7 @@ class LibraryRepository extends ServiceEntityRepository
         parent::__construct($registry, Library::class);
     }
 
-    public function findOneByIsbn(int $isbn): mixed
+    public function findOneByIsbn(string $isbn): mixed
     {
         return $this->createQueryBuilder('l')
             ->andWhere('l.isbn = :val')
