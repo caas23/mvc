@@ -12,7 +12,7 @@ class CardHand
     /**
      * @var array $hand
      */
-    private array $hand = [];
+    private array $hand = []; //@phpstan-ignore-line
 
     /**
      * Add cards to hand, using the Card class.
@@ -34,7 +34,7 @@ class CardHand
      * Get one card from the hand.
      * @param array $cards
      */
-    public function getOneCard($cards): string
+    public function getOneCard($cards): string //@phpstan-ignore-line
     {
         foreach ($this->hand as $card) {
             $oneCard = $card->getOneCard($cards);

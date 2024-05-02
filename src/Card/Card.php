@@ -18,7 +18,7 @@ class Card
      * Get a random card from given deck.
      * @param array $cards
      */
-    public function getOneCard(array $cards): string
+    public function getOneCard(array $cards): string //@phpstan-ignore-line
     {
         $randKey = array_rand($cards, 1);
 

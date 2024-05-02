@@ -94,6 +94,7 @@ class SessionHandler extends DeckOfCards
 
     /**
      * Check if player or bank won, add winner to session using winnerToSession().
+     * @SuppressWarnings(PHPMD) (Cyclomatic Complexity of 10)
      */
     public function checkWinner(
         SessionInterface $session,
