@@ -189,10 +189,10 @@ class Kmom05Controller extends AbstractController
 
         foreach ($books as $book) {
             $library = new Library();
-            $library->setTitle($book[0]);
-            $library->setAuthor($book[1]);
-            $library->setIsbn($book[2]);
-            $library->setImage($book[3]);
+            $library->setTitle((string)$book[0]);
+            $library->setAuthor((string)$book[1]);
+            $library->setIsbn((int)$book[2]);
+            $library->setImage((string)$book[3]);
             $entityManager->persist($library);
             $entityManager->flush();
         }
