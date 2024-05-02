@@ -454,3 +454,159 @@ input[type=submit]:hover {
 .p-total {
     margin-top: 0;
 }
+
+.library-container {
+    & h3 {
+        margin-bottom: 0.5rem;
+    }
+}
+form.library-form { 
+    
+    & input {
+        display: block;  
+        margin-bottom: 0.7rem;  
+    }
+
+    & label::after {
+        content: ':';
+    }
+
+    & input[type=text] {
+        font-size: 16px;
+        border: none;
+        padding: 6px 14px;
+        text-decoration: none;
+        border-radius: 5px;
+        width: 250px;
+    }
+
+    & input[type=submit] {
+        background-color: #1995e7;
+        font-size: 16px;
+        border: none;
+        color: #fff;
+        padding: 12px 28px;
+        text-decoration: none;
+        margin: 1rem 0;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 278px;
+        margin-bottom: 0;
+    }
+
+    & .tip-under {
+        margin-bottom: 0.25rem;
+    }
+}
+
+.book-img {
+    display: block;
+    float: left;
+    height: 250px;
+    border-radius: 3px;
+    margin-right: 1rem;
+}
+
+.library-container > div {
+    position: relative;
+
+    & h4 {
+        margin-bottom: 0;
+    }
+    & span {
+        height: 250px;
+        width: 75%;
+        position: absolute;
+        bottom: 8.75rem;
+    }
+
+    & span p {
+        margin-top: 0;
+    }
+
+    & .span-tip {
+        height: 0;
+        width: auto;
+        position: relative;
+        bottom: 0 ;  
+        font-size: 15px;
+        font-style: italic;  
+    }
+}
+
+/* .single-book {
+    display: block;
+    height: 290px;
+    padding: 1rem;
+    border-bottom: 2px dashed #ccc;
+
+    & h3 {
+        margin-top: 0;
+    }
+
+    & .book-info {
+        position: relative;
+        width: 75%;
+        bottom: -8rem;
+    }
+    
+    & .book-info p {
+        margin-top: 0;
+    }
+    
+    &:last-child {
+        border-bottom: none;
+    }
+} */
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+    & a {
+        color: #111;
+    }
+    
+    & a:hover {
+        color: #1995e7;
+    }
+
+    & th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #1995e7;
+        color: white;
+    }
+    
+    & td, th {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+
+    & tr {
+        background-color: #f2f2f2;
+    }
+}
+
+.crud-btn-1 {
+    position: absolute;
+    bottom: 4rem;
+    left: 1rem;
+    width: 125px;
+}
+
+.crud-btn-2 {
+    position: absolute;
+    bottom: 4rem;
+    left: 9.5rem;
+    width: 125px;
+}
+
+.crud-btn-3 {
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    width: 261px;
+}
