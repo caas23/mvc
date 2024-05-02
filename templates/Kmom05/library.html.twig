@@ -1,0 +1,45 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Bibliotek{% endblock %}
+
+{% block body %}
+    <h1>Bibliotek</h1>
+    <div class="container library-container">
+        <div>
+            <h3>Lägg till ny bok</h3>
+            <form class="library-form" method="post" action="">  
+                <label for="title">Titel</label>
+                <input type="text" id="title" name="title" placeholder="Titel..." required>
+                
+                <label for="isbn">ISBN</label>
+                <input type="text" id="isbn" name="isbn" placeholder="ISBN..." required>
+                
+                <label for="author">Författare</label>
+                <input type="text" id="author" name="author" placeholder="Författare..." required>
+                
+                <label for="image">Bildkälla</label>
+                <input type="text" id="image" name="image" placeholder="Bildkälla..." required>
+
+                <input type="submit" name="" value="Lägg till bok">
+            </form>
+            
+            <h3>Visa en eller alla böcker</h3>
+            <form class="library-form" method="post" action="">  
+                <label for="id">Id</label>
+                <input class="tip-under" type="text" id="id" name="id" placeholder="Id för boken..." required>
+                <span class="span-tip">Tips! Se alla böckers id via "visa alla böcker".</span>
+                <input type="submit" name="" value="Visa vald bok">
+            </form>
+            
+            <form class="library-form" action="{{ path('library_show_all') }}">  
+                <input type="submit" name="" value="Visa alla böcker">
+            </form>
+            
+            <h3>Återställ databasen</h3>
+            
+            <form class="library-form" action="{{ path('library_reset') }}">  
+                <input type="submit" name="" value="Återställ">
+            </form>
+        </div>
+    </div>
+{% endblock %}

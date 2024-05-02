@@ -1,0 +1,27 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Bibliotek{% endblock %}
+
+{% block body %}
+    <h1>Bibliotek</h1>
+    <div class="container library-container">
+        <div>
+            <h3>Uppdatera bok med id {{ id }}</h3>
+            <form class="library-form" method="post" action="">  
+                <label for="title">Titel</label>
+                <input type="text" id="title" name="title" value="{{ title }}" required>
+                
+                <label for="isbn">ISBN</label>
+                <input type="text" id="isbn" name="isbn" value="{{ isbn }}" required>
+                
+                <label for="author">Författare</label>
+                <input type="text" id="author" name="author" value="{{ author }}" required>
+                
+                <label for="image">Bildkälla</label>
+                <input type="text" id="image" name="image" value="{{ image }}" required>
+
+                <input type="submit" name="" value="Uppdatera bok">
+            </form>
+        </div>
+    </div>
+{% endblock %}

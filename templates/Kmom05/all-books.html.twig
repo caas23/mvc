@@ -1,0 +1,32 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Bibliotek {% endblock %}
+
+{% block body %}
+    <h1>Alla böcker</h1>
+        <div class="container library-container">
+            <div>
+                <table id="library">
+                    <tr>
+                        <th>Titel</th>
+                        <th>Författare</th>
+                        <th>Isbn</th>
+                        <th>Id</th>
+                    </tr>
+                    {% for key, book in books %}
+                    <tr>
+                        <td><a href="show/{{book.id}}">{{book.title}}</a></td>
+                        <td>{{book.author}}</td>
+                        <td>{{book.isbn}}</td>
+                        <td>{{book.id}}</td>
+                    </tr> 
+                    {% endfor %}  
+                </table>
+
+                <form action="{{ path('library') }}">
+                    <input class="crud-btn-3" type="submit" value="Tillbaka till biblioteket">
+                </form>
+
+            </div>
+        </div>
+{% endblock %}
