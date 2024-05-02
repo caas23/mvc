@@ -366,6 +366,61 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Caas23-Controller-Kmom03Controller.html#method_drawCardBank"
         },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom05Controller",
+            "name": "Kmom05Controller",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom05Controller.html"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom05Controller\u003A\u003Alibrary\u0028\u0029",
+            "name": "library",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom05Controller.html#method_library"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom05Controller\u003A\u003AlibraryPost\u0028\u0029",
+            "name": "libraryPost",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom05Controller.html#method_libraryPost"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom05Controller\u003A\u003AshowBookById\u0028\u0029",
+            "name": "showBookById",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom05Controller.html#method_showBookById"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom05Controller\u003A\u003AshowAllBooks\u0028\u0029",
+            "name": "showAllBooks",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom05Controller.html#method_showAllBooks"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom05Controller\u003A\u003AupdateBookById\u0028\u0029",
+            "name": "updateBookById",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom05Controller.html#method_updateBookById"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom05Controller\u003A\u003AupdateBookByIdPost\u0028\u0029",
+            "name": "updateBookByIdPost",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom05Controller.html#method_updateBookByIdPost"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom05Controller\u003A\u003AdeleteBookById\u0028\u0029",
+            "name": "deleteBookById",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom05Controller.html#method_deleteBookById"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom05Controller\u003A\u003AresetLibrary\u0028\u0029",
+            "name": "resetLibrary",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom05Controller.html#method_resetLibrary"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom05Controller\u003A\u003AshowAllBooksAPI\u0028\u0029",
+            "name": "showAllBooksAPI",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom05Controller.html#method_showAllBooksAPI"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom05Controller\u003A\u003AshowOneBookAPI\u0028\u0029",
+            "name": "showOneBookAPI",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom05Controller.html#method_showOneBookAPI"
+        },                {
             "fqsen": "\\Caas23\\Controller\\SessionController",
             "name": "SessionController",
             "summary": "",
@@ -476,10 +531,100 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Caas23-Dice-DiceHand.html#property_hand"
         },                {
+            "fqsen": "\\Caas23\\Entity\\Library",
+            "name": "Library",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#method_getId"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003AgetTitle\u0028\u0029",
+            "name": "getTitle",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#method_getTitle"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003AsetTitle\u0028\u0029",
+            "name": "setTitle",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#method_setTitle"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003AgetIsbn\u0028\u0029",
+            "name": "getIsbn",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#method_getIsbn"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003AsetIsbn\u0028\u0029",
+            "name": "setIsbn",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#method_setIsbn"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003AgetAuthor\u0028\u0029",
+            "name": "getAuthor",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#method_getAuthor"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003AsetAuthor\u0028\u0029",
+            "name": "setAuthor",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#method_setAuthor"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003AgetImage\u0028\u0029",
+            "name": "getImage",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#method_getImage"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003AsetImage\u0028\u0029",
+            "name": "setImage",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#method_setImage"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#property_id"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003A\u0024title",
+            "name": "title",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#property_title"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003A\u0024isbn",
+            "name": "isbn",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#property_isbn"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003A\u0024author",
+            "name": "author",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#property_author"
+        },                {
+            "fqsen": "\\Caas23\\Entity\\Library\u003A\u003A\u0024image",
+            "name": "image",
+            "summary": "",
+            "url": "classes/Caas23-Entity-Library.html#property_image"
+        },                {
             "fqsen": "\\Caas23\\Kernel",
             "name": "Kernel",
             "summary": "",
             "url": "classes/Caas23-Kernel.html"
+        },                {
+            "fqsen": "\\Caas23\\Repository\\LibraryRepository",
+            "name": "LibraryRepository",
+            "summary": "",
+            "url": "classes/Caas23-Repository-LibraryRepository.html"
+        },                {
+            "fqsen": "\\Caas23\\Repository\\LibraryRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Caas23-Repository-LibraryRepository.html#method___construct"
+        },                {
+            "fqsen": "\\Caas23\\Repository\\LibraryRepository\u003A\u003AfindOneByIsbn\u0028\u0029",
+            "name": "findOneByIsbn",
+            "summary": "",
+            "url": "classes/Caas23-Repository-LibraryRepository.html#method_findOneByIsbn"
         },                {
             "fqsen": "\\",
             "name": "\\",
@@ -501,9 +646,19 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/caas23-dice.html"
         },                {
+            "fqsen": "\\Caas23\\Entity",
+            "name": "Entity",
+            "summary": "",
+            "url": "namespaces/caas23-entity.html"
+        },                {
             "fqsen": "\\Caas23",
             "name": "Caas23",
             "summary": "",
             "url": "namespaces/caas23.html"
+        },                {
+            "fqsen": "\\Caas23\\Repository",
+            "name": "Repository",
+            "summary": "",
+            "url": "namespaces/caas23-repository.html"
         }            ]
 );
