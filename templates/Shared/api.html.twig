@@ -73,6 +73,21 @@
                 <li>
                     Visar nuvarande ställning i spelet 21.
                 </li>
+                
+                
+                <h4>Bibliotek</h4>
+                
+                <a href="{{ path('api/library/books') }}" target="_blank">Böcker bibliotek</a>
+                <li>
+                    Visar alla böcker som finns i sparade i biblioteket.
+                </li>
+                
+                <a href="{{ path('api/library/book', {'isbn': 9789144105567}) }}" target="_blank">Visa en bok</a>
+                <li>
+                    Visar en bok som finns i sparad i biblioteket, via dess ISBN.<br>
+                    Klicka på länken för att komma till ett exempel, eller ange<br>
+                    <code>/api/library/book/:isbn</code> för att visa valfri bok.
+                </li>
 
             </ul>
         </div>
