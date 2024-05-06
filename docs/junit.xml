@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="17" assertions="30" errors="0" warnings="0" failures="0" skipped="0" time="0.051626">
+    <testsuite name="Project Test Suite" tests="17" assertions="30" errors="0" warnings="0" failures="0" skipped="0" time="0.051626">
+      <testsuite name="Caas23\Card\CardHandTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" tests="4" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.029825">
+        <testcase name="testCreateHand" class="Caas23\Card\CardHandTest" classname="Caas23.Card.CardHandTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" line="15" assertions="1" time="0.010186"/>
+        <testcase name="testAddStubbedCards" class="Caas23\Card\CardHandTest" classname="Caas23.Card.CardHandTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" line="24" assertions="2" time="0.017658"/>
+        <testcase name="testGetOneCardFromHand" class="Caas23\Card\CardHandTest" classname="Caas23.Card.CardHandTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" line="40" assertions="1" time="0.001580"/>
+        <testcase name="testGetCardEmptyHand" class="Caas23\Card\CardHandTest" classname="Caas23.Card.CardHandTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" line="60" assertions="1" time="0.000401"/>
+      </testsuite>
+      <testsuite name="Caas23\Card\CardTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" tests="3" assertions="9" errors="0" warnings="0" failures="0" skipped="0" time="0.006931">
+        <testcase name="testCreateCard" class="Caas23\Card\CardTest" classname="Caas23.Card.CardTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="16" assertions="1" time="0.000357"/>
+        <testcase name="testGetOneCard" class="Caas23\Card\CardTest" classname="Caas23.Card.CardTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="25" assertions="2" time="0.003049"/>
+        <testcase name="testGetValueOfCard" class="Caas23\Card\CardTest" classname="Caas23.Card.CardTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/CardTest.php" line="38" assertions="6" time="0.003524"/>
+      </testsuite>
+      <testsuite name="Caas23\Card\DeckOfCardsJokerTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsJokerTest.php" tests="2" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.002841">
+        <testcase name="testCreateDeck" class="Caas23\Card\DeckOfCardsJokerTest" classname="Caas23.Card.DeckOfCardsJokerTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsJokerTest.php" line="15" assertions="1" time="0.001483"/>
+        <testcase name="testGetDeckOfCards" class="Caas23\Card\DeckOfCardsJokerTest" classname="Caas23.Card.DeckOfCardsJokerTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsJokerTest.php" line="24" assertions="4" time="0.001358"/>
+      </testsuite>
+      <testsuite name="Caas23\Card\DeckOfCardsTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" tests="3" assertions="6" errors="0" warnings="0" failures="0" skipped="0" time="0.004128">
+        <testcase name="testCreateDeck" class="Caas23\Card\DeckOfCardsTest" classname="Caas23.Card.DeckOfCardsTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="15" assertions="1" time="0.000380"/>
+        <testcase name="testGetDeckOfCards" class="Caas23\Card\DeckOfCardsTest" classname="Caas23.Card.DeckOfCardsTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="24" assertions="2" time="0.000512"/>
+        <testcase name="testGetDeckOfCardsShuffled" class="Caas23\Card\DeckOfCardsTest" classname="Caas23.Card.DeckOfCardsTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="35" assertions="3" time="0.003236"/>
+      </testsuite>
+      <testsuite name="Caas23\Card\SessionHandlerTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/SessionHandlerTest.php" tests="5" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.007901">
+        <testcase name="testCreateParent" class="Caas23\Card\SessionHandlerTest" classname="Caas23.Card.SessionHandlerTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/SessionHandlerTest.php" line="17" assertions="1" time="0.001192"/>
+        <testcase name="testSessionInit" class="Caas23\Card\SessionHandlerTest" classname="Caas23.Card.SessionHandlerTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/SessionHandlerTest.php" line="26" assertions="1" time="0.004637"/>
+        <testcase name="testAddWinnerToSession" class="Caas23\Card\SessionHandlerTest" classname="Caas23.Card.SessionHandlerTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/SessionHandlerTest.php" line="37" assertions="1" time="0.000791"/>
+        <testcase name="testSetValue" class="Caas23\Card\SessionHandlerTest" classname="Caas23.Card.SessionHandlerTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/SessionHandlerTest.php" line="48" assertions="1" time="0.000698"/>
+        <testcase name="testSetAceValue" class="Caas23\Card\SessionHandlerTest" classname="Caas23.Card.SessionHandlerTest" file="/home/caas23/dbwebb-kurser/mvc/me/report/tests/Card/SessionHandlerTest.php" line="61" assertions="1" time="0.000582"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
