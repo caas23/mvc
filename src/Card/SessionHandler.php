@@ -51,7 +51,7 @@ class SessionHandler extends DeckOfCards
         mixed $total,
         bool $bank
     ): void {
-        if ($value != 01) {
+        if ($value != 1) {
             $session->set("total", $total + $value);
         } elseif ($bank == false) {
             $session->set("aceCard", true);

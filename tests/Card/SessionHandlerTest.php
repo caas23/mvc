@@ -48,9 +48,9 @@ class SessionHandlerTest extends TestCase
     public function testSetValue(): void
     {
         $session = $this->createMock(SessionInterface::class);
-        (new SessionHandler())->setValue($session, 01, 10, true);
-        (new SessionHandler())->setValue($session, 01, 10, false);
-        (new SessionHandler())->setValue($session, 02, 10, true);
+        (new SessionHandler())->setValue($session, 1, 10, true);
+        (new SessionHandler())->setValue($session, 1, 10, false);
+        (new SessionHandler())->setValue($session, 2, 10, true);
 
         $this->assertInstanceOf("Symfony\Component\HttpFoundation\Session\SessionInterface", $session);
     }
@@ -61,7 +61,7 @@ class SessionHandlerTest extends TestCase
     public function testSetAceValue(): void
     {
         $session = $this->createMock(SessionInterface::class);
-        (new SessionHandler())->setAceValue($session, 14, 01);
+        (new SessionHandler())->setAceValue($session, 14, 1);
 
         $this->assertInstanceOf("Symfony\Component\HttpFoundation\Session\SessionInterface", $session);
     }
