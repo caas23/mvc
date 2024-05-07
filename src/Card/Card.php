@@ -29,7 +29,7 @@ class Card
     /**
      * Get numeric value for given card.
      */
-    public function getValue(string $card): int
+    public function getValue(?string $card): int
     {
         $number = explode("-", $card)[1];
         $number = explode(".", $number)[0];
