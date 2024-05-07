@@ -31,8 +31,8 @@ class Card
      */
     public function getValue(?string $card): int
     {
-        $number = explode("-", $card)[1];
-        $number = explode(".", $number)[0];
+        $number = explode("-", (string)$card)[1];
+        $number = explode(".", (string)$number)[0];
 
         return (int)$number;
     }
