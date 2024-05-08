@@ -86,52 +86,14 @@ class Kmom02ControllerApi extends AbstractController
         Request $request,
         SessionInterface $session
     ): Response {
-        $number = (new CardMultiple())->drawMultiple($request, $session);
-        // $number = $request->request->get('num_cards');
-
-        // if ($number == '') {
-        //     $number = $request->request->get('num_cards_joker');
-        //     if (!$session->has("cardsJoker")) {
-        //         $newDeck = new DeckOfCardsJoker();
-        //         $session->set("cardsJoker", $newDeck->getCards('../public/svg/'));
-        //     }
-
-        //     $card = new Card();
-
-        //     $drawnCards = [];
-
-        //     for ($i = 1; $i <= $number; $i++) {
-        //         $cards = $session->get("cardsJoker");
-        //         $randomCard = $card->getOneCard((array)$cards);
-        //         $session->set("cardsJoker", array_diff((array)$cards, (array)$randomCard));
-        //         $drawnCards[] = $randomCard;
-        //     }
-        //     if (isset($cards)) {
-        //         $session->set("cards_left", $cards);
-        //     }
-        //     $session->set("drawn_cards", $drawnCards);
-        //     return $this->redirectToRoute('drawMultiple', ["number" => $number]);
-
-        // } if (!$session->has("cards")) {
-        //     $newDeck = new DeckOfCards();
-        //     $session->set("cards", $newDeck->getCards('../public/svg/'));
-        // }
-
-        // $card = new Card();
-
-        // $drawnCards = [];
-
-        // for ($i = 1; $i <= $number; $i++) {
-        //     $cards = $session->get("cards");
-        //     $randomCard = $card->getOneCard((array)$cards);
-        //     $session->set("cards", array_diff((array)$cards, (array)$randomCard));
-        //     $drawnCards[] = $randomCard;
-        // }
-        // if (isset($cards)) {
-        //     $session->set("cards_left", $cards);
-        // }
-        // $session->set("drawn_cards", $drawnCards);
-        return $this->redirectToRoute('drawMultiple', ["number" => $number]);
+        
+        $numOfCards = $request->request->get('num_cards');
+        
+        if ($numOfCards == '') {
+            $number = (new CardMultiple())->drawMultipleJoker($request, $session);
+        } else {
+            $number = (new CardMultiple())->drawMultiple($request, $session);
+        } return $this->redirectToRoute('drawMultiple', ["number" => $number]);
     }
 
     #[Route("api/deck/draw/{number<\d+>}", name: "drawMultiple", methods: ['GET'])]

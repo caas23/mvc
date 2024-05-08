@@ -81,12 +81,16 @@ class Kmom02ControllerCard extends AbstractController
         Request $request,
         SessionInterface $session
     ): Response {
-        $number = (new CardMultiple())->drawMultiple($request, $session);
-
-        return $this->redirectToRoute('drawMulitple', ["number" => $number]);
+        $numOfCards = $request->request->get('num_cards');
+        
+        if ($numOfCards == '') {
+            $number = (new CardMultiple())->drawMultipleJoker($request, $session);
+        } else {
+            $number = (new CardMultiple())->drawMultiple($request, $session);
+        } return $this->redirectToRoute('drawMultiple', ["number" => $number]);
     }
 
-    #[Route("card/deck/draw/{number<\d+>}", name: "drawMulitple", methods: ['GET'])]
+    #[Route("card/deck/draw/{number<\d+>}", name: "drawMultiple", methods: ['GET'])]
     public function cardDeckShowMultiple(
         SessionInterface $session
     ): Response {
