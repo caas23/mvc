@@ -9,39 +9,39 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 /**
  * Test cases for class DiceHand.
  */
-class SessionHandlerTest extends TestCase
+class CardValuesTest extends TestCase
 {
     /**
      * Construct object and verify that the object is a deck.
      */
     public function testCreateParent(): void
     {
-        $parent = new SessionHandler();
-        $this->assertInstanceOf("\Caas23\Card\DeckOfCards", $parent);
+        $parent = new CardValues();
+        $this->assertInstanceOf("\Caas23\Card\SessionHandler", $parent);
     }
 
     /**
-     * Test init a new session.
+     * Test set a value for a card.
      */
-    public function testSessionInit(): void
+    public function testSetValue(): void
     {
         $session = $this->createMock(SessionInterface::class);
-        (new SessionHandler())->sessionInit($session, 'public/svg/');
+        (new CardValues())->setValue($session, 1, 10, true);
+        (new CardValues())->setValue($session, 1, 10, false);
+        (new CardValues())->setValue($session, 2, 10, true);
+        (new CardValues())->setValue($session, 1, 5, true);
 
         $this->assertInstanceOf("Symfony\Component\HttpFoundation\Session\SessionInterface", $session);
     }
 
-
     /**
-     * Test check if bust.
+     * Test set a value for an ace.
      */
-    public function testcheckBust(): void
+    public function testSetAceValue(): void
     {
         $session = $this->createMock(SessionInterface::class);
-        (new SessionHandler())->checkBust($session, 22, false);
-        (new SessionHandler())->checkBust($session, 22, true);
+        (new CardValues())->setAceValue($session, 14, 1);
+
         $this->assertInstanceOf("Symfony\Component\HttpFoundation\Session\SessionInterface", $session);
     }
-
-    
 }
