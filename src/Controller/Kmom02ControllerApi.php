@@ -3,7 +3,6 @@
 namespace Caas23\Controller;
 
 use Caas23\Card\Card;
-use Caas23\Card\CardHand;
 use Caas23\Card\DeckOfCards;
 use Caas23\Card\DeckOfCardsJoker;
 
@@ -14,54 +13,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ApiController extends AbstractController
+class Kmom02ControllerApi extends AbstractController
 {
-    // Kmom01
-    #[Route("/api", name: "api", methods: ["GET"])]
-    public function api(): Response
-    {
-        $number = random_int(100, 999);
-        $num1 = str_split((string)$number, 1)[0];
-        $num2 = str_split((string)$number, 1)[1];
-        $num3 = str_split((string)$number, 1)[2];
-
-        $data = [
-            'number' => $number,
-            'num1' => $num1,
-            'num2' => $num2,
-            'num3' => $num3
-        ];
-
-        return $this->render('Shared/api.html.twig', $data);
-    }
-
-    // Kmom01
-    #[Route("/api/quote", name: "api/quote")]
-    public function jsonQuote(): Response
-    {
-        $quoteNum = random_int(0, 2);
-        $quotes = array(
-            "The way to get started is to quit talking and begin doing. -Walt Disney",
-            "Be yourself; everyone else is already taken. -Oscar Wilde",
-            "You must be the change you wish to see in the world. -Mahatma Gandhi",
-        );
-
-        date_default_timezone_set('CET');
-        $now = date('Y-m-d H:i:s');
-
-        $data = [
-            'Citat' => $quotes[$quoteNum],
-            'Citatet genererades' => $now
-        ];
-
-        $response = new JsonResponse($data);
-        $response->setEncodingOptions(
-            $response->getEncodingOptions() | JSON_PRETTY_PRINT
-        );
-        return $response;
-    }
-
-    // Kmom02
     #[Route("/api/deck", name: "api/deck", methods: ["GET"])]
     public function jsonDeck(): Response
     {
@@ -80,7 +33,6 @@ class ApiController extends AbstractController
         return $response;
     }
 
-    // Kmom02
     #[Route("/api/deck/shuffle", name: "api/deck/shuffle")]
     public function jsonDeckShuffle(
         SessionInterface $session
@@ -101,7 +53,6 @@ class ApiController extends AbstractController
         return $response;
     }
 
-    // Kmom02
     #[Route("/api/deck/draw", name: "api/deck/draw")]
     public function jsonDeckDraw(
         SessionInterface $session
@@ -129,7 +80,6 @@ class ApiController extends AbstractController
         return $response;
     }
 
-    // Kmom02
     #[Route("/api/deck/joker", name: "api/deck/joker", methods: ["GET"])]
     public function jsonDeckJoker(): Response
     {
@@ -148,7 +98,6 @@ class ApiController extends AbstractController
         return $response;
     }
 
-    // Kmom02
     #[Route("/api/deck/joker/shuffle", name: "api/deck/joker/shuffle")]
     public function jsonDeckJokerShuffle(
         SessionInterface $session
@@ -170,7 +119,6 @@ class ApiController extends AbstractController
         return $response;
     }
 
-    // Kmom02
     #[Route("/api/deck/joker/draw", name: "api/deck/joker/draw")]
     public function jsonDeckJokerDraw(
         SessionInterface $session
@@ -198,7 +146,6 @@ class ApiController extends AbstractController
         return $response;
     }
 
-    // Kmom02
     #[Route("/api", name: "api_post", methods: ["POST"])]
     public function apiPost(
         Request $request,
@@ -251,7 +198,6 @@ class ApiController extends AbstractController
         return $this->redirectToRoute('drawMultiple', ["number" => $number]);
     }
 
-    // Kmom02
     #[Route("api/deck/draw/{number<\d+>}", name: "drawMultiple", methods: ['GET'])]
     public function jsonDeckShowMultiple(
         SessionInterface $session
