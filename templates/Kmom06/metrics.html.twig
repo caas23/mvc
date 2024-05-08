@@ -79,11 +79,11 @@
             klasser har 3 eller lägre. Dessutom har denna klass ett "blob/God object", vilket klassas som ett error i PhpMetrics. Jag läser 
             errormeddelandet och ser att orsaken kan vara tidigare noterade LCOM, men även andra faktorer listas som möjliga orsaker.
             En annan klass som utmärker sig är sessionklassen (den större gula delen i bilden nedan), som anges ha en relativt hög komplexitet.<br>
-            <img class="session-img" src="/img/session-pre.png" alt"session-pre"><br>
+            <img class="session-img" src="{{ asset('img/session-pre.png') }}" alt"session-pre"><br>
             <i>Sessionklassen innan ändringar.</i><br>
-            <img class="lcom-img" src="/img/lcom-pre.png" alt"lcom-pre"><br>
+            <img class="lcom-img" src="{{ asset('img/lcom-pre.png') }}" alt"lcom-pre"><br>
             <i>LCOM innan ändringar.</i><br>
-            <img class="metrics-img" src="/img/pm-pre.png" alt"pm-pre"><br>
+            <img class="metrics-img" src="{{ asset('img/pm-pre.png') }}" alt"pm-pre"><br>
             <i>Maintainability/complexity innan ändringar.</i>
         </p>
 
@@ -93,13 +93,13 @@
             kommer av att jag tänker att det hade varit enklare att jobba med något som låg lägre först.
             Jag ser dock att min kodtäckning är väldigt låg, och där kan det finnas något att jobba vidare med. 
             Här ser jag dock att kodtäckningens låga procent beror på delar som jag medvetet inte testat, medan
-            kortklasserna som testats har över 93%.
+            kortklasserna som testats initialt har över 93%.
             Jag ser även att alla delar har <i>A</i> som rating, förutom två som har <i>B</i>. Tittar jag närmare på dessa
-            ser jag att det handlar om <i>conditions</i>, och ser mycket ritkigt att det är en del if- och for-loopar som 
+            ser jag att det handlar om <i>conditions</i>, och ser mycket riktigt att det är en del if- och for-loopar som 
             kanske kan hanteras på annat sätt. Jag noterar även att båda egentligen hanterar samma sak, men där ena handlar om
             API-delen, medan den andra är den "vanliga" webbdelen.
             Jag ser även att det finns en del issues. Vid snabb överblick ser det flesta ut att kunna åtgärdas på något sätt.<br>
-            <img class="issues-img" src="/img/issues-pre.png" alt"issues-pre"><br>
+            <img class="issues-img" src="{{ asset('img/issues-pre.png') }}" alt"issues-pre"><br>
             <i>Issues innan ändringar.</i><br>
             <a href="https://scrutinizer-ci.com/g/caas23/mvc/" class="links">
                 <img src="https://scrutinizer-ci.com/g/caas23/mvc/badges/build.png?b=main" alt="build score">
@@ -108,7 +108,7 @@
             </a>
             <i>Badges.</i><br>
 
-            <img class="metrics-img" src="/img/scr-pre.png" alt"scr-pre"><br>
+            <img class="metrics-img" src="{{ asset('img/scr-pre.png') }}" alt"scr-pre"><br>
             <i>Scrutinizerpoäng innan ändringar.</i>
         </p>
         <h3>Förbättringar</h3>
@@ -140,13 +140,13 @@
              Troligen är detta en av orsakerna till att de är röda, och har därför inte hanterats ytterligare. Fokus har istället legat på Card-klasser och dess metoder.<br>
              - Målet om <i>A</i> i ratings och 10.00 i Scrutinizerpoäng har uppnåtts.<br>
 
-            <img class="session-img" src="/img/session-post.png" alt"session-post"><br>
+            <img class="session-img" src="{{ asset('img/session-post.png') }}" alt"session-post"><br>
             <i>Sessionklassen efter ändringar.</i><br>
-            <img class="lcom-img" src="/img/lcom-post.png" alt"lcom-post"><br>
+            <img class="lcom-img" src="{{ asset('img/lcom-post.png') }}" alt"lcom-post"><br>
             <i>LCOM efter ändringar.</i><br>
-            <img class="issues-img" src="/img/issues-post.png" alt"issues-post"><br>
+            <img class="issues-img" src="{{ asset('img/issues-post.png') }}" alt"issues-post"><br>
             <i>Issues efter ändringar.</i><br>
-            <img class="metrics-img" src="/img/scr-post.png" alt"scr-post"><br>
+            <img class="metrics-img" src="{{ asset('img/scr-post.png') }}" alt"scr-post"><br>
             <i>Scrutinizerpoäng efter ändringar.</i>
         </p>
         <h3>Diskussion</h3>
@@ -156,7 +156,7 @@
             kan det vara otroligt lärorikt och hjälpsamt att arbeta på detta sätt. Dessutom ger det något att förhålla sig till, vilket jag tänker är hjälpsamt i team eller 
             andra projekt där flera arbetar tillsammans och vill ha en gemensam grund, vad gäller exempelvis kodstil, att luta sig mot.
             En nackdel skulle kunna vara att stirra sig blind på siffror, resultat och felmeddelande/issues, utan att reflektera över vad de försöker säga, och därmed
-            kan denna typ av feedback potentiellt vara hämmande snarare än hjälpsamt. I mitt fall upplevde jag dock feedbacken som hjälpsam och jag fick möjlighet att
+            kan denna typ av feedback potentiellt vara hämmande snarare än hjälpsam. I mitt fall upplevde jag dock feedbacken som hjälpsam och jag fick möjlighet att
             reflektera och göra avvägningar.
         </p>
             
