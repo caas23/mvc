@@ -15,12 +15,10 @@ class CardMultiple
      * Get number of random cards from deck without jokers.
      */
     public function drawMultiple(
-        Request $request,
-        SessionInterface $session
+        SessionInterface $session,
+        int $number
         ): ?string
-    {
-        $number = $request->request->get('num_cards');
-    
+    {  
         if (!$session->has("cards")) {
             $newDeck = new DeckOfCards();
             $session->set("cards", $newDeck->getCards('../public/svg/'));
@@ -47,11 +45,10 @@ class CardMultiple
      * Get number of random cards from deck with jokers.
      */
     public function drawMultipleJoker(
-        Request $request,
-        SessionInterface $session
+        SessionInterface $session,
+        int $number
         ): ?string
     {
-        $number = $request->request->get('num_cards_joker');
         if (!$session->has("cardsJoker")) {
             $newDeck = new DeckOfCardsJoker();
             $session->set("cardsJoker", $newDeck->getCards('../public/svg/'));

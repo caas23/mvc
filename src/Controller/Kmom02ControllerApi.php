@@ -90,9 +90,10 @@ class Kmom02ControllerApi extends AbstractController
         $numOfCards = $request->request->get('num_cards');
         
         if ($numOfCards == '') {
-            $number = (new CardMultiple())->drawMultipleJoker($request, $session);
+            $numOfCards = $request->request->get('num_cards_joker');
+            $number = (new CardMultiple())->drawMultipleJoker($session, $numOfCards);
         } else {
-            $number = (new CardMultiple())->drawMultiple($request, $session);
+            $number = (new CardMultiple())->drawMultiple($session, $numOfCards);
         } return $this->redirectToRoute('drawMultipleApi', ["number" => $number]);
     }
 
