@@ -9,7 +9,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class Kmom01ControllerApi extends AbstractController
 {
-
     #[Route("/api", name: "api", methods: ["GET"])]
     public function api(): Response
     {

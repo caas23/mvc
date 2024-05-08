@@ -29,6 +29,7 @@ class GameWinner extends SessionHandler
 
     /**
      * Check if player or bank won, add winner to session using winnerToSession().
+     * @SuppressWarnings(PHPMD.ElseExpression)
      */
     public function checkWinner(
         SessionInterface $session,
@@ -43,7 +44,7 @@ class GameWinner extends SessionHandler
             $this->checkWinnerPlayersTurn($session, $total);
         }
     }
-    
+
     /**
      * Check winner if it's the bank's turn.
      */
@@ -58,7 +59,7 @@ class GameWinner extends SessionHandler
             $this->winnerToSession($session, "player_won");
         }
     }
-    
+
     /**
      * Check winner if it's the player's turn.
      */

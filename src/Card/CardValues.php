@@ -16,6 +16,7 @@ class CardValues extends SessionHandler
 
     /**
      * Set value for card, add to total. Check if total > 21, using checkBust().
+     * @SuppressWarnings(PHPMD.ElseExpression)
      */
     public function setValue(
         SessionInterface $session,

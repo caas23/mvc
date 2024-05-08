@@ -31,7 +31,7 @@ class GameWinnerTest extends TestCase
 
         $this->assertInstanceOf("Symfony\Component\HttpFoundation\Session\SessionInterface", $session);
     }
-    
+
     /**
      * Test check winner, bank's turn.
      */
@@ -43,7 +43,7 @@ class GameWinnerTest extends TestCase
 
         $this->assertInstanceOf("Symfony\Component\HttpFoundation\Session\SessionInterface", $session);
     }
-    
+
     /**
      * Test check winner, players's turn.
      */

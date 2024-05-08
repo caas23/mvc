@@ -43,5 +43,5 @@ class SessionHandlerTest extends TestCase
         $this->assertInstanceOf("Symfony\Component\HttpFoundation\Session\SessionInterface", $session);
     }
 
-    
+
 }

@@ -86,16 +86,16 @@ class Kmom02ControllerApi extends AbstractController
         Request $request,
         SessionInterface $session
     ): Response {
-        
+
         $numOfCards = $request->request->get('num_cards');
         $path = '../public/svg/';
-        
+
         if ($numOfCards == '') {
             $numOfCards = $request->request->get('num_cards_joker');
-            (new CardMultiple())->drawMultipleJoker($session, (int)$numOfCards, $path);
-        } else {
-            (new CardMultiple())->drawMultiple($session, (int)$numOfCards, $path);
-        } return $this->redirectToRoute('drawMultipleApi', ["number" => $numOfCards]);
+            (new CardMultiple())->drawMultiple($session, (int)$numOfCards, "cardsJoker", $path);
+            return $this->redirectToRoute('drawMultipleApi', ["number" => $numOfCards]);
+        } (new CardMultiple())->drawMultiple($session, (int)$numOfCards, "cards", $path);
+        return $this->redirectToRoute('drawMultipleApi', ["number" => $numOfCards]);
     }
 
     #[Route("api/deck/draw/{number<\d+>}", name: "drawMultipleApi", methods: ['GET'])]

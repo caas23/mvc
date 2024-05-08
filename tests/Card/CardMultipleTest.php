@@ -5,7 +5,6 @@ namespace Caas23\Card;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
-
 /**
  * Test cases for class CardMultiple.
  */
@@ -27,14 +26,15 @@ class CardMultipleTest extends TestCase
     {
         $sessionMultiple = $this->createMock(SessionInterface::class);
         $number = 5;
+        $cardType = "cards";
         $path = 'public/svg/';
-        $cards = (new CardMultiple())->drawMultiple($sessionMultiple, $number, $path);
+        $cards = (new CardMultiple())->drawMultiple($sessionMultiple, $number, $cardType, $path);
         $this->assertInstanceOf("Symfony\Component\HttpFoundation\Session\SessionInterface", $sessionMultiple);
         $this->assertNotEmpty($cards);
         $this->assertEquals((int)$cards, 5);
 
     }
-    
+
     /**
      * Test draw multiple cards with jokers.
      */
@@ -42,11 +42,12 @@ class CardMultipleTest extends TestCase
     {
         $sessionMultiple = $this->createMock(SessionInterface::class);
         $number = 5;
+        $cardType = "cardsJoker";
         $path = 'public/svg/';
-        $cards = (new CardMultiple())->drawMultipleJoker($sessionMultiple, $number, $path);
+        $cards = (new CardMultiple())->drawMultiple($sessionMultiple, $number, $cardType, $path);
         $this->assertInstanceOf("Symfony\Component\HttpFoundation\Session\SessionInterface", $sessionMultiple);
         $this->assertNotEmpty($cards);
         $this->assertEquals((int)$cards, 5);
-        
+
     }
 }
