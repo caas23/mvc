@@ -57,7 +57,7 @@ class SessionHandler extends DeckOfCards
             $session->set("aceCard", true);
         } elseif ($total + 14 <= 21) {
             $session->set("total", $total + 14);
-        } elseif ($bank === true) {
+        } else {
             $session->set("total", $total + 1);
         }
         $this->checkBust($session, $session->get("total"), $bank);
