@@ -88,13 +88,14 @@ class Kmom02ControllerApi extends AbstractController
     ): Response {
         
         $numOfCards = $request->request->get('num_cards');
+        $path = '../public/svg/';
         
         if ($numOfCards == '') {
             $numOfCards = $request->request->get('num_cards_joker');
-            $number = (new CardMultiple())->drawMultipleJoker($session, $numOfCards);
+            (new CardMultiple())->drawMultipleJoker($session, (int)$numOfCards, $path);
         } else {
-            $number = (new CardMultiple())->drawMultiple($session, $numOfCards);
-        } return $this->redirectToRoute('drawMultipleApi', ["number" => $number]);
+            (new CardMultiple())->drawMultiple($session, (int)$numOfCards, $path);
+        } return $this->redirectToRoute('drawMultipleApi', ["number" => $numOfCards]);
     }
 
     #[Route("api/deck/draw/{number<\d+>}", name: "drawMultipleApi", methods: ['GET'])]

@@ -82,12 +82,13 @@ class Kmom02ControllerCard extends AbstractController
         SessionInterface $session
     ): Response {
         $numOfCards = $request->request->get('num_cards');
+        $path = '../public/svg/';
         
         if ($numOfCards == '') {
             $numOfCards = $request->request->get('num_cards_joker');
-            $number = (new CardMultiple())->drawMultipleJoker($session, $numOfCards);
+            $number = (new CardMultiple())->drawMultipleJoker($session, (int)$numOfCards, $path);
         } else {
-            $number = (new CardMultiple())->drawMultiple($session, $numOfCards);
+            $number = (new CardMultiple())->drawMultiple($session, (int)$numOfCards, $path);
         } return $this->redirectToRoute('drawMultiple', ["number" => $number]);
     }
 
