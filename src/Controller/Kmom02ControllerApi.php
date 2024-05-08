@@ -93,10 +93,10 @@ class Kmom02ControllerApi extends AbstractController
             $number = (new CardMultiple())->drawMultipleJoker($request, $session);
         } else {
             $number = (new CardMultiple())->drawMultiple($request, $session);
-        } return $this->redirectToRoute('drawMultiple', ["number" => $number]);
+        } return $this->redirectToRoute('drawMultipleApi', ["number" => $number]);
     }
 
-    #[Route("api/deck/draw/{number<\d+>}", name: "drawMultiple", methods: ['GET'])]
+    #[Route("api/deck/draw/{number<\d+>}", name: "drawMultipleApi", methods: ['GET'])]
     public function jsonDeckShowMultiple(
         SessionInterface $session
     ): Response {
