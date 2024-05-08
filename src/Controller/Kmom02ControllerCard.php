@@ -4,6 +4,7 @@ namespace Caas23\Controller;
 
 use Caas23\Card\Card;
 use Caas23\Card\CardHand;
+use Caas23\Card\CardMultiple;
 use Caas23\Card\DeckOfCards;
 use Caas23\Card\DeckOfCardsJoker;
 
@@ -80,50 +81,8 @@ class Kmom02ControllerCard extends AbstractController
         Request $request,
         SessionInterface $session
     ): Response {
-        $number = $request->request->get('num_cards');
+        $number = (new CardMultiple())->drawMultiple($request, $session);
 
-        if ($number == '') {
-            $number = $request->request->get('num_cards_joker');
-            if (!$session->has("cardsJoker")) {
-                $newDeck = new DeckOfCardsJoker();
-                $session->set("cardsJoker", $newDeck->getCards('../public/svg/'));
-            }
-
-            $card = new Card();
-
-            $drawnCards = [];
-
-            for ($i = 1; $i <= $number; $i++) {
-                $cards = $session->get("cardsJoker");
-                $randomCard = $card->getOneCard((array)$cards);
-                $session->set("cardsJoker", array_diff((array)$cards, (array)$randomCard));
-                $drawnCards[] = $randomCard;
-            }
-            if (isset($cards)) {
-                $session->set("cards_left", $cards);
-            }
-            $session->set("drawn_cards", $drawnCards);
-            return $this->redirectToRoute('drawMulitple', ["number" => $number]);
-
-        } if (!$session->has("cards")) {
-            $newDeck = new DeckOfCards();
-            $session->set("cards", $newDeck->getCards('../public/svg/'));
-        }
-
-        $card = new Card();
-
-        $drawnCards = [];
-
-        for ($i = 1; $i <= $number; $i++) {
-            $cards = $session->get("cards");
-            $randomCard = $card->getOneCard((array)$cards);
-            $session->set("cards", array_diff((array)$cards, (array)$randomCard));
-            $drawnCards[] = $randomCard;
-        }
-        if (isset($cards)) {
-            $session->set("cards_left", $cards);
-        }
-        $session->set("drawn_cards", $drawnCards);
         return $this->redirectToRoute('drawMulitple', ["number" => $number]);
     }
 
