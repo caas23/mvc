@@ -25,3 +25,9 @@ npm install
 npm run build
 php -S localhost:8888 -t public #run
 ```
+
+Badges from _Scrutinizer_ can be seen below.
+
+[![Build Status](https://scrutinizer-ci.com/g/caas23/mvc/badges/build.png?b=main)](https://scrutinizer-ci.com/g/caas23/mvc/build-status/main) 
+[![Code Coverage](https://scrutinizer-ci.com/g/caas23/mvc/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/caas23/mvc/?branch=main)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/caas23/mvc/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/caas23/mvc/?branch=main)
