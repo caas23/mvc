@@ -95,7 +95,6 @@ class SessionHandler extends DeckOfCards
 
     /**
      * Check if player or bank won, add winner to session using winnerToSession().
-     * @SuppressWarnings(PHPMD) (Cyclomatic Complexity of 10)
      */
     public function checkWinner(
         SessionInterface $session,
@@ -104,10 +103,35 @@ class SessionHandler extends DeckOfCards
     ): void {
         $playersTotal = $session->get("players_total");
 
-        if ($bank === false && $total === 21 || ($bank === true && $total >= 17 && $total < $playersTotal)) {
+        if ($bank === true) {
+            $this->checkWinnerBanksTurn($session, $total, $playersTotal);
+        } else {
+            $this->checkWinnerPlayersTurn($session, $total);
+        }
+    }
+    
+    public function checkWinnerBanksTurn(
+        SessionInterface $session,
+        mixed $total,
+        mixed $playersTotal
+    ): void {
+        if ($total === 21 || $total >= 17 && $total >= $playersTotal) {
+            $this->winnerToSession($session, "bank_won");
+        } elseif ($total >= 17 && $total < $playersTotal) {
             $this->winnerToSession($session, "player_won");
-        } elseif ($bank === true && ($total === 21 || ($total >= 17 && $total >= $playersTotal))) {
+        }
+    }
+    
+    public function checkWinnerPlayersTurn(
+        SessionInterface $session,
+        mixed $total
+    ): void {
+        if ($total === 21) {
+            $this->winnerToSession($session, "player_won");
+        } elseif ($total > 21) {
             $this->winnerToSession($session, "bank_won");
         }
     }
+
+
 }
