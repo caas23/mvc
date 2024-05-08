@@ -1,0 +1,135 @@
+{% extends "Shared/base.html.twig" %}
+
+{% block title %}Mätvärden{% endblock %}
+
+{% block body %}
+    <h1>Mätvärden</h1>
+    <div class="container metrics-container">
+        <div>
+        <h3>Introduktion</h3>
+
+        <h4>Codestyle</h4>
+        <p>
+            Codestyle, eller kodstil, handlar om att skriva kod som härrör till en etablerad standard. 
+            Dels kan detta vara på en generell nivå med generella och vedertagna kodstiler för PHP, 
+            dels kan det handla om en utbyggd standard tillhandahållen inom ett givet projekt, 
+            som gäller i det specifika fallet.<br>
+            Syftet med dessa standards är att göra det enklare att läsa, utveckla och underhålla koden.
+        </p>
+        
+        <h4>Coverage</h4>
+        <p>
+            Coverage, eller kodtäckning, handlar om hur stor del av koden som är testad. Det handlar alltså om ett
+            mått som ger en uppfattning om hur vältestad koden är.<br> 
+            Syftet med detta är dels att ge koden och programmet trovärdighet, att utåt visa att koden fungerar. Det bör
+            dock has i åtanke att god kodtäckning inte nödvändigtvis innebär "bästa möjliga kod", eller vice versa för den delen.<br>
+            I min kod kan ses att detta värde är väldigt lågt, vilket förklaras av att endast delar av koden har testats.
+        </p>
+        
+        <h4>Complexity</h4>
+        <p>
+            Complexity, många gånger Cyclomatic complexity, handlar i stora drag om hur många logiska operationer som behöver utföras.
+            Generellt vill man hålla nere detta tal, och inte ha för stor komplexitet i en och samma metod, utan hellre bryta ned olika 
+            "vägval" för att göra koden mindre komplex.<br>
+            Syftet med att hålla ned talet är dels att förenkla tesning av koden, men även att göra koden mer lättläst, lätthanterlig och
+            enklare att följa vid eventeulla direkta, eller indirekta, ändringar.
+        </p>
+        
+        <h4>Cohesion</h4>
+        <p>
+            Cohesion handlar om relationen mellan metoder inom en klass. Generellt eftersträvas klasser där metoderna 
+            har en tydlig koppling och samspelar med varandra.<br>
+            Syftet med detta är att tydligt separera delar som hör, och inte hör, samman. Detta ger en kod som är enklare 
+            att testa och underhålla.
+        </p>
+        
+        <h4>Coupling</h4>
+        <p>
+            Coupling handar om hur starkt länkade olika klasser är. Om en klass har en hög koppling till en annan klass,
+            blir den starkt beroende av ändringar i den andra klassen medan låg koppling innebär en mer självständig klass.<br>
+            Två typer av kopplingar, som kan nämnas är:<br>
+             -  <i>Afferent coupling</i> som är ett mått på hur många klasser som påverkas av en given klass.<br>
+             -  <i>Efferent coupling</i> som är ett mått på antal klasser som en given klass påverkas av.
+        </p>
+        
+        <h4>CRAP</h4>
+        <p>
+            <i><strong>C</strong>hange <strong>R</strong>isk <strong>A</strong>nti <strong>P</strong>attern</i> handlar om 
+            förväntad arbetsinsats för att underhålla en viss kod. Påverkande faktorer är dels kodens komplexitet, dels 
+            kodtäckning (alltså, tester för given kod). En hög komplexitet kan resulterar i högt <i>CRAP score</i>, men om 
+            den höga komplexiteten kompenseras av hög kodtäckning minskar detta.
+        </p>
+        
+        <h4>Code smell</h4>
+        <p>
+            Code smell handlar om delar av koden som skulle kunna indikera ett djupare problem, även om de inte 
+            är faktiska buggar. Vad detta konkret innebär tycks variera lite, beroende på källa och subjektivt tyckande, men
+            generellt handlar det om underliggande problem som i längden kan leda till så kallad <i>teknisk skuld</i>. Några exempel 
+            på code smell innefattar upprepande av kod (vilket leder till merarbete vid underhåll), att kodstandard saknas eller inte följs
+            samt så kallad "död kod", alltså överflödig och onödig kod.
+        </p>
+        <i>Källor till ovanstående har hämtats från <a href="https://dbwebb.se/kurser/mvc-v2/kmom06">kurssidan</a> samt dess undersidor och läshänvisningar.</i>
+        
+            
+        <h3>Phpmetrics</h3>
+        <p>
+            Det första jag kollar på är bilden för maintainability/complexity, och noterar en hel del röda delar. När jag hovrar över
+            dessa ser jag att det uteslutande handlar om controllers.
+            Jag tittar närmare på klasserna och ser att <i>Caas23/Controller/ApiController</i> har ett LCOM-värde av 10, medan reseterande
+            klasser har 3 eller lägre. Dessutom har denna klass ett "blob/God object", vilket klassas som ett error i PhpMetrics. Jag läser 
+            errormeddelandet och ser att orsaken kan vara tidigare noterade LCOM, men även andra faktorer listas som möjliga orsaker.
+            En annan klass som utmärker sig är sessionklassen (den större gula delen i bilden nedan), som anges ha en relativt hög komplexitet.<br>
+            <img class="session-img" src="/img/session-pre.png" alt"session-pre"><br>
+            <i>Sessionklassen innan ändringar.</i><br>
+            <img class="lcom-img" src="/img/lcom-pre.png" alt"lcom-pre"><br>
+            <i>LCOM innan ändringar.</i><br>
+            <img class="metrics-img" src="/img/pm-pre.png" alt"pm-pre"><br>
+            <i>Maintainability/complexity innan ändringar.</i>
+        </p>
+
+        <h3>Scrutinizer</h3>
+        <p>
+            När jag tittar på resultatet från Scrutinizer är min första tanke "Aj då, redan 9.87?". Reaktionen
+            kommer av att jag tänker att det hade varit enklare att jobba med något som låg lägre först.
+            Jag ser dock att min kodtäckning är väldigt låg, och där kan det finnas något att jobba vidare med. 
+            Här ser jag dock att kodtäckningens låga procent beror på delar som jag medvetet inte testat, medan
+            kortklasserna som testats har över 93%.
+            Jag ser även att alla delar har <i>A</i> som rating, förutom två som har <i>B</i>. Tittar jag närmare på dessa
+            ser jag att det handlar om <i>conditions</i>, och ser mycket ritkigt att det är en del if- och for-loopar som 
+            kanske kan hanteras på annat sätt. Jag noterar även att båda egentligen hanterar samma sak, men där ena handlar om
+            API-delen, medan den andra är den "vanliga" webbdelen.
+            Jag ser även att det finns en del issues. Vid snabb överblick ser det flesta ut att kunna åtgärdas på något sätt.<br>
+            <img class="issues-img" src="/img/issues-pre.png" alt"issues-pre"><br>
+            <i>Issues innan ändringar.</i><br>
+            <a href="https://scrutinizer-ci.com/g/caas23/mvc/" class="links">
+                <img src="https://scrutinizer-ci.com/g/caas23/mvc/badges/build.png?b=main" alt="build score">
+                <img src="https://scrutinizer-ci.com/g/caas23/mvc/badges/coverage.png?b=main" alt="coverage score">
+                <img src="https://scrutinizer-ci.com/g/caas23/mvc/badges/quality-score.png?b=main" alt="scrutinizer score"><br>
+            </a>
+            <i>Badges.</i><br>
+
+            <img class="metrics-img" src="/img/scr-pre.png" alt"scr-pre"><br>
+            <i>Scrutinizerpoäng innan ändringar.</i>
+        </p>
+        <h3>Förbättringar</h3>
+        <h4>Innan</h4>
+        <p>
+            De förbättringar jag vill införa är<br>
+             - Minska antalet issuses.<br>
+             - Få ner LCOM-värdet i <i>Caas23/Controller/ApiController</i>.<br>
+             - Hantera det error som uppstod gällande "blob/God object".<br>
+             - Se över komplexiteten i sessionsklassen.<br>
+             - Hantera de <i>conditions</i> som anmärktes ovan.<br><br>
+             
+            Förhoppningen är att ovanstående förbättringar ska leda till <i>A</i> för alla delar samt 10.00 i rating (vilket jag hoppas är nåbart då det redan är 9.87).
+            Samtidigt hoppas jag kunna omvandla den gula sessiondelen till grön i bilden för maintainability/complexity, eller åtminstone minska komplexiteten något.
+        </p>
+        <h4>Efter</h4>
+        <p>
+            Skärmdumpar efter förbättringar.
+        </p>
+        <h3>Diskussion</h3>
+            
+        </div>
+    </div>
+{% endblock %}
