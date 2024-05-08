@@ -113,10 +113,10 @@
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    SessionHandler
+    CardValues
 
         <span class="phpdocumentor-element__extends">
-        extends <a href="classes/Caas23-Card-DeckOfCards.html"><abbr title="\Caas23\Card\DeckOfCards">DeckOfCards</abbr></a>
+        extends <a href="classes/Caas23-Card-SessionHandler.html"><abbr title="\Caas23\Card\SessionHandler">SessionHandler</abbr></a>
     </span>
     
             <div class="phpdocumentor-element__package">
@@ -135,13 +135,13 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/SessionHandler.php"><a href="files/src-card-sessionhandler.html"><abbr title="src/Card/SessionHandler.php">SessionHandler.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/CardValues.php"><a href="files/src-card-cardvalues.html"><abbr title="src/Card/CardValues.php">CardValues.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">10</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">SessionHandler class handling the session.</p>
+            <p class="phpdocumentor-summary">CardValues class handling card values.</p>
 
 
 
@@ -150,7 +150,7 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/Caas23-Card-SessionHandler.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Caas23-Card-CardValues.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -164,7 +164,7 @@
 
 <h4 id="toc-properties">
     Properties
-    <a href="classes/Caas23-Card-SessionHandler.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Caas23-Card-CardValues.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
@@ -178,12 +178,12 @@
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/Caas23-Card-SessionHandler.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Caas23-Card-CardValues.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Caas23-Card-SessionHandler.html#method___construct">__construct()</a>
+    <a href="classes/Caas23-Card-CardValues.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
@@ -216,6 +216,20 @@
 </dt>
 <dd>Init new session.</dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Caas23-Card-CardValues.html#method_setAceValue">setAceValue()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Set ace value, as chosen by player. Add to total. Check if total &gt; 21, using checkBust().</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Caas23-Card-CardValues.html#method_setValue">setValue()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Set value for card, add to total. Check if total &gt; 21, using checkBust().</dd>
+
     </dl>
 
 
@@ -227,7 +241,7 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Caas23-Card-SessionHandler.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Caas23-Card-CardValues.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -268,7 +282,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Caas23-Card-SessionHandler.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Caas23-Card-CardValues.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -279,13 +293,13 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Caas23-Card-SessionHandler.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Caas23-Card-CardValues.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/SessionHandler.php"><a href="files/src-card-sessionhandler.html"><abbr title="src/Card/SessionHandler.php">SessionHandler.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/CardValues.php"><a href="files/src-card-cardvalues.html"><abbr title="src/Card/CardValues.php">CardValues.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
@@ -499,13 +513,148 @@
 
     
 </article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setAceValue">
+        setAceValue()
+        <a href="classes/Caas23-Card-CardValues.html#method_setAceValue" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/CardValues.php"><a href="files/src-card-cardvalues.html"><abbr title="src/Card/CardValues.php">CardValues.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">42</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Set ace value, as chosen by player. Add to total. Check if total &gt; 21, using checkBust().</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setAceValue</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$total</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$session</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$total</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setValue">
+        setValue()
+        <a href="classes/Caas23-Card-CardValues.html#method_setValue" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Card/CardValues.php"><a href="files/src-card-cardvalues.html"><abbr title="src/Card/CardValues.php">CardValues.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">21</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Set value for card, add to total. Check if total &gt; 21, using checkBust().</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setValue</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$session</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$total</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$bank</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$session</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Symfony\Component\HttpFoundation\Session\SessionInterface">SessionInterface</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$total</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$bank</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/Caas23-Card-CardValues.html#method_setValue#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">SuppressWarnings</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>(PHPMD.ElseExpression)</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
+</article>
             </section>
 
         <div class="phpdocumentor-modal" id="source-view">
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Card/SessionHandler.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Card/CardValues.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -604,26 +753,28 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                            <li><a href="classes/Caas23-Card-SessionHandler.html#toc-properties">Properties</a></li>
-                                                            <li><a href="classes/Caas23-Card-SessionHandler.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/Caas23-Card-CardValues.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/Caas23-Card-CardValues.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/Caas23-Card-DeckOfCards.html#property_deck">$deck<a href="classes/Caas23-Card-SessionHandler.html"></li>
+                                                    <li><a href="classes/Caas23-Card-DeckOfCards.html#property_deck">$deck<a href="classes/Caas23-Card-CardValues.html"></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/Caas23-Card-SessionHandler.html#method___construct">__construct()</a></li>
+                                            <li><a href="classes/Caas23-Card-CardValues.html#method___construct">__construct()</a></li>
                                             <li><a href="classes/Caas23-Card-SessionHandler.html#method_checkBust">checkBust()</a></li>
                                             <li><a href="classes/Caas23-Card-DeckOfCards.html#method_getCards">getCards()</a></li>
                                             <li><a href="classes/Caas23-Card-DeckOfCards.html#method_getCardsShuffled">getCardsShuffled()</a></li>
                                             <li><a href="classes/Caas23-Card-SessionHandler.html#method_sessionInit">sessionInit()</a></li>
+                                            <li><a href="classes/Caas23-Card-CardValues.html#method_setAceValue">setAceValue()</a></li>
+                                            <li><a href="classes/Caas23-Card-CardValues.html#method_setValue">setValue()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -643,7 +794,7 @@
     </section>
 </section>
         </div>
-        <a href="classes/Caas23-Card-SessionHandler.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Caas23-Card-CardValues.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

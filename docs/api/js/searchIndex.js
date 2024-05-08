@@ -51,6 +51,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Caas23-Card-CardHand.html#property_hand"
         },                {
+            "fqsen": "\\Caas23\\Card\\CardMultiple",
+            "name": "CardMultiple",
+            "summary": "Card\u0020class\u0020handling\u0020drawing\u0020multiple\u0020cards.",
+            "url": "classes/Caas23-Card-CardMultiple.html"
+        },                {
+            "fqsen": "\\Caas23\\Card\\CardMultiple\u003A\u003AdrawMultiple\u0028\u0029",
+            "name": "drawMultiple",
+            "summary": "Get\u0020number\u0020of\u0020random\u0020cards\u0020from\u0020deck\u0020with\u0020or\u0020without\u0020jokers.",
+            "url": "classes/Caas23-Card-CardMultiple.html#method_drawMultiple"
+        },                {
+            "fqsen": "\\Caas23\\Card\\CardValues",
+            "name": "CardValues",
+            "summary": "CardValues\u0020class\u0020handling\u0020card\u0020values.",
+            "url": "classes/Caas23-Card-CardValues.html"
+        },                {
+            "fqsen": "\\Caas23\\Card\\CardValues\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Caas23-Card-CardValues.html#method___construct"
+        },                {
+            "fqsen": "\\Caas23\\Card\\CardValues\u003A\u003AsetValue\u0028\u0029",
+            "name": "setValue",
+            "summary": "Set\u0020value\u0020for\u0020card,\u0020add\u0020to\u0020total.\u0020Check\u0020if\u0020total\u0020\u003E\u002021,\u0020using\u0020checkBust\u0028\u0029.",
+            "url": "classes/Caas23-Card-CardValues.html#method_setValue"
+        },                {
+            "fqsen": "\\Caas23\\Card\\CardValues\u003A\u003AsetAceValue\u0028\u0029",
+            "name": "setAceValue",
+            "summary": "Set\u0020ace\u0020value,\u0020as\u0020chosen\u0020by\u0020player.\u0020Add\u0020to\u0020total.\u0020Check\u0020if\u0020total\u0020\u003E\u002021,\u0020using\u0020checkBust\u0028\u0029.",
+            "url": "classes/Caas23-Card-CardValues.html#method_setAceValue"
+        },                {
             "fqsen": "\\Caas23\\Card\\DeckOfCards",
             "name": "DeckOfCards",
             "summary": "DeckOfCards\u0020class\u0020handling\u0020a\u0020deck.",
@@ -96,6 +126,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Caas23-Card-DeckOfCardsJoker.html#property_joker"
         },                {
+            "fqsen": "\\Caas23\\Card\\GameWinner",
+            "name": "GameWinner",
+            "summary": "GameWinner\u0020class\u0020handling\u0020winner\u0020of\u0020game\u002021.",
+            "url": "classes/Caas23-Card-GameWinner.html"
+        },                {
+            "fqsen": "\\Caas23\\Card\\GameWinner\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Caas23-Card-GameWinner.html#method___construct"
+        },                {
+            "fqsen": "\\Caas23\\Card\\GameWinner\u003A\u003AwinnerToSession\u0028\u0029",
+            "name": "winnerToSession",
+            "summary": "Add\u0020winner\u0020to\u0020session\u0020and\u0020add\u0020one\u0020point.",
+            "url": "classes/Caas23-Card-GameWinner.html#method_winnerToSession"
+        },                {
+            "fqsen": "\\Caas23\\Card\\GameWinner\u003A\u003AcheckWinner\u0028\u0029",
+            "name": "checkWinner",
+            "summary": "Check\u0020if\u0020player\u0020or\u0020bank\u0020won,\u0020add\u0020winner\u0020to\u0020session\u0020using\u0020winnerToSession\u0028\u0029.",
+            "url": "classes/Caas23-Card-GameWinner.html#method_checkWinner"
+        },                {
+            "fqsen": "\\Caas23\\Card\\GameWinner\u003A\u003AcheckWinnerBanksTurn\u0028\u0029",
+            "name": "checkWinnerBanksTurn",
+            "summary": "Check\u0020winner\u0020if\u0020it\u0027s\u0020the\u0020bank\u0027s\u0020turn.",
+            "url": "classes/Caas23-Card-GameWinner.html#method_checkWinnerBanksTurn"
+        },                {
+            "fqsen": "\\Caas23\\Card\\GameWinner\u003A\u003AcheckWinnerPlayersTurn\u0028\u0029",
+            "name": "checkWinnerPlayersTurn",
+            "summary": "Check\u0020winner\u0020if\u0020it\u0027s\u0020the\u0020player\u0027s\u0020turn.",
+            "url": "classes/Caas23-Card-GameWinner.html#method_checkWinnerPlayersTurn"
+        },                {
             "fqsen": "\\Caas23\\Card\\SessionHandler",
             "name": "SessionHandler",
             "summary": "SessionHandler\u0020class\u0020handling\u0020the\u0020session.",
@@ -111,85 +171,10 @@ Search.appendIndex(
             "summary": "Init\u0020new\u0020session.",
             "url": "classes/Caas23-Card-SessionHandler.html#method_sessionInit"
         },                {
-            "fqsen": "\\Caas23\\Card\\SessionHandler\u003A\u003AwinnerToSession\u0028\u0029",
-            "name": "winnerToSession",
-            "summary": "Add\u0020winner\u0020to\u0020session\u0020and\u0020add\u0020one\u0020point.",
-            "url": "classes/Caas23-Card-SessionHandler.html#method_winnerToSession"
-        },                {
-            "fqsen": "\\Caas23\\Card\\SessionHandler\u003A\u003AsetValue\u0028\u0029",
-            "name": "setValue",
-            "summary": "Set\u0020value\u0020for\u0020card,\u0020add\u0020to\u0020total.\u0020Check\u0020if\u0020total\u0020\u003E\u002021,\u0020using\u0020checkBust\u0028\u0029.",
-            "url": "classes/Caas23-Card-SessionHandler.html#method_setValue"
-        },                {
-            "fqsen": "\\Caas23\\Card\\SessionHandler\u003A\u003AsetAceValue\u0028\u0029",
-            "name": "setAceValue",
-            "summary": "Set\u0020ace\u0020value,\u0020as\u0020chosen\u0020by\u0020player.\u0020Add\u0020to\u0020total.\u0020Check\u0020if\u0020total\u0020\u003E\u002021,\u0020using\u0020checkBust\u0028\u0029.",
-            "url": "classes/Caas23-Card-SessionHandler.html#method_setAceValue"
-        },                {
             "fqsen": "\\Caas23\\Card\\SessionHandler\u003A\u003AcheckBust\u0028\u0029",
             "name": "checkBust",
             "summary": "Check\u0020if\u0020total\u0020\u003E\u002021,\u0020if\u0020so\u0020add\u0020winner\u0020to\u0020session.\u0020If\u0020total\u0020\u003C\u003D\u002021,\u0020and\u0020game\u0020is\u0020over,\u0020check\u0020who\u0020won\u0020using\u0020checkWinner\u0028\u0029.",
             "url": "classes/Caas23-Card-SessionHandler.html#method_checkBust"
-        },                {
-            "fqsen": "\\Caas23\\Card\\SessionHandler\u003A\u003AcheckWinner\u0028\u0029",
-            "name": "checkWinner",
-            "summary": "Check\u0020if\u0020player\u0020or\u0020bank\u0020won,\u0020add\u0020winner\u0020to\u0020session\u0020using\u0020winnerToSession\u0028\u0029.",
-            "url": "classes/Caas23-Card-SessionHandler.html#method_checkWinner"
-        },                {
-            "fqsen": "\\Caas23\\Controller\\ApiController",
-            "name": "ApiController",
-            "summary": "",
-            "url": "classes/Caas23-Controller-ApiController.html"
-        },                {
-            "fqsen": "\\Caas23\\Controller\\ApiController\u003A\u003Aapi\u0028\u0029",
-            "name": "api",
-            "summary": "",
-            "url": "classes/Caas23-Controller-ApiController.html#method_api"
-        },                {
-            "fqsen": "\\Caas23\\Controller\\ApiController\u003A\u003AjsonQuote\u0028\u0029",
-            "name": "jsonQuote",
-            "summary": "",
-            "url": "classes/Caas23-Controller-ApiController.html#method_jsonQuote"
-        },                {
-            "fqsen": "\\Caas23\\Controller\\ApiController\u003A\u003AjsonDeck\u0028\u0029",
-            "name": "jsonDeck",
-            "summary": "",
-            "url": "classes/Caas23-Controller-ApiController.html#method_jsonDeck"
-        },                {
-            "fqsen": "\\Caas23\\Controller\\ApiController\u003A\u003AjsonDeckShuffle\u0028\u0029",
-            "name": "jsonDeckShuffle",
-            "summary": "",
-            "url": "classes/Caas23-Controller-ApiController.html#method_jsonDeckShuffle"
-        },                {
-            "fqsen": "\\Caas23\\Controller\\ApiController\u003A\u003AjsonDeckDraw\u0028\u0029",
-            "name": "jsonDeckDraw",
-            "summary": "",
-            "url": "classes/Caas23-Controller-ApiController.html#method_jsonDeckDraw"
-        },                {
-            "fqsen": "\\Caas23\\Controller\\ApiController\u003A\u003AjsonDeckJoker\u0028\u0029",
-            "name": "jsonDeckJoker",
-            "summary": "",
-            "url": "classes/Caas23-Controller-ApiController.html#method_jsonDeckJoker"
-        },                {
-            "fqsen": "\\Caas23\\Controller\\ApiController\u003A\u003AjsonDeckJokerShuffle\u0028\u0029",
-            "name": "jsonDeckJokerShuffle",
-            "summary": "",
-            "url": "classes/Caas23-Controller-ApiController.html#method_jsonDeckJokerShuffle"
-        },                {
-            "fqsen": "\\Caas23\\Controller\\ApiController\u003A\u003AjsonDeckJokerDraw\u0028\u0029",
-            "name": "jsonDeckJokerDraw",
-            "summary": "",
-            "url": "classes/Caas23-Controller-ApiController.html#method_jsonDeckJokerDraw"
-        },                {
-            "fqsen": "\\Caas23\\Controller\\ApiController\u003A\u003AapiPost\u0028\u0029",
-            "name": "apiPost",
-            "summary": "",
-            "url": "classes/Caas23-Controller-ApiController.html#method_apiPost"
-        },                {
-            "fqsen": "\\Caas23\\Controller\\ApiController\u003A\u003AjsonDeckShowMultiple\u0028\u0029",
-            "name": "jsonDeckShowMultiple",
-            "summary": "",
-            "url": "classes/Caas23-Controller-ApiController.html#method_jsonDeckShowMultiple"
         },                {
             "fqsen": "\\Caas23\\Controller\\DiceGameController",
             "name": "DiceGameController",
@@ -241,6 +226,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Caas23-Controller-DiceGameController.html#method_save"
         },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom01ControllerApi",
+            "name": "Kmom01ControllerApi",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom01ControllerApi.html"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom01ControllerApi\u003A\u003Aapi\u0028\u0029",
+            "name": "api",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom01ControllerApi.html#method_api"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom01ControllerApi\u003A\u003AjsonQuote\u0028\u0029",
+            "name": "jsonQuote",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom01ControllerApi.html#method_jsonQuote"
+        },                {
             "fqsen": "\\Caas23\\Controller\\Kmom01ControllerTwig",
             "name": "Kmom01ControllerTwig",
             "summary": "",
@@ -265,6 +265,56 @@ Search.appendIndex(
             "name": "lucky",
             "summary": "",
             "url": "classes/Caas23-Controller-Kmom01ControllerTwig.html#method_lucky"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom02ControllerApi",
+            "name": "Kmom02ControllerApi",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom02ControllerApi.html"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom02ControllerApi\u003A\u003AjsonDeck\u0028\u0029",
+            "name": "jsonDeck",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom02ControllerApi.html#method_jsonDeck"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom02ControllerApi\u003A\u003AjsonDeckShuffle\u0028\u0029",
+            "name": "jsonDeckShuffle",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom02ControllerApi.html#method_jsonDeckShuffle"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom02ControllerApi\u003A\u003AjsonDeckDraw\u0028\u0029",
+            "name": "jsonDeckDraw",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom02ControllerApi.html#method_jsonDeckDraw"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom02ControllerApi\u003A\u003AapiPost\u0028\u0029",
+            "name": "apiPost",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom02ControllerApi.html#method_apiPost"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom02ControllerApi\u003A\u003AjsonDeckShowMultiple\u0028\u0029",
+            "name": "jsonDeckShowMultiple",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom02ControllerApi.html#method_jsonDeckShowMultiple"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom02ControllerApiJoker",
+            "name": "Kmom02ControllerApiJoker",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom02ControllerApiJoker.html"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom02ControllerApiJoker\u003A\u003AjsonDeckJoker\u0028\u0029",
+            "name": "jsonDeckJoker",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom02ControllerApiJoker.html#method_jsonDeckJoker"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom02ControllerApiJoker\u003A\u003AjsonDeckJokerShuffle\u0028\u0029",
+            "name": "jsonDeckJokerShuffle",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom02ControllerApiJoker.html#method_jsonDeckJokerShuffle"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom02ControllerApiJoker\u003A\u003AjsonDeckJokerDraw\u0028\u0029",
+            "name": "jsonDeckJokerDraw",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom02ControllerApiJoker.html#method_jsonDeckJokerDraw"
         },                {
             "fqsen": "\\Caas23\\Controller\\Kmom02ControllerCard",
             "name": "Kmom02ControllerCard",
@@ -420,6 +470,16 @@ Search.appendIndex(
             "name": "showOneBookAPI",
             "summary": "",
             "url": "classes/Caas23-Controller-Kmom05Controller.html#method_showOneBookAPI"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom06Controller",
+            "name": "Kmom06Controller",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom06Controller.html"
+        },                {
+            "fqsen": "\\Caas23\\Controller\\Kmom06Controller\u003A\u003Ametrics\u0028\u0029",
+            "name": "metrics",
+            "summary": "",
+            "url": "classes/Caas23-Controller-Kmom06Controller.html#method_metrics"
         },                {
             "fqsen": "\\Caas23\\Controller\\SessionController",
             "name": "SessionController",
