@@ -3,6 +3,7 @@
 namespace Caas23\Controller;
 
 use Caas23\Card\Card;
+use Caas23\Card\CardValues;
 use Caas23\Card\SessionHandler;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -46,7 +47,7 @@ class Kmom03Controller extends AbstractController
         SessionInterface $session
     ): Response {
         $card = new Card();
-        $handleSession = new SessionHandler();
+        $handleValue = new CardValues();
 
         if ($request->request->get("21") == "Spela igen!") {
             return $this->redirectToRoute('game');
@@ -64,7 +65,7 @@ class Kmom03Controller extends AbstractController
             $randomCard = $card->getOneCard((array)$cards);
             $drawn[] = $randomCard;
 
-            $handleSession->setValue($session, $card->getValue($randomCard), $session->get("total"), false);
+            $handleValue->setValue($session, $card->getValue($randomCard), $session->get("total"), false);
 
             $session->set("cards", array_diff((array)$cards, (array)$randomCard));
             $session->set("drawn", $drawn);
@@ -72,7 +73,7 @@ class Kmom03Controller extends AbstractController
         }
 
         if ($request->request->get("21") == "Ange värde") {
-            $handleSession->setAceValue($session, (int)$request->request->get("ace"), $session->get("total"));
+            $handleValue->setAceValue($session, (int)$request->request->get("ace"), $session->get("total"));
         }
 
         $data = [
@@ -88,7 +89,7 @@ class Kmom03Controller extends AbstractController
     public function drawCardBank(
         SessionInterface $session
     ): Response {
-        $handleSession = new SessionHandler();
+        $handleValue = new CardValues();
         $session->set("total", 0);
         $total = $session->get("total");
 
@@ -100,7 +101,7 @@ class Kmom03Controller extends AbstractController
             $randomCard = $card->getOneCard((array)$cards);
             $drawn[] = $randomCard;
 
-            $handleSession->setValue($session, $card->getValue($randomCard), $session->get("total"), true);
+            $handleValue->setValue($session, $card->getValue($randomCard), $session->get("total"), true);
 
             $session->set("cards", array_diff((array)$cards, (array)$randomCard));
             $session->set("drawn", $drawn);
