@@ -121,14 +121,44 @@
              - Se över komplexiteten i sessionsklassen.<br>
              - Hantera de <i>conditions</i> som anmärktes ovan.<br><br>
              
-            Förhoppningen är att ovanstående förbättringar ska leda till <i>A</i> för alla delar samt 10.00 i rating (vilket jag hoppas är nåbart då det redan är 9.87).
+            Förhoppningen är att ovanstående förbättringar ska leda till <i>A</i> för alla delar samt 10.00 i Scrutinizerpoäng (vilket jag hoppas är nåbart då det redan är 9.87).
             Samtidigt hoppas jag kunna omvandla den gula sessiondelen till grön i bilden för maintainability/complexity, eller åtminstone minska komplexiteten något.
         </p>
         <h4>Efter</h4>
         <p>
-            Skärmdumpar efter förbättringar.
+            För att införa de förbättringsåtgärder som beskrivits ovan krävdes lite mer arbete än först anat. Klasser med hög komplexitet har delats upp i mindre klasser 
+            för att åtgärda detta, vilket har lett till att nya tester har skrivits - vilket i sin tur har ökat kodtäckningen något (initalt låg denna omkring 11%).<br><br>
+            De åtgärder som införts och de effekter det medfört är följande<br>
+             - Antalet issues har minskat till 0.<br>
+             - LCOM för <i>Caas23/Controller/ApiController</i> har helt eliminerats då denna klass tagits bort och istället delats upp i flera mindre Controllers.
+             Högsta LCOM finns nu i <i>Caas23/Controller/Kmom02ControllerApi</i>, som har ett värde av 5.<br>
+             - Error för "blob/God object" har eliminerats till följd av ovannämnda åtgärd.<br>
+             - Komplexiteten i sessionklassen har minskat till 6 (från 20), genom att denna har delats upp i fler subklasser.<br>
+             - De <i>conditions</i> som anmärktes har hanterats. Den mer eller mindre identiska koden för API-delen och "vanliga" webbdelen slagits
+             samman till en metod, för att kunna användas i båda fallen.<br>
+             - Kvarstår gör en del av de röda fälten i bilden över Maintainability/complexity. Som nämnt ovan handlar detta om Controllers, som helt saknar tester.
+             Troligen är detta en av orsakerna till att de är röda, och har därför inte hanterats ytterligare. Fokus har istället legat på Card-klasser och dess metoder.<br>
+             - Målet om <i>A</i> i ratings och 10.00 i Scrutinizerpoäng har uppnåtts.<br>
+
+            <img class="session-img" src="/img/session-post.png" alt"session-post"><br>
+            <i>Sessionklassen efter ändringar.</i><br>
+            <img class="lcom-img" src="/img/lcom-post.png" alt"lcom-post"><br>
+            <i>LCOM efter ändringar.</i><br>
+            <img class="issues-img" src="/img/issues-post.png" alt"issues-post"><br>
+            <i>Issues efter ändringar.</i><br>
+            <img class="metrics-img" src="/img/scr-post.png" alt"scr-post"><br>
+            <i>Scrutinizerpoäng efter ändringar.</i>
         </p>
         <h3>Diskussion</h3>
+        <p>
+            Jag tänker att man absolut kan använda detta arbetssätt för att jobba med kodkvalitet och "clean code", även om jag inte tror att
+            det är ett absolut facit på att något är på ett visst sätt. Jag tror att för en person på min nivå (i ett stort perspektiv, liten erfarenhet av programmering)
+            kan det vara otroligt lärorikt och hjälpsamt att arbeta på detta sätt. Dessutom ger det något att förhålla sig till, vilket jag tänker är hjälpsamt i team eller 
+            andra projekt där flera arbetar tillsammans och vill ha en gemensam grund, vad gäller exempelvis kodstil, att luta sig mot.
+            En nackdel skulle kunna vara att stirra sig blind på siffror, resultat och felmeddelande/issues, utan att reflektera över vad de försöker säga, och därmed
+            kan denna typ av feedback potentiellt vara hämmande snarare än hjälpsamt. I mitt fall upplevde jag dock feedbacken som hjälpsam och jag fick möjlighet att
+            reflektera och göra avvägningar.
+        </p>
             
         </div>
     </div>
