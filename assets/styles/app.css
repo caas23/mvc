@@ -610,3 +610,44 @@ table {
     left: 1rem;
     width: 261px;
 }
+
+.metrics-img {
+    width: 200px;
+    background-color: #c4e7fd;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    border-radius: 50%;
+}
+
+.lcom-img, .session-img {
+    background-color: #c4e7fd;
+    padding: 0.25rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.issues-img {
+    background-color: #c4e7fd;
+    padding: 0.25rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.links {
+    text-decoration: none;
+
+    & img {
+        margin-top: 1rem;
+    }
+}
+
+.metrics-container {
+    & h4 {
+        margin-bottom: 0;
+    }
+
+    & p {
+        margin-top: 0.5rem;
+    }
+}
+
