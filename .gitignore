@@ -34,6 +34,7 @@ yarn-error.log
 /tools/
 .phpdoc/
 .php-cs-fixer.cache
+/work/
 
 ### Ignore Dice files
 src/Dice/
