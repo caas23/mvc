@@ -57,10 +57,10 @@ class SessionHandler extends DeckOfCards
             $session->set("aceCard", true);
         } elseif ($total + 14 <= 21) {
             $session->set("total", $total + 14);
-        } else {
+        } elseif ($bank === true) {
             $session->set("total", $total + 1);
         }
-        $this->checkBust($session, $total, $bank);
+        $this->checkBust($session, $session->get("total"), $bank);
     }
 
     /**
@@ -73,8 +73,9 @@ class SessionHandler extends DeckOfCards
     ): void {
         $session->set("total", $total + $value);
         $session->set("aceCard", false);
-        $this->checkBust($session, $total, false);
+        $this->checkBust($session, $session->get("total"), false);
     }
+
     /**
      * Check if total > 21, if so add winner to session. If total <= 21, and game is over, check who won using checkWinner().
      */
@@ -103,9 +104,9 @@ class SessionHandler extends DeckOfCards
     ): void {
         $playersTotal = $session->get("players_total");
 
-        if ($bank === false && ($total == 21 || ($bank === true && $total >= 17 && $total < $playersTotal))) {
+        if ($bank === false && $total === 21 || ($bank === true && $total >= 17 && $total < $playersTotal)) {
             $this->winnerToSession($session, "player_won");
-        } elseif ($bank === true && ($total == 21 || ($total >= 17 && $total >= $playersTotal))) {
+        } elseif ($bank === true && ($total === 21 || ($total >= 17 && $total >= $playersTotal))) {
             $this->winnerToSession($session, "bank_won");
         }
     }
