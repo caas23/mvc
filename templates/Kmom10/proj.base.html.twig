@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Projekt | {% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('proj') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('proj') }}
+            {% block importmap %}{{ importmap('proj') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <div class="nav">
+                {% set currentPath = app.request.uri|split('/')|last %}
+                <nav>
+                    <span class="{{ currentPath == 'proj' ? 'active' : '' }}"><a href="{{ path('proj') }}">Hem</a></span>
+                    <span class="{{ currentPath == 'about' ? 'active' : '' }}"><a href="{{ path('proj_about') }}">Om</a></span>
+                    <span class="{{ currentPath == 'api' ? 'active' : '' }}"><a href="{{ path('proj_api') }}">API</a></span>
+                </nav>
+            </div>
+            {% block body %}{% endblock %}
+        </main>
+    </body>
+</html>

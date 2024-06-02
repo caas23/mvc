@@ -1,0 +1,28 @@
+{% extends "Kmom10/proj.base.html.twig" %}
+
+{% block title %}Om{% endblock %}
+
+{% block body %}
+    <h1>&nbsp;</h1>
+    <div class="container-about">
+        <div>
+            <h1>Om</h1>
+            <p>
+                Detta avslutande projekt i kursen <i>MVC</i> vid BTH, har sitt fokus på två av de totalt 17 globala mål. De två mål
+                som fokuseras på är <i>Mål 3 - God hälsa och välbefinnande</i>, där fokus lagts på effekterna av Coronapandemin, samt 
+                <i>Mål 7 - Hållbar energi för alla</i> där fokus lagts på att visualisera andel förnybar energi nationellt. Varje mål
+                visualiseras i diagram med hjälp av statistik och data inom respektive område. Den data och statistik som presenteras 
+                för vardera mål är på inget sätt heltäckande för målen som helhet, utan fokuserar på valda delmål.
+            </p>
+            <p>
+                Läs mer om repsektive mål genom att navigera via 'Hem' i menyn till vänster, eller se delar av statistiken via 'API'.<br>
+            </p>
+            <button class="db-btn">
+                <a href="{{ path('proj_database') }}">Databas</a>
+            </button>
+            <p>
+                <i>Sidan är skapad av Calle Andersson (caas23), student vid BTH.</i>
+            </p>
+        </div>
+    </div>
+{% endblock %}

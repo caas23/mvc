@@ -1,0 +1,58 @@
+{% extends "Kmom10/proj.base.html.twig" %}
+
+{% block title %}Api{% endblock %}
+
+{% block body %}
+    <h1>&nbsp;</h1>
+    <div class="container-api">
+        <div>
+            <h1>API</h1>
+                <h3>God hälsa och välbefinnande</h3>
+                <p>
+                    <a href="{{ path('api_health1') }}" target="_blank">Visa dödsfall</a>
+                    till följd av Covid-19, samt dödsfall generellt år 2017-2023.
+                </p>
+                <p>
+                    <a href="{{ path('api_health2') }}" target="_blank">Visa dödsfall</a> till följd av Covid-19, sorterat per åldersgrupp.
+                </p>
+                
+                <h3>Hållbar energi för alla</h3>
+                <p>
+                    <a href="{{ path('api_energy1') }}" target="_blank">Visa energitillförsel</a>
+                    per energivara [TWh].
+                </p>
+                <p>
+                    <a href="{{ path('api_energy2') }}" target="_blank">Visa användning</a>
+                    av petroleumprodukter per sektor [TWh].
+                </p>
+                 
+                <p>
+                    Välj ett år (2007, 2012, 2017, 2022) för att visa energianvändning
+                    <form method="post" action="" target="_blank">
+                        <select name="year">
+                            <option value="2007">2007</option>  
+                            <option value="2012">2012</option>  
+                            <option value="2017">2017</option>  
+                            <option value="2022">2022</option>  
+                        <input type="submit" name="" value="Visa energianvändning">
+                    </form>
+                </p> 
+
+                 <i>Källor: SCB och Energimyndigheten</i>
+                {# <h3>Hållbar energi för alla</h3>
+                <a href="{{ path('api/deck') }}" target="_blank">Visa alla kort sorterade per färg och värde</a>
+                <li>
+                    Visar 52 kort sorterad.
+                </li>
+                
+                <li>
+                    Dra <strong>x antal</strong> slumpmässiga kort
+                    <form method="post" action="" target="_blank">  
+                        <input type="number" name="num_cards" min="1" max="52" placeholder="1">
+                        <input type="submit" name="" value="Visa kort">
+                    </form>
+                </li>  #}
+        </div>
+    </div>
+    
+{% endblock %}
