@@ -23,6 +23,8 @@ Encore
     .addEntry('app', './assets/app.js')
     .addEntry('proj', './assets/proj.js')
 
+    .enableStimulusBridge('./assets/controllers.json')
+
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
 
