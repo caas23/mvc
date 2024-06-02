@@ -321,7 +321,6 @@ class ChartFunctions
      */
     public function setDataEnergySupply(\Symfony\UX\Chartjs\Model\Chart $chart, array $labels, array $dataInput): void
     {
-
         $dataOutput = [
             $this->supplyFunctions->{'get72'}($dataInput),
             $this->supplyFunctions->{'get82'}($dataInput),
@@ -331,36 +330,23 @@ class ChartFunctions
             $this->supplyFunctions->{'get22'}($dataInput),
         ];
 
-
         $year72 = [];
-        foreach ($dataOutput[0] as $d) {
-            $year72[] = $d;
-        }
+        foreach ($dataOutput[0] as $d) {$year72[] = $d;}
 
         $year82 = [];
-        foreach ($dataOutput[1] as $d) {
-            $year82[] = $d;
-        }
+        foreach ($dataOutput[1] as $d) {$year82[] = $d;}
 
         $year92 = [];
-        foreach ($dataOutput[2] as $d) {
-            $year92[] = $d;
-        }
+        foreach ($dataOutput[2] as $d) {$year92[] = $d;}
 
         $year02 = [];
-        foreach ($dataOutput[3] as $d) {
-            $year02[] = $d;
-        }
+        foreach ($dataOutput[3] as $d) {$year02[] = $d;}
 
         $year12 = [];
-        foreach ($dataOutput[4] as $d) {
-            $year12[] = $d;
-        }
+        foreach ($dataOutput[4] as $d) {$year12[] = $d;}
 
         $year22 = [];
-        foreach ($dataOutput[5] as $d) {
-            $year22[] = $d;
-        }
+        foreach ($dataOutput[5] as $d) {$year22[] = $d;}
 
 
         $chart->setData([
@@ -427,44 +413,28 @@ class ChartFunctions
         ];
 
         $year87 = [];
-        foreach ($dataOutput[0] as $d) {
-            $year87[] = $d;
-        }
+        foreach ($dataOutput[0] as $d) {$year87[] = $d;}
 
         $year92 = [];
-        foreach ($dataOutput[1] as $d) {
-            $year92[] = $d;
-        }
+        foreach ($dataOutput[1] as $d) {$year92[] = $d;}
 
         $year97 = [];
-        foreach ($dataOutput[2] as $d) {
-            $year97[] = $d;
-        }
+        foreach ($dataOutput[2] as $d) {$year97[] = $d;}
 
         $year02 = [];
-        foreach ($dataOutput[3] as $d) {
-            $year02[] = $d;
-        }
+        foreach ($dataOutput[3] as $d) {$year02[] = $d;}
 
         $year07 = [];
-        foreach ($dataOutput[4] as $d) {
-            $year07[] = $d;
-        }
+        foreach ($dataOutput[4] as $d) {$year07[] = $d;}
 
         $year12 = [];
-        foreach ($dataOutput[5] as $d) {
-            $year12[] = $d;
-        }
+        foreach ($dataOutput[5] as $d) {$year12[] = $d;}
 
         $year17 = [];
-        foreach ($dataOutput[6] as $d) {
-            $year17[] = $d;
-        }
+        foreach ($dataOutput[6] as $d) {$year17[] = $d;}
 
         $year22 = [];
-        foreach ($dataOutput[7] as $d) {
-            $year22[] = $d;
-        }
+        foreach ($dataOutput[7] as $d) {$year22[] = $d;}
 
         $chart->setData([
             'labels' => $labels,
