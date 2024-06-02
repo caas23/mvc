@@ -11,6 +11,26 @@ class DeceasedCovidFunctions
         $entity->setTotalDeceased(5771);
         $entity->setMenDeceased(3104);
         $entity->setWomenDeceased(2667);
+
+        $entity->setTotalSpecHome(2682);
+        $entity->setMenSpecHome(1164);
+        $entity->setWomenSpecHome(1518);
+        $entity->setTotalHomeCare(1535);
+        $entity->setMenHomeCare(836);
+        $entity->setWomenHomeCare(699);
+        $entity->setTotalHospitalDeath(2782);
+        $entity->setMenHospitalDeath(1739);
+        $entity->setWomenHospitalDeath(1043);
+        $entity->setTotalSpecHomeDeath(2625);
+        $entity->setMenSpecHomeDeath(1151);
+        $entity->setWomenSpecHomeDeath(1474);
+        $entity->setTotalOrdHomeDeath(223);
+        $entity->setMenOrdHomeDeath(125);
+        $entity->setWomenOrdHomeDeath(98);
+    }
+
+    public function addAge(DeceasedCovid $entity): void
+    {
         $entity->setTotalUnder50(60);
         $entity->setMenUnder50(38);
         $entity->setWomenUnder50(22);
@@ -20,7 +40,6 @@ class DeceasedCovidFunctions
         $entity->setTotal6069(383);
         $entity->setMen6069(277);
         $entity->setWomen6069(106);
-
         $entity->setTotal7074(472);
         $entity->setMen7074(326);
         $entity->setWomen7074(146);
@@ -36,7 +55,10 @@ class DeceasedCovidFunctions
         $entity->setTotalOver90(1529);
         $entity->setMenOver90(606);
         $entity->setWomenOver90(923);
+    }
 
+    public function addGroup(DeceasedCovid $entity): void
+    {
         $entity->setTotalCvGroup(2849);
         $entity->setMenCvGroup(1666);
         $entity->setWomenCvGroup(1183);
@@ -58,22 +80,6 @@ class DeceasedCovidFunctions
         $entity->setTotalMulitpleGroups(3337);
         $entity->setMenMulitpleGroups(1896);
         $entity->setWomenMulitpleGroups(1441);
-
-        $entity->setTotalSpecHome(2682);
-        $entity->setMenSpecHome(1164);
-        $entity->setWomenSpecHome(1518);
-        $entity->setTotalHomeCare(1535);
-        $entity->setMenHomeCare(836);
-        $entity->setWomenHomeCare(699);
-        $entity->setTotalHospitalDeath(2782);
-        $entity->setMenHospitalDeath(1739);
-        $entity->setWomenHospitalDeath(1043);
-        $entity->setTotalSpecHomeDeath(2625);
-        $entity->setMenSpecHomeDeath(1151);
-        $entity->setWomenSpecHomeDeath(1474);
-        $entity->setTotalOrdHomeDeath(223);
-        $entity->setMenOrdHomeDeath(125);
-        $entity->setWomenOrdHomeDeath(98);
     }
 
     /**

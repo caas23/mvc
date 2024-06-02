@@ -45,6 +45,8 @@ class ChartFunctions
 
         $entityCovid = new DeceasedCovid();
         $this->covidFunctions->add($entityCovid);
+        $this->covidFunctions->addAge($entityCovid);
+        $this->covidFunctions->addGroup($entityCovid);
 
         $entityGeneral = new DeceasedGeneral();
         $this->generalFunctions->add($entityGeneral);

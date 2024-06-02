@@ -58,30 +58,14 @@ class Kmom10Controller extends AbstractController
         $chartFunctions->setOptionsDoughnutHealth($chart1, 'Totala antal dödsfall');
 
         $chart2 = $chartBuilder->createChart(Chart::TYPE_BAR);
-        $labels2 = [
-            '< 50',
-            '50-59',
-            '60-69',
-            '70-74',
-            '75-79',
-            '80-84',
-            '85-89',
-            '> 90',
-        ];
+        $labels2 = ['< 50', '50-59', '60-69', '70-74', '75-79', '80-84', '85-89',  '> 90'];
         $chartFunctions->setDataBarHealth($chart2, $labels2, $dataCovid, 2, 'Age'); //@phpstan-ignore-line
         $chartFunctions->setOptionsBarHealth($chart2, 'Dödsfall per åldersgrupp');
 
 
         $chart3 = $chartBuilder->createChart(Chart::TYPE_BAR);
         $labels3 = [
-            ['Hjärt- och', 'kärlsjukdom'],
-            'Högt blodtryck',
-            'Diabetes',
-            'Lungsjukdom',
-            'Ingen grupp',
-            'En grupp',
-            ['Två eller', 'fler grupper'],
-        ];
+            ['Hjärt- och', 'kärlsjukdom'], 'Högt blodtryck', 'Diabetes', 'Lungsjukdom', 'Ingen grupp', 'En grupp', ['Två eller', 'fler grupper']];
         $chartFunctions->setDataBarHealth($chart3, $labels3, $dataCovid, 3, 'Group'); //@phpstan-ignore-line
         $chartFunctions->setOptionsBarHealth($chart3, 'Dödsfall per sjukdomsgrupp');
 
@@ -96,25 +80,13 @@ class Kmom10Controller extends AbstractController
 
 
         $chart5 = $chartBuilder->createChart(Chart::TYPE_BAR);
-        $labels5 = [
-            'Sjukhus',
-            'Särskilt boende',
-            'Ordinärt boende',
-        ];
+        $labels5 = ['Sjukhus', 'Särskilt boende', 'Ordinärt boende'];
         $chartFunctions->setDataBarHealth($chart5, $labels5, $dataCovid, 5, 'Place'); //@phpstan-ignore-line
         $chartFunctions->setOptionsBarHealth($chart5, 'Dödsfall per dödsplats');
 
 
         $chart6 = $chartBuilder->createChart(Chart::TYPE_BAR);
-        $labels6 = [
-            '2017',
-            '2018',
-            '2019',
-            '2020',
-            '2021',
-            '2022',
-            '2023',
-        ];
+        $labels6 = ['2017', '2018', '2019', '2020', '2021', '2022', '2023'];
         $chartFunctions->setDataBarHealth($chart6, $labels6, $dataGeneral, 6);
         $chartFunctions->setOptionsBarHealth($chart6, 'Dödsfall per år (2017-2023)');
 
