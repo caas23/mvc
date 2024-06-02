@@ -112,13 +112,14 @@ class ChartFunctions
      */
     public function setDataBarHealth(\Symfony\UX\Chartjs\Model\Chart $chart, array $labels, array $dataInput, int $number, string $category = null): void
     {
-        if ($category != null) {
+        $dataOutput = [];
+        if ($category !== null) {
             $dataOutput = [
                 $this->covidFunctions->{'getDeceasedBy' .$category .'Total'}($dataInput),
                 $this->covidFunctions->{'getDeceasedBy' .$category .'Men'}($dataInput),
                 $this->covidFunctions->{'getDeceasedBy' .$category .'Women'}($dataInput)
             ];
-        } if ($category == null) {
+        } if ($category === null) {
             $dataOutput = [
                 $this->generalFunctions->getTotal($dataInput),
                 $this->generalFunctions->getMen($dataInput),
