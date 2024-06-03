@@ -251,9 +251,6 @@
     "symfony/ux-chartjs": {
         "version": "v2.17.0"
     },
-    "symfony/ux-turbo": {
-        "version": "v2.16.0"
-    },
     "symfony/validator": {
         "version": "7.0",
         "recipe": {
