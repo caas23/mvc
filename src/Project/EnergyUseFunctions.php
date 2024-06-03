@@ -4,6 +4,9 @@ namespace Caas23\Project;
 
 use Caas23\Entity\EnergyUse;
 
+/**
+ * EnergyUseFunctions class.
+ */
 class EnergyUseFunctions
 {
     public function add(EnergyUse $entity): void

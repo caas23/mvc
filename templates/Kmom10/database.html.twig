@@ -9,8 +9,10 @@
             <h1>Databas</h1>
             <p>
                 Databasen (<i>fig.1</i>) hanterar totalt fem tabeller, vilka saknar relationer sinsemellan. Två av tabellerna rör mål 3, medan 
-                resterande tre hanterar data för mål 7. Som databas har SQLite valts, för att enkelt kunna komma igång och arbeta, dock har inga 
-                tester gjorts mot databasen. Nedan ges en förklaring till innehållet i databasen.
+                resterande tre hanterar data för mål 7. En del tester för databasen har gjorts, vilka krävde inhämtning av vissa extrakunskaper
+                för att genomföra. Innan enhetstesterna med databasen gick igenom på Scrutinizer krävdes en del justeringar i repot för att
+                se till att databasen laddades upp och kunde nås av Scrutinizer. När jag väl fått databasen på plats i mitt repo fungerade 
+                testerna även via Scrutinizer. Nedan ges en förklaring till innehållet i databasen.
             </p>
             <div class="explanation-div">
                 <div class="db-div">
@@ -60,7 +62,7 @@
                 <strong>Anmärkningar om fig.1</strong><br>
                 För att öka läsbarheten har vissa förenklingar gjorts i diagrammet. Parenteser har använts för att visa att entiteten innefattar 
                 flera separata entiteter.<br><br><u>Exempel</u><br>
-                <code>(total/men/women)_17</code> representerar tre skilda entiter <br>&rarr; <code>total_17, men_17</code> och <code>women_17</code>.
+                <code>(total/men/women)_17</code> representerar tre skilda entiter <br>&rarr; <code>total17, men17</code> och <code>women17</code>.
             </div>
         </div>
     </div>

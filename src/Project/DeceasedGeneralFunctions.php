@@ -4,6 +4,9 @@ namespace Caas23\Project;
 
 use Caas23\Entity\DeceasedGeneral;
 
+/**
+ * DeceasedGeneralFunctions class.
+ */
 class DeceasedGeneralFunctions
 {
     public function add(DeceasedGeneral $entity): void

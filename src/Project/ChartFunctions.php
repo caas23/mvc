@@ -248,7 +248,7 @@ class ChartFunctions
     /**
      * Set data for energy use charts.
      * @param array<int, array<int, string>|string> $labels
-     * @param array<mixed, mixed> $dataInput
+     * @param array<int|string, mixed> $dataInput
      */
     public function setDataEnergyUse(\Symfony\UX\Chartjs\Model\Chart $chart, array $labels, array $dataInput): void
     {
@@ -317,7 +317,7 @@ class ChartFunctions
     /**
      * Set data for energy supply charts.
      * @param array<int, string> $labels
-     * @param array<mixed, mixed> $dataInput
+     * @param array<int|string, mixed> $dataInput
      */
     public function setDataEnergySupply(\Symfony\UX\Chartjs\Model\Chart $chart, array $labels, array $dataInput): void
     {
@@ -397,7 +397,7 @@ class ChartFunctions
      * Set data for energy petro charts.
      * @SuppressWarnings(PHPMD) (NPath)
      * @param array<int, string> $labels
-     * @param array<mixed, mixed> $dataInput
+     * @param array<int|string, mixed> $dataInput
      */
     public function setDataEnergyPetro(\Symfony\UX\Chartjs\Model\Chart $chart, array $labels, array $dataInput): void
     {

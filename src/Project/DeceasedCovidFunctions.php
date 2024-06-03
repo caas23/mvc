@@ -4,6 +4,9 @@ namespace Caas23\Project;
 
 use Caas23\Entity\DeceasedCovid;
 
+/**
+ * DeceasedCovidFunctions class.
+ */
 class DeceasedCovidFunctions
 {
     public function add(DeceasedCovid $entity): void

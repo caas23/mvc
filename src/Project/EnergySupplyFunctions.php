@@ -4,6 +4,9 @@ namespace Caas23\Project;
 
 use Caas23\Entity\EnergySupply;
 
+/**
+ * EnergySupplyFunctions class.
+ */
 class EnergySupplyFunctions
 {
     public function add(EnergySupply $entity): void
