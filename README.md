@@ -26,6 +26,21 @@ npm run build
 php -S localhost:8888 -t public #run
 ```
 
+If `npm run build` fails, open assets/controllers.json and delete the following, then rebuild
+```
+"@symfony/ux-turbo": {
+            "turbo-core": {
+                "enabled": true,
+                "fetch": "eager"
+            },
+            "mercure-turbo-stream": {
+                "enabled": false,
+                "fetch": "eager"
+            }
+        }
+```
+
+
 Badges from _Scrutinizer_ can be seen below.
 
 [![Build Status](https://scrutinizer-ci.com/g/caas23/mvc/badges/build.png?b=main)](https://scrutinizer-ci.com/g/caas23/mvc/build-status/main) 
