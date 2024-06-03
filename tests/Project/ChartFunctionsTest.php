@@ -76,7 +76,7 @@ class ChartFunctionsTest extends TestCase
 
         $mockRepository = $this
             ->getMockBuilder(EntityRepository::class)
-            ->setMethods(['findAll'])
+            ->onlyMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -100,7 +100,7 @@ class ChartFunctionsTest extends TestCase
 
         $mockRepository = $this
             ->getMockBuilder(EntityRepository::class)
-            ->setMethods(['findAll'])
+            ->onlyMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -126,7 +126,7 @@ class ChartFunctionsTest extends TestCase
 
         $mockRepository = $this
             ->getMockBuilder(EntityRepository::class)
-            ->setMethods(['findAll'])
+            ->onlyMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -151,7 +151,7 @@ class ChartFunctionsTest extends TestCase
 
         $mockRepository = $this
             ->getMockBuilder(EntityRepository::class)
-            ->setMethods(['findAll'])
+            ->onlyMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -176,7 +176,7 @@ class ChartFunctionsTest extends TestCase
 
         $mockRepository = $this
             ->getMockBuilder(EntityRepository::class)
-            ->setMethods(['findAll'])
+            ->onlyMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
 
