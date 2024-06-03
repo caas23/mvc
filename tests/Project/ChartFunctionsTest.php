@@ -14,7 +14,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ChartFunctionsTest extends TestCase
 {
-
     /**
      * Creeate.
      */
@@ -23,13 +22,13 @@ class ChartFunctionsTest extends TestCase
         $func = new ChartFunctions();
         $this->assertInstanceOf("\Caas23\Project\ChartFunctions", $func);
     }
-    
+
 
     /**
      * Test set options.
      */
     public function testSetOptionsDoughnutHealth(): void
-    {       
+    {
         $func = new ChartFunctions();
         $chartBuilder = $this->createMock('Symfony\UX\Chartjs\Builder\ChartBuilderInterface');
         $chart = $chartBuilder->createChart(Chart::TYPE_DOUGHNUT);
@@ -37,12 +36,12 @@ class ChartFunctionsTest extends TestCase
         $this->assertInstanceOf('Symfony\UX\Chartjs\Builder\ChartBuilderInterface', $chartBuilder);
         $this->assertInstanceOf('Symfony\UX\Chartjs\Model\Chart', $chart);
     }
-    
+
     /**
      * Test set options.
      */
     public function testSetOptionsBarHealth(): void
-    {       
+    {
         $func = new ChartFunctions();
         $chartBuilder = $this->createMock('Symfony\UX\Chartjs\Builder\ChartBuilderInterface');
         $chart = $chartBuilder->createChart(Chart::TYPE_BAR);
@@ -50,12 +49,12 @@ class ChartFunctionsTest extends TestCase
         $this->assertInstanceOf('Symfony\UX\Chartjs\Builder\ChartBuilderInterface', $chartBuilder);
         $this->assertInstanceOf('Symfony\UX\Chartjs\Model\Chart', $chart);
     }
-   
+
     /**
      * Test set options.
      */
     public function testSetOptionsEnergy(): void
-    {       
+    {
         $func = new ChartFunctions();
         $chartBuilder = $this->createMock('Symfony\UX\Chartjs\Builder\ChartBuilderInterface');
         $chart = $chartBuilder->createChart(Chart::TYPE_BAR);
@@ -63,12 +62,12 @@ class ChartFunctionsTest extends TestCase
         $this->assertInstanceOf('Symfony\UX\Chartjs\Builder\ChartBuilderInterface', $chartBuilder);
         $this->assertInstanceOf('Symfony\UX\Chartjs\Model\Chart', $chart);
     }
-    
+
     /**
      * Test set data.
      */
     public function testSetDataDoughnutHealth(): void
-    {       
+    {
         $func = new ChartFunctions();
         $chartBuilder = $this->createMock('Symfony\UX\Chartjs\Builder\ChartBuilderInterface');
         $chart = $chartBuilder->createChart(Chart::TYPE_DOUGHNUT);
@@ -81,7 +80,7 @@ class ChartFunctionsTest extends TestCase
             ->getMock();
 
         $input = $mockRepository->findAll();
-        $func->setDataDoughnutHealth($chart, $input);
+        $func->setDataDoughnutHealth($chart, $input); //@phpstan-ignore-line
         $this->assertInstanceOf('Symfony\UX\Chartjs\Builder\ChartBuilderInterface', $chartBuilder);
         $this->assertInstanceOf('Symfony\UX\Chartjs\Model\Chart', $chart);
         $this->assertInstanceOf('Caas23\Project\DeceasedCovidFunctions', $covidFunctions);
@@ -92,7 +91,7 @@ class ChartFunctionsTest extends TestCase
      * Test set data.
      */
     public function testSetDataBarHealth(): void
-    {       
+    {
         $func = new ChartFunctions();
         $chartBuilder = $this->createMock('Symfony\UX\Chartjs\Builder\ChartBuilderInterface');
         $chart = $chartBuilder->createChart(Chart::TYPE_DOUGHNUT);
@@ -106,19 +105,19 @@ class ChartFunctionsTest extends TestCase
 
         $labels = ['unit', 'test'];
         $input = $mockRepository->findAll();
-        $func->setDataBarHealth($chart, $labels, $input, 5);
-        $func->setDataBarHealth($chart, $labels, $input, 5, 'Place');
+        $func->setDataBarHealth($chart, $labels, $input, 5); //@phpstan-ignore-line (doctrine)
+        $func->setDataBarHealth($chart, $labels, $input, 5, 'Place'); //@phpstan-ignore-line (doctrine)
         $this->assertInstanceOf('Symfony\UX\Chartjs\Builder\ChartBuilderInterface', $chartBuilder);
         $this->assertInstanceOf('Symfony\UX\Chartjs\Model\Chart', $chart);
         $this->assertInstanceOf('Caas23\Project\DeceasedCovidFunctions', $covidFunctions);
         $this->assertInstanceOf('Doctrine\ORM\EntityRepository', $mockRepository);
     }
-   
+
     /**
      * Test set data.
      */
     public function testSetDataEnergyUse(): void
-    {       
+    {
         $func = new ChartFunctions();
         $chartBuilder = $this->createMock('Symfony\UX\Chartjs\Builder\ChartBuilderInterface');
         $chart = $chartBuilder->createChart(Chart::TYPE_DOUGHNUT);
@@ -138,12 +137,12 @@ class ChartFunctionsTest extends TestCase
         $this->assertInstanceOf('Caas23\Project\DeceasedCovidFunctions', $covidFunctions);
         $this->assertInstanceOf('Doctrine\ORM\EntityRepository', $mockRepository);
     }
-    
+
     /**
      * Test set data.
      */
     public function testSetDataEnergySupply(): void
-    {       
+    {
         $func = new ChartFunctions();
         $chartBuilder = $this->createMock('Symfony\UX\Chartjs\Builder\ChartBuilderInterface');
         $chart = $chartBuilder->createChart(Chart::TYPE_DOUGHNUT);
@@ -163,12 +162,12 @@ class ChartFunctionsTest extends TestCase
         $this->assertInstanceOf('Caas23\Project\DeceasedCovidFunctions', $covidFunctions);
         $this->assertInstanceOf('Doctrine\ORM\EntityRepository', $mockRepository);
     }
-    
+
     /**
      * Test set data.
      */
     public function testSetDataEnergyPetro(): void
-    {       
+    {
         $func = new ChartFunctions();
         $chartBuilder = $this->createMock('Symfony\UX\Chartjs\Builder\ChartBuilderInterface');
         $chart = $chartBuilder->createChart(Chart::TYPE_DOUGHNUT);

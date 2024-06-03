@@ -16,35 +16,34 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
  */
 class ChartFunctions2Test extends KernelTestCase
 {
-
-    private $doctrine;
+    private $doctrine; //@phpstan-ignore-line (doctrine)
 
     protected function setUp(): void
     {
         $this->doctrine = self::getContainer()
             ->get('Doctrine\Persistence\ManagerRegistry');
     }
-    
-    
+
+
     /**
      * Creeate.
      */
     public function testSetUpHealth(): void
     {
-        
+
         $doctrine = $this->doctrine;
         $func = new ChartFunctions();
         $func->setUpHealth($doctrine);
         $this->assertInstanceOf("\Caas23\Project\ChartFunctions", $func);
         $this->assertInstanceOf("Doctrine\Persistence\ManagerRegistry", $doctrine);
     }
-    
+
     /**
      * Creeate.
      */
     public function testSetUpEnergy(): void
     {
-        
+
         $doctrine = $this->doctrine;
         $func = new ChartFunctions();
         $func->setUpEnergy($doctrine);

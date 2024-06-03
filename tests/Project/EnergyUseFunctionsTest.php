@@ -8,13 +8,12 @@ use Caas23\Repository\EnergyUseRepository;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
-
 /**
  * Test cases for class EnergyUseFunctions.
  */
 class EnergyUseFunctionsTest extends KernelTestCase
 {
-    private $doctrine;
+    private $doctrine; //@phpstan-ignore-line (doctrine)
 
     protected function setUp(): void
     {
@@ -26,15 +25,15 @@ class EnergyUseFunctionsTest extends KernelTestCase
      * Test get data.
      */
     public function testGetData(): void
-    {       
+    {
         $func = new EnergyUseFunctions();
 
         $entityManager = $this->doctrine->getManager();
         $entityManager->createQuery('DELETE FROM Caas23\Entity\EnergyUse')->execute();
-        
+
         $entity = new EnergyUse();
         $func->add($entity);
-        
+
         $entityManager->persist($entity);
         $entityManager->flush();
 
