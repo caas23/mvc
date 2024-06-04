@@ -292,7 +292,67 @@
         <div>
             <h3 id="kmom07-10" >Kmom07-10</h3>
             <p>
-                Redovisningstext för detta kmom kommer här.
+                <strong>Krav 1, 2, 3</strong><br>
+                <u>Innehåll och utseende</u><br>
+                <p>
+                    Jag valde globala målen som fokus och skapade därför en ny stylesheet där färgerna och ikonerna från de globala målen fick ta 
+                    plats mot en mer återhållsam vit bakgrund. För att få en större skillnad mot det utseende som min webbplats haft tidigare under 
+                    kursen valde jag här att låta menyn ligga till vänster i ett vertikalt läge samt låta aktuell menysida vara highlightad i menyn.<br><br>
+                    Vidare valde jag att fokusera på två av målen och inom dessa valda delmål. Läs mer om detta under proj/about.
+                </p>
+                <u>Repo och dokumentation</u><br>
+                <p>
+                    Kodtäckningen för Entity och Project har knappt 97 respektive 98%. Däremot har inte Controller eller Repository testats och har därför 0. 
+                    Enligt Scrutinizer kan ses att Coverage är 74% och Scrutinizerpoängen är 7.5. Det som avsevärt försämrar poängen är mina Entity-klasser, 
+                    som alla har F förutom en som har B, medan resterande klasser har A. Jag har sett över detta och ser att komplexiteten i klasserna är ett problem. 
+                    Med facit i hand hade det varit klokt att bryta ned Entity-klasserna, men detta har av tidsskäl lämnats orört för tillfället.
+                </p>
+                <strong>Krav 4</strong><br>
+                <p>
+                    För detta krav valde jag att skapa två Api-routes för mål 3, där statistik för dödsfall till följd av Covid samt dödsfall generellt visas. 
+                    För mål 7 finns tre routes, där två av dem visar energitillförsel samt användning av petroleumprodukter medan den tredje är en POST-route 
+                    som visar energianvändning för valt år. För denna finns fyra år att välja mellan, och dessa har lagt in i ett select form för att underlätta 
+                    för användaren att välja ett år med faktisk data tillgänglig. Ett annat alternativ hade varit att visa upp ett felmeddelande om ett otillgängligt år valt. 
+                    Vald väg ansågs dock tydligast.
+                </p>
+                <strong>Krav 5</strong><br>
+                <p>
+                    Här skapades ett diagram med hjälp av Workbench, där vissa förenklingar gjorts för att öka läsbarheten (läs mer om detta via <code>proj/about/database</code>). 
+                    Som nämnt ovan angående att ha facit i hand - kanske borde behovet av förenkling för ökad läsbarhet gett mig en tanke om 
+                    ”Är tabellerna för komplexa och bör jag bryta ned dem ytterligare?”, det är lätt att vara efterklok och jag tar med mig erfarenheterna till framtida projekt. 
+                    För vidare läsning om hur kravet tacklades hänvisar jag till <code>proj/about/database</code>.
+                </p>
+                <strong>Krav 6</strong><br>
+                <p>
+                    Vid start av projektet visste jag att Mikael flaggat för att denna del kunde vara svår att uppnå om fokus var ”Visualisera indikatorer för hållbarhet”. 
+                    ”Challenge accepted”, tänkte jag och gick ändå vidare med de globala målen som fokus. Jag tycker att jag lyckats implementera ett antal saker i mitt 
+                    projekt som krävt en del extra läsning, extra tanke och extra krut som kanske inte hade ”behövts” för att klara projektet.
+                <ul>
+                    <li>Jag har genomfört enhetstester som involverar databasen och som även fungerar via Scrutinizer. 
+                        Då jag inte gjort sådana tester tidigare under kursen var det något som tog mig både tid och läsning för att få rätsida på.</li><br>
+
+                    <li>Då jag valt ett fokus som anses lättare rent logikmässigt har jag lagt extra fokus på att skapa ett snyggt intryck, 
+                        med fokus på att lyfta fram globala målen som helhet genom ikoner, bakgrunder et cetera. 
+                        Hänvisningarna till respektive mål på ”Hem”-sidan har stylats för att vara extra inbjudande och snyggt.
+                        Diagrammen har stylats för att matcha färgbasen för respektive mål. Dessa delar är inte utmanande rent programmeringsmässigt, 
+                        men gissningsvis hade en betydligt mindre insats släppts igenom och därför lyfter jag fram detta som något som jag ansträngt mig extra för att uppnå.</li><br>
+
+                    <li>Extra fokus har lagts på diagrammen och hur dessa presenteras för att både förhöja utseendemässiga aspekter, men även för att förenkla navigering och överskådlighet. 
+                    Javascript har använts för att göra det enkelt att visa inget, ett, flera eller alla diagram samtidigt.</li>
+                </ul>
+                </p>
+                <strong>Allmänt om projektet</strong><br>
+                <p>
+                    Projektet generellt har som alltid varit givande att genomföra. Efter ett år på programmet känns det som att projekten verkligen fångar kursernas innehåll på ett bra sätt. 
+                    Extra roligt att få chansen väva in de globala målen och få hantera lite energistatistik och siffror, sådant ligger mig varmt om hjärtat. 
+                    Att genomföra projektet har gått bra överlag, det som tog mig längst tid var nog att få chartjs att samarbeta för att kunna komma vidare och skapa diagram och få ihop helheten.
+                </p>
+                <strong>Allmänt om kursen</strong><br>
+                <p>
+                    Kursen generellt har varit både läro- och innehållsrik. Den är ganska mastig då det är mycket som tas upp, samtidigt tror jag det är nödvändigt att alla delar (testning etc) är med, 
+                    för att skapa en helhetskänsla och att det varit innehållsrikt är inget jag ser som negativt, tvärtom. 
+                    Som alltid är Mikaels insats toppen – bra genomgångar och föreläsningar och bra hjälp vid frågor och funderingar. Jag ger helheten 10/10.
+                </p>
             </p>
         </div>
     </div>
